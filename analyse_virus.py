@@ -38,8 +38,8 @@ def evolution_virus(nb_individu,variance_population,rayon_contamination):
     #Afficher 1er individu avec pourcentage infectés/sains
     numero_infecte_1 = rd.randint(0, taille_pop) # on choisit le premier individu infecté au hasard
     coord_1er_infecte = [x[:, 0][numero_infecte_1], x[:, 1][numero_infecte_1]] # coordonnées du 1er infecté
-    ax1.scatter(x[:,0],x[:,1],c='dodgerblue')
-    ax1.scatter(x[:,0][numero_infecte_1],x[:,1][numero_infecte_1],c='firebrick')
+    ax1.scatter(x[:,0],x[:,1],c='dodgerblue') #sains
+    ax1.scatter(x[:,0][numero_infecte_1],x[:,1][numero_infecte_1],c='firebrick') #1er individu infecté
     ax1.set_title('1er individu',fontsize=8)
     ax1.axis('off')
     ax4.pie([1,taille_pop],labels=('infectés','sains'),shadow=True,autopct='%1.1f%%',colors=['firebrick','dodgerblue'])
@@ -49,12 +49,12 @@ def evolution_virus(nb_individu,variance_population,rayon_contamination):
     coord_sains = [] #liste des cas sains après 1er vague
     for k in range (taille_pop):
         if distance(coord_1er_infecte,[x[:,0][k],x[:,1][k]]) < rayon_contamination and k != numero_infecte_1 :
-            ax2.scatter(x[:,0][k],x[:,1][k],c='firebrick')
-            coord_infectes.append([x[:,0][k],x[:,1][k]])
+            ax2.scatter(x[:,0][k],x[:,1][k],c='firebrick') #infectés
+            coord_infectes.append([x[:,0][k],x[:,1][k]]) #on ajoute le nouvel individu infectés dans la liste
         else :
-            ax2.scatter(x[:, 0][k], x[:, 1][k], c='dodgerblue')
-            coord_sains.append([x[:, 0][k], x[:, 1][k]])
-        ax2.scatter(x[:, 0][numero_infecte_1], x[:, 1][numero_infecte_1], c='firebrick')
+            ax2.scatter(x[:, 0][k], x[:, 1][k], c='dodgerblue') #sains
+            coord_sains.append([x[:, 0][k], x[:, 1][k]]) #on ajoute l'individu sain
+        ax2.scatter(x[:, 0][numero_infecte_1], x[:, 1][numero_infecte_1], c='firebrick') #1er individu infecté
         ax2.set_title('1er vague',fontsize=8)
     ax2.axis('off')
     ax5.pie([len(coord_infectes),len(coord_sains)],labels=('infectés','sains'),shadow=True,autopct='%1.1f%%',colors=['firebrick','dodgerblue'])
@@ -64,11 +64,11 @@ def evolution_virus(nb_individu,variance_population,rayon_contamination):
     for k in range(len(coord_infectes)):
         for j in range(len(coord_sains)):
             if distance(np.array(coord_infectes)[k, :], np.array(coord_sains)[j, :]) < rayon_contamination and np.array(coord_sains)[j, :] not in np.array(coord_infectes):
-                coord_infectes.append(np.array(coord_sains)[j, :])
+                coord_infectes.append(np.array(coord_sains)[j, :]) #on ajoute l'individu infecté
             elif np.array(coord_sains)[j, :] not in np.array(cas_sains_1):
-                cas_sains_1.append(np.array(coord_sains)[j, :])
-    ax3.scatter(np.array(cas_sains_1)[:, 0], np.array(cas_sains_1)[:, 1], c='dodgerblue')
-    ax3.scatter(np.array(coord_infectes)[:, 0], np.array(coord_infectes)[:, 1], c='firebrick')
+                cas_sains_1.append(np.array(coord_sains)[j, :]) #on ajoute l'individu sain
+    ax3.scatter(np.array(cas_sains_1)[:, 0], np.array(cas_sains_1)[:, 1], c='dodgerblue') #sains
+    ax3.scatter(np.array(coord_infectes)[:, 0], np.array(coord_infectes)[:, 1], c='firebrick') #infectés
     ax3.set_title('2e vague',fontsize=8)
     ax3.axis('off')
     ax6.pie([len(coord_infectes),len(cas_sains_1)],labels=('infectés','sains'),shadow=True,autopct='%1.1f%%',colors=['firebrick','dodgerblue'])
@@ -78,11 +78,11 @@ def evolution_virus(nb_individu,variance_population,rayon_contamination):
     for k in range(len(coord_infectes)):
         for j in range(len(cas_sains_1)):
             if distance(np.array(coord_infectes)[k, :], np.array(cas_sains_1)[j, :]) < rayon_contamination and np.array(cas_sains_1)[j, :] not in np.array(coord_infectes):
-                coord_infectes.append(np.array(cas_sains_1)[j, :])
+                coord_infectes.append(np.array(cas_sains_1)[j, :]) #on ajoute les individus infectés
             elif np.array(cas_sains_1)[j, :] not in np.array(cas_sains_2):
-                cas_sains_2.append(np.array(cas_sains_1)[j, :])
-    ax7.scatter(np.array(cas_sains_2)[:, 0], np.array(cas_sains_2)[:, 1], c='dodgerblue')
-    ax7.scatter(np.array(coord_infectes)[:, 0], np.array(coord_infectes)[:, 1], c='firebrick')
+                cas_sains_2.append(np.array(cas_sains_1)[j, :]) #on ajoute les individus sains
+    ax7.scatter(np.array(cas_sains_2)[:, 0], np.array(cas_sains_2)[:, 1], c='dodgerblue') #sains
+    ax7.scatter(np.array(coord_infectes)[:, 0], np.array(coord_infectes)[:, 1], c='firebrick') #infectés
     ax7.set_title('3e vague',fontsize=8)
     ax7.axis('off')
     ax8.pie([len(coord_infectes), len(cas_sains_2)], labels=('infectés', 'sains'), shadow=True, autopct='%1.1f%%',colors=['firebrick','dodgerblue'])
