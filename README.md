@@ -1,4 +1,5 @@
-# creation et etude d'un virus
+## creation et etude d'un virus
+
 Ce début de projet vous propose de créer une population et un virus et de voir sa propagation au sein de cette population.
 
 Vous pouvez selectionner plusieurs paramètres :
