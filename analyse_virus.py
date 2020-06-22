@@ -32,20 +32,22 @@ def virus(nb_individu, variance_population, rayon_contamination, infectiosite):
     # infectiosite correspond à la proba d'un infecté de transmettre le virus à l'interieur de son rayon
 
     x, y = make_blobs(n_samples=nb_individu, centers=1, cluster_std=variance_population)  # création du dataset
-    ax = plt.figure()
+    ax = plt.figure(figsize=(10,8))
     taille_pop = len(x)
 
     # création des figures
-    ax1 = ax.add_subplot(5, 2, 1)
-    ax2 = ax.add_subplot(5, 2, 3)
-    ax3 = ax.add_subplot(5, 2, 5)
-    ax4 = ax.add_subplot(5, 2, 2)
-    ax5 = ax.add_subplot(5, 2, 4)
-    ax6 = ax.add_subplot(5, 2, 6)
-    ax7 = ax.add_subplot(5, 2, 7)
-    ax8 = ax.add_subplot(5, 2, 8)
-    ax9 = ax.add_subplot(5, 2, 9)
-    ax10 = ax.add_subplot(5, 2, 10)
+    ax1 = ax.add_subplot(6, 2, 1)
+    ax2 = ax.add_subplot(6, 2, 3)
+    ax3 = ax.add_subplot(6, 2, 5)
+    ax4 = ax.add_subplot(6, 2, 2)
+    ax5 = ax.add_subplot(6, 2, 4)
+    ax6 = ax.add_subplot(6, 2, 6)
+    ax7 = ax.add_subplot(6, 2, 7)
+    ax8 = ax.add_subplot(6, 2, 8)
+    ax9 = ax.add_subplot(6, 2, 9)
+    ax10 = ax.add_subplot(6, 2, 10)
+    ax11 = ax.add_subplot(6, 2, 11)
+    ax12 = ax.add_subplot(6, 2, 12)
 
     # Afficher 1er individu avec pourcentage infectés/sains
     numero_infecte_1 = rd.randint(0, taille_pop)  # on choisit le premier individu infecté au hasard
@@ -115,6 +117,14 @@ def virus(nb_individu, variance_population, rayon_contamination, infectiosite):
     ax9.set_title('4e vague', fontsize=8)
     ax9.axis('off')
     ax10.pie([len(coord_infectes), len(coord_sains)], shadow=True, autopct='%1.1f%%',colors=['firebrick', 'dodgerblue'],pctdistance=1,counterclock=False)
-    plt.show()
 
+    ax11.axis('off')
+    ax12.axis('off')
+    textstr = '\n'.join((
+        r'$nombre \ individu=%.2f$' % (nb_individu,),
+        r'$variance \ population=%.2f$' % (variance_population,),
+        r'$rayon \ de \ contamination=%.2f$' % (rayon_contamination,),
+        r'$infectiosité=%.2f$' % (infectiosite,)))
+    ax.text(0.12, 0.09, textstr, horizontalalignment='left',verticalalignment='bottom',fontsize=14,bbox=dict(boxstyle='round', facecolor='dodgerblue', alpha=0.6))
+    plt.show()
     
