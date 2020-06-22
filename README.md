@@ -9,3 +9,5 @@ Vous pouvez selectionner plusieurs paramètres :
 	• variance_population : pour avoir une population plus ou moins étalée
  
  	• rayon_contamination : qui détermine le rayon dans lequel un individu infecté infecte un individu sain
+	
+	• infectiosité : probabilité qu'un infecté transmette le virus dans son rayon de contamination
