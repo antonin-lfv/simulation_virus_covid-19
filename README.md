@@ -13,3 +13,5 @@ Vous pouvez selectionner plusieurs paramètres :
 	• infectiosité : probabilité qu'un infecté transmette le virus dans son rayon de contamination
 
 	• p : probabilité qu'une personne infectée devienne immunisée
+	
+	• d : probabilité qu'une personne infectée décède 
