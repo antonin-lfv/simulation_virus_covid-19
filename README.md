@@ -11,3 +11,5 @@ Vous pouvez selectionner plusieurs paramètres :
  	• rayon_contamination : qui détermine le rayon dans lequel un individu infecté infecte un individu sain
 	
 	• infectiosité : probabilité qu'un infecté transmette le virus dans son rayon de contamination
+
+	• p : probabilité qu'une personne infectée devienne immunisée
