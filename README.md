@@ -1,2 +1,15 @@
-# creation et etude d'un virus
- Ce début de projet propose de créer une population, un virus et de voir sa propagation au sein de la population.
+## creation et etude d'un virus
+
+Ce début de projet vous propose de créer une population et un virus et de voir sa propagation au sein de cette population.
+
+Vous pouvez selectionner plusieurs paramètres :
+  
+	• nb_population : le nombre d'individu au départ
+  
+	• variance_population : pour avoir une population plus ou moins étalée
+ 
+ 	• rayon_contamination : qui détermine le rayon dans lequel un individu infecté infecte un individu sain
+	
+	• infectiosité : probabilité qu'un infecté transmette le virus dans son rayon de contamination
+
+	• p : probabilité qu'une personne infectée devienne immunisée
