@@ -14,7 +14,7 @@ def distance(x,y): #distance entre 2 points du plan cartésien
     y2 = y[1]
     return(abs(np.sqrt((y1-x1)**2+(y2-x2)**2)))
 
-def remove_(a,l): #pour supprimer de la liste des sains les nouveaux infectés 
+def remove_(a,l): #pour supprimer de la liste des sains (a) les nouveaux infectés (l)
     for i in range (len(l)):
         a.remove(l[i])
     return(list(a))
@@ -26,7 +26,7 @@ def chance_infecte(p): #return True si il devient infecté avec une proba p
     else :
         return(False)
 
-def immuniser(l, l2, p): #pour séparer la liste des infectés entre les infectés et les immunisés
+def immuniser(l, l2, p): #pour séparer la liste des infectés en infectés et immunisés
     l += l2  # on ajoute l2 pour conserver les immunisés précédents
     coord_immu = []
     l_p = l[:]  # création d'une copie pour éviter les erreurs d'indices
@@ -35,15 +35,27 @@ def immuniser(l, l2, p): #pour séparer la liste des infectés entre les infect�
         if rd.randint(0, 100) <= proba:
             coord_immu.append(l_p[i])
             list(np.delete(l, (i), axis=0))
-    return (l, coord_immu)
-    
+    return (l, coord_immu) #l est la liste des infectés et coord_immu des immunisés
+
+def deces(l, l2, p): #pour séparer la liste des infectés en infectés et décès
+    l += l2  # on ajoute l2 pour avoir tous les infectes
+    coord_deces = []
+    l_p = l[:]  # création d'une copie pour éviter d'erreur d'indice
+    for i in range(len(l_p)):
+        proba = int(p * 100)
+        if rd.randint(0, 100) <= proba:
+            coord_deces.append(l_p[i])
+            list(np.delete(l, (i), axis=0))
+    return (l, coord_deces)
+
 """ Afficher les 4 premières vagues de contamination: """
 
-def virus(nb_individu, variance_population, rayon_contamination, infectiosite, p):
-    # recommandé : nb_individu = 120, var_population = 0.85, rayon_contamination = 0.9, infectiosite = 0.25, p = 0.5
+def virus(nb_individu, variance_population, rayon_contamination, infectiosite, p, d):
+    # recommandé : nb_individu = 120, var_population = 0.85, rayon_contamination = 0.9, infectiosite = 0.25, p = 0.5, d = 0.3
     # variance population correspond à l'espacement moyen des individus
     # infectiosite correspond à la proba d'un infecté de transmettre le virus à l'interieur de son rayon
     # p correspond à la proba d'un infecté de devenir immunisé
+    # d correspond à la proba d'un infecté de déceder
 
     x, y = make_blobs(n_samples=nb_individu, centers=1, cluster_std=variance_population)  # création du dataset
     ax = plt.figure(figsize=(10, 8))
@@ -70,8 +82,7 @@ def virus(nb_individu, variance_population, rayon_contamination, infectiosite, p
     ax1.scatter(x[:, 0][numero_infecte_1], x[:, 1][numero_infecte_1], c='firebrick')
     ax1.set_title('1er individu', fontsize=8)
     ax1.axis('off')
-    ax4.pie([1, taille_pop], shadow=True, autopct='%1.1f%%',
-            colors=['firebrick', 'dodgerblue'], pctdistance=1.5, counterclock=False)
+    ax4.pie([1, taille_pop], shadow=True, autopct='%1.1f%%',colors=['firebrick', 'dodgerblue'], pctdistance=1.5, counterclock=False)
 
     # Afficher 1er vague avec pourcentage infectés/sains
     coord_infectes = []  # cette liste sera implémentée des nouveaux cas
@@ -86,17 +97,15 @@ def virus(nb_individu, variance_population, rayon_contamination, infectiosite, p
         ax2.scatter(x[:, 0][numero_infecte_1], x[:, 1][numero_infecte_1], c='firebrick')
         ax2.set_title('1er vague', fontsize=8)
     ax2.axis('off')
-    ax5.pie([len(coord_infectes), len(coord_sains)], shadow=True, autopct='%1.1f%%',
-            colors=['firebrick', 'dodgerblue'], pctdistance=1.5, counterclock=False)
+    ax5.pie([len(coord_infectes), len(coord_sains)], shadow=True, autopct='%1.1f%%',colors=['firebrick', 'dodgerblue'], pctdistance=1.5, counterclock=False)
 
     # Afficher 2e vague avec pourcentage infectés/sains
     non_sains = []
     coord_infectes, coord_immunises = immuniser(coord_infectes, [], p)
+    coord_infectes, coord_deces = deces(coord_infectes, [], d)
     for k in range(len(coord_infectes)):
         for j in range(len(coord_sains)):
-            if distance(np.array(coord_infectes)[k, :], np.array(coord_sains)[j, :]) < 0.5 and np.array(coord_sains)[j,
-                                                                                               :] not in np.array(
-                    coord_infectes) and chance_infecte(infectiosite):
+            if distance(np.array(coord_infectes)[k, :], np.array(coord_sains)[j, :]) < 0.5 and np.array(coord_sains)[j,:] not in np.array(coord_infectes) and chance_infecte(infectiosite):
                 coord_infectes.append(np.array(coord_sains)[j, :])
                 non_sains.append(list(np.array(coord_sains)[j, :]))
 
@@ -104,48 +113,47 @@ def virus(nb_individu, variance_population, rayon_contamination, infectiosite, p
     ax3.scatter(np.array(coord_sains)[:, 0], np.array(coord_sains)[:, 1], c='dodgerblue')
     ax3.scatter(np.array(coord_infectes)[:, 0], np.array(coord_infectes)[:, 1], c='firebrick')
     ax3.scatter(np.array(coord_immunises)[:, 0], np.array(coord_immunises)[:, 1], c='g')
+    ax3.scatter(np.array(coord_deces)[:, 0], np.array(coord_deces)[:, 1], c='k')
     ax3.set_title('2e vague', fontsize=8)
     ax3.axis('off')
-    ax6.pie([len(coord_infectes), len(coord_sains), len(coord_immunises)], shadow=True, autopct='%1.1f%%',
-            colors=['firebrick', 'dodgerblue', 'g'], pctdistance=1.5, counterclock=False)
+    ax6.pie([len(coord_infectes), len(coord_sains), len(coord_immunises), len(coord_deces)], shadow=True, autopct='%1.1f%%',colors=['firebrick', 'dodgerblue', 'g','dimgrey'], pctdistance=1.5, counterclock=False)
 
     # Afficher 3e vague avec pourcentage infectés/sains
     non_sains = []
     coord_infectes, coord_immunises = immuniser(coord_infectes, coord_immunises, p)
+    coord_infectes, coord_deces = deces(coord_infectes, coord_deces, d)
     for k in range(len(coord_infectes)):
         for j in range(len(coord_sains)):
-            if distance(np.array(coord_infectes)[k, :], np.array(coord_sains)[j, :]) < 0.5 and np.array(coord_sains)[j,
-                                                                                               :] not in np.array(
-                    coord_infectes) and chance_infecte(infectiosite):
+            if distance(np.array(coord_infectes)[k, :], np.array(coord_sains)[j, :]) < 0.5 and np.array(coord_sains)[j,:] not in np.array(coord_infectes) and chance_infecte(infectiosite):
                 coord_infectes.append(np.array(coord_sains)[j, :])
                 non_sains.append(list(np.array(coord_sains)[j, :]))
     coord_sains = remove_(coord_sains, non_sains)
     ax7.scatter(np.array(coord_sains)[:, 0], np.array(coord_sains)[:, 1], c='dodgerblue')
     ax7.scatter(np.array(coord_infectes)[:, 0], np.array(coord_infectes)[:, 1], c='firebrick')
     ax7.scatter(np.array(coord_immunises)[:, 0], np.array(coord_immunises)[:, 1], c='g')
+    ax7.scatter(np.array(coord_deces)[:, 0], np.array(coord_deces)[:, 1], c='k')
     ax7.set_title('3e vague', fontsize=8)
     ax7.axis('off')
-    ax8.pie([len(coord_infectes), len(coord_sains), len(coord_immunises)], shadow=True, autopct='%1.1f%%',
-            colors=['firebrick', 'dodgerblue', 'g'], pctdistance=1, counterclock=False)
+    ax8.pie([len(coord_infectes), len(coord_sains), len(coord_immunises), len(coord_deces)], shadow=True, autopct='%1.1f%%',
+            colors=['firebrick', 'dodgerblue', 'g','dimgrey'], pctdistance=1, counterclock=False)
 
     # Afficher 4e vague avec pourcentage infectés/sains
     non_sains = []
     coord_infectes, coord_immunises = immuniser(coord_infectes, coord_immunises, p)
+    coord_infectes, coord_deces = deces(coord_infectes, coord_deces, d)
     for k in range(len(coord_infectes)):
         for j in range(len(coord_sains)):
-            if distance(np.array(coord_infectes)[k, :], np.array(coord_sains)[j, :]) < 0.5 and np.array(coord_sains)[j,
-                                                                                               :] not in np.array(
-                    coord_infectes) and chance_infecte(infectiosite):
+            if distance(np.array(coord_infectes)[k, :], np.array(coord_sains)[j, :]) < 0.5 and np.array(coord_sains)[j,:] not in np.array(coord_infectes) and chance_infecte(infectiosite):
                 coord_infectes.append(np.array(coord_sains)[j, :])
                 non_sains.append(list(np.array(coord_sains)[j, :]))
     coord_sains = remove_(coord_sains, non_sains)
     ax9.scatter(np.array(coord_sains)[:, 0], np.array(coord_sains)[:, 1], c='dodgerblue')
     ax9.scatter(np.array(coord_infectes)[:, 0], np.array(coord_infectes)[:, 1], c='firebrick')
     ax9.scatter(np.array(coord_immunises)[:, 0], np.array(coord_immunises)[:, 1], c='g')
+    ax9.scatter(np.array(coord_deces)[:, 0], np.array(coord_deces)[:, 1], c='k', alpha=0.7)
     ax9.set_title('4e vague', fontsize=8)
     ax9.axis('off')
-    ax10.pie([len(coord_infectes), len(coord_sains), len(coord_immunises)], shadow=True, autopct='%1.1f%%',
-             colors=['firebrick', 'dodgerblue', 'g'], pctdistance=1, counterclock=False)
+    ax10.pie([len(coord_infectes), len(coord_sains), len(coord_immunises), len(coord_deces)], shadow=True, autopct='%1.1f%%',colors=['firebrick', 'dodgerblue', 'g', 'dimgrey'], pctdistance=1, counterclock=False)
 
     ax11.axis('off')
     ax12.axis('off')
@@ -154,9 +162,9 @@ def virus(nb_individu, variance_population, rayon_contamination, infectiosite, p
         r'$variance \ population=%.2f$' % (variance_population,),
         r'$rayon \ de \ contamination=%.2f$' % (rayon_contamination,),
         r'$infectiosité=%.2f$' % (infectiosite,),
-        r'$proba \ dêtre \ immunisé=%.2f$' % (p,)))
-    ax.text(0.12, 0.07, textstr, horizontalalignment='left', verticalalignment='bottom', fontsize=14,
-            bbox=dict(boxstyle='round', facecolor='dodgerblue', alpha=0.6))
+        r'$proba \ dêtre \ immunisé=%.2f$' % (p,),
+        r'$proba \ de \ décès=%.2f$' % (d,)))
+    ax.text(0.12, 0.04, textstr, horizontalalignment='left', verticalalignment='bottom', fontsize=14,bbox=dict(boxstyle='round', facecolor='dodgerblue', alpha=0.6))
     plt.show()
     
     
@@ -164,7 +172,7 @@ def virus(nb_individu, variance_population, rayon_contamination, infectiosite, p
     
 """ afficher toutes les vagues (dans des fenetres différentes) jusqu'a la n-ième """
     
-def n_vagues_anim(n, nb_individu, var_population, rayon_contamination, infectiosite,p):
+def n_vagues_anim(n, nb_individu, var_population, rayon_contamination, infectiosite,p, d):
     x, y = make_blobs(n_samples=nb_individu, centers=1, cluster_std=var_population)  # création du dataset
     taille_pop = len(x)
     plt.figure()
@@ -189,27 +197,30 @@ def n_vagues_anim(n, nb_individu, var_population, rayon_contamination, infectios
     plt.axis('off')
     #vagues 2 à n
     coord_immunises = []  # on initialise
+    coord_deces = []
     for i in range(n - 2):
         plt.figure()
         non_sains = []
         coord_infectes, coord_immunises = immuniser(coord_infectes, coord_immunises, p)
+        coord_infectes, coord_deces = deces(coord_infectes, coord_deces, d)
         for k in range(len(coord_infectes)):
             for j in range(len(coord_sains)):
-                if distance(np.array(coord_infectes)[k, :],
-                            np.array(coord_sains)[j, :]) < rayon_contamination and np.array(coord_sains)[j,:] not in np.array(coord_infectes) and chance_infecte(infectiosite):
+                if distance(np.array(coord_infectes)[k, :],np.array(coord_sains)[j, :]) < rayon_contamination and np.array(coord_sains)[j,:] not in np.array(coord_infectes) and chance_infecte(infectiosite):
                     coord_infectes.append(list(np.array(coord_sains)[j, :]))
                     non_sains.append(list(np.array(coord_sains)[j, :]))
         coord_sains = remove_(coord_sains, non_sains)
         plt.scatter(np.array(coord_sains)[:, 0], np.array(coord_sains)[:, 1], c='dodgerblue')
         plt.scatter(np.array(coord_infectes)[:, 0], np.array(coord_infectes)[:, 1], c='firebrick')
         plt.scatter(np.array(coord_immunises)[:, 0], np.array(coord_immunises)[:, 1], c='g')
+        plt.scatter(np.array(coord_deces)[:, 0], np.array(coord_deces)[:, 1], c='k', alpha=0.7)
         plt.axis('off')
     plt.show()
 
-    
-""" Afficher la n-ième vague """
 
-def nieme_vague(n, nb_individu, var_population, rayon_contamination, infectiosite, p):
+    
+""" Afficher la n-ième vague avec les pourcentages """
+
+def nieme_vague(n, nb_individu, var_population, rayon_contamination, infectiosite, p, d):
     if n < 2:
         return ('error, n must be >= 2')
     if nb_individu <= 0 or var_population <= 0 or rayon_contamination <= 0:
@@ -218,12 +229,15 @@ def nieme_vague(n, nb_individu, var_population, rayon_contamination, infectiosit
         return ('error, infectiosité must be in [0,1]')
     if p < 0 or p > 1:
         return ('error, p must be in [0,1]')
+    if d < 0 or p > 1:
+        return ('error, d must be in [0,1]')
 
     # on obtient ici le resultat de la n-ieme vague
     # recommandé : nb_individu = 150, var_population = 1, rayon_contamination = 0.9, p=0.25
     # variance population correspond à l'espacement moyen des individus
     # infectiosité correspond à la proba d'un infectés de transmettre le virus
     # p est la proba de devenir immunisé
+    # d est la proba de décès
 
     # création des figures
     ax = plt.figure()
@@ -245,24 +259,24 @@ def nieme_vague(n, nb_individu, var_population, rayon_contamination, infectiosit
         else:
             coord_sains.append([x[:, 0][k], x[:, 1][k]])
     # vagues 2 à n
-    coord_immunises = []  # on initialise
+    coord_immunises = []# on initialise
+    coord_deces = []
     for i in range(n - 2):
         non_sains = []
         coord_infectes, coord_immunises = immuniser(coord_infectes, coord_immunises, p)
+        coord_infectes, coord_deces = deces(coord_infectes, coord_deces, d)
         for k in range(len(coord_infectes)):
             for j in range(len(coord_sains)):
-                if distance(np.array(coord_infectes)[k, :],
-                            np.array(coord_sains)[j, :]) < rayon_contamination and np.array(coord_sains)[j,:] not in np.array(coord_infectes) and chance_infecte(infectiosite):
+                if distance(np.array(coord_infectes)[k, :],np.array(coord_sains)[j, :]) < rayon_contamination and np.array(coord_sains)[j,:] not in np.array(coord_infectes) and chance_infecte(infectiosite):
                     coord_infectes.append(list(np.array(coord_sains)[j, :]))
                     non_sains.append(list(np.array(coord_sains)[j, :]))
         coord_sains = remove_(coord_sains, non_sains)
 
-    print(coord_immunises)
     ax1.scatter(np.array(coord_sains)[:, 0], np.array(coord_sains)[:, 1], c='dodgerblue')
     ax1.scatter(np.array(coord_infectes)[:, 0], np.array(coord_infectes)[:, 1], c='firebrick')
     ax1.scatter(np.array(coord_immunises)[:, 0], np.array(coord_immunises)[:, 1], c='g')
+    ax1.scatter(np.array(coord_deces)[:, 0], np.array(coord_deces)[:, 1], c='k')
     ax1.set_title('n-ième vague', fontsize=8)
     ax1.axis('off')
-    ax2.pie([len(coord_infectes), len(coord_sains), len(coord_immunises)], labels=('infectés', 'sains', 'immunisés'),
-            shadow=True, autopct='%1.1f%%')
+    ax2.pie([len(coord_infectes), len(coord_sains), len(coord_immunises), len(coord_deces)],colors=['firebrick', 'dodgerblue', 'g', 'dimgrey'], labels=('infectés', 'sains', 'immunisés', 'décès'),shadow=True, autopct='%1.1f%%')
     plt.show()

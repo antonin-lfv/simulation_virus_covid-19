@@ -1,6 +1,6 @@
 ## creation et etude d'un virus
 
-Ce début de projet vous propose de créer une population et un virus et de voir sa propagation au sein de cette population.
+Ce début de projet vous propose de créer une population et un virus, et de voir sa propagation au sein de cette population. Les individus infectés pourront transmettre le virus avec une certaine probabilité, et peuvent aussi devenir immunisés.
 
 Vous pouvez selectionner plusieurs paramètres :
   
@@ -13,3 +13,5 @@ Vous pouvez selectionner plusieurs paramètres :
 	• infectiosité : probabilité qu'un infecté transmette le virus dans son rayon de contamination
 
 	• p : probabilité qu'une personne infectée devienne immunisée
+	
+	• d : probabilité qu'une personne infectée décède 
