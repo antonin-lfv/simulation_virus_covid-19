@@ -14,7 +14,7 @@ def distance(x,y): #distance entre 2 points du plan cartésien
     y2 = y[1]
     return(abs(np.sqrt((y1-x1)**2+(y2-x2)**2)))
 
-def remove_(a,l): #pour supprimer de la liste des sains les nouveaux infectés 
+def remove_(a,l): #pour supprimer de la liste des sains (a) les nouveaux infectés (l)
     for i in range (len(l)):
         a.remove(l[i])
     return(list(a))
@@ -26,7 +26,7 @@ def chance_infecte(p): #return True si il devient infecté avec une proba p
     else :
         return(False)
 
-def immuniser(l, l2, p): #pour séparer la liste des infectés entre les infectés et les immunisés
+def immuniser(l, l2, p): #pour séparer la liste des infectés en infectés et immunisés
     l += l2  # on ajoute l2 pour conserver les immunisés précédents
     coord_immu = []
     l_p = l[:]  # création d'une copie pour éviter les erreurs d'indices
@@ -35,15 +35,15 @@ def immuniser(l, l2, p): #pour séparer la liste des infectés entre les infect�
         if rd.randint(0, 100) <= proba:
             coord_immu.append(l_p[i])
             list(np.delete(l, (i), axis=0))
-    return (l, coord_immu)
+    return (l, coord_immu) #l est la liste des infectés et coord_immu des immunisés
     
 """ Afficher les 4 premières vagues de contamination: """
 
 def virus(nb_individu, variance_population, rayon_contamination, infectiosite, p):
-    # recommandé : nb_individu = 120, var_population = 0.85, rayon_contamination = 0.9, infectiosite = 0.25, p = 0.5
+    #### recommandé : nb_individu = 150, var_population = 0.95, rayon_contamination = 1.1, infectiosite = 0.40, p = 0.6
     # variance population correspond à l'espacement moyen des individus
     # infectiosite correspond à la proba d'un infecté de transmettre le virus à l'interieur de son rayon
-    # p correspond à la proba d'un infecté de devenir immunisé
+    # p correspond à la proba qu'a un infecté de devenir immunisé
 
     x, y = make_blobs(n_samples=nb_individu, centers=1, cluster_std=variance_population)  # création du dataset
     ax = plt.figure(figsize=(10, 8))
@@ -89,7 +89,7 @@ def virus(nb_individu, variance_population, rayon_contamination, infectiosite, p
     ax5.pie([len(coord_infectes), len(coord_sains)], shadow=True, autopct='%1.1f%%',
             colors=['firebrick', 'dodgerblue'], pctdistance=1.5, counterclock=False)
 
-    # Afficher 2e vague avec pourcentage infectés/sains
+    # Afficher 2e vague avec pourcentage infectés/sains -- les immunisés font leur apparition
     non_sains = []
     coord_infectes, coord_immunises = immuniser(coord_infectes, [], p)
     for k in range(len(coord_infectes)):
