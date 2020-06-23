@@ -207,7 +207,7 @@ def n_vagues_anim(n, nb_individu, var_population, rayon_contamination, infectios
     plt.show()
 
     
-""" Afficher la n-ième vague """
+""" Afficher la n-ième vague avec les pourcentages """
 
 def nieme_vague(n, nb_individu, var_population, rayon_contamination, infectiosite, p):
     if n < 2:
