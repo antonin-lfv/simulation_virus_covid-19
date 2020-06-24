@@ -37,7 +37,7 @@ def immuniser(l, l2, p): #l: infectés; l2: immunisés précédents
     coord_immu += l2 #on ajoute les immunisés précédents
     return l, coord_immu
 
-def deces(l, l2, l3, p):
+def deces(l, l2, l3, p): #l: infectés; l2: décès précedents; l3: immunisés (pour ne pas qu'un immunisé décède)
     coord_deces = []
     l_p = l[:]  # création d'une copie pour éviter d'erreur d'indice
     for i in range(len(l_p)):
