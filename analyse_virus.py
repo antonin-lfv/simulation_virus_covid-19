@@ -26,26 +26,26 @@ def chance_infecte(p): #return True si il devient infecté avec une proba p
     else :
         return(False)
 
-def immuniser(l, l2, p): #pour séparer la liste des infectés en infectés et immunisés
-    l += l2  # on ajoute l2 pour conserver les immunisés précédents
+def immuniser(l, l2, p): #l: infectés; l2: immunisés précédents
     coord_immu = []
-    l_p = l[:]  # création d'une copie pour éviter les erreurs d'indices
+    l_p = l[:]  # création d'une copie pour éviter d'erreur d'indice
     for i in range(len(l_p)):
         proba = int(p * 100)
         if rd.randint(0, 100) <= proba:
             coord_immu.append(l_p[i])
             list(np.delete(l, (i), axis=0))
-    return (l, coord_immu) #l est la liste des infectés et coord_immu des immunisés
+    coord_immu += l2 #on ajoute les immunisés précédents
+    return l, coord_immu
 
-def deces(l, l2, p): #pour séparer la liste des infectés en infectés et décès
-    l += l2  # on ajoute l2 pour avoir tous les infectes
+def deces(l, l2, l3, p):
     coord_deces = []
     l_p = l[:]  # création d'une copie pour éviter d'erreur d'indice
     for i in range(len(l_p)):
         proba = int(p * 100)
-        if rd.randint(0, 100) <= proba:
+        if rd.randint(0, 100) <= proba and np.array(l_p[i]) not in np.array(l3) :
             coord_deces.append(l_p[i])
             list(np.delete(l, (i), axis=0))
+    coord_deces += l2 #on ajoute les décès précédents
     return (l, coord_deces)
 
 """ Afficher les 4 premières vagues de contamination: """
@@ -102,7 +102,7 @@ def virus(nb_individu, variance_population, rayon_contamination, infectiosite, p
     # Afficher 2e vague avec pourcentage infectés/sains
     non_sains = []
     coord_infectes, coord_immunises = immuniser(coord_infectes, [], p)
-    coord_infectes, coord_deces = deces(coord_infectes, [], d)
+    coord_infectes, coord_deces = deces(coord_infectes, [], coord_immunises, d)
     for k in range(len(coord_infectes)):
         for j in range(len(coord_sains)):
             if distance(np.array(coord_infectes)[k, :], np.array(coord_sains)[j, :]) < 0.5 and np.array(coord_sains)[j,:] not in np.array(coord_infectes) and chance_infecte(infectiosite):
@@ -121,7 +121,7 @@ def virus(nb_individu, variance_population, rayon_contamination, infectiosite, p
     # Afficher 3e vague avec pourcentage infectés/sains
     non_sains = []
     coord_infectes, coord_immunises = immuniser(coord_infectes, coord_immunises, p)
-    coord_infectes, coord_deces = deces(coord_infectes, coord_deces, d)
+    coord_infectes, coord_deces = deces(coord_infectes, coord_deces, coord_immunises, d)
     for k in range(len(coord_infectes)):
         for j in range(len(coord_sains)):
             if distance(np.array(coord_infectes)[k, :], np.array(coord_sains)[j, :]) < 0.5 and np.array(coord_sains)[j,:] not in np.array(coord_infectes) and chance_infecte(infectiosite):
@@ -140,7 +140,7 @@ def virus(nb_individu, variance_population, rayon_contamination, infectiosite, p
     # Afficher 4e vague avec pourcentage infectés/sains
     non_sains = []
     coord_infectes, coord_immunises = immuniser(coord_infectes, coord_immunises, p)
-    coord_infectes, coord_deces = deces(coord_infectes, coord_deces, d)
+    coord_infectes, coord_deces = deces(coord_infectes, coord_deces, coord_immunises, d)
     for k in range(len(coord_infectes)):
         for j in range(len(coord_sains)):
             if distance(np.array(coord_infectes)[k, :], np.array(coord_sains)[j, :]) < 0.5 and np.array(coord_sains)[j,:] not in np.array(coord_infectes) and chance_infecte(infectiosite):
@@ -202,7 +202,7 @@ def n_vagues_anim(n, nb_individu, var_population, rayon_contamination, infectios
         plt.figure()
         non_sains = []
         coord_infectes, coord_immunises = immuniser(coord_infectes, coord_immunises, p)
-        coord_infectes, coord_deces = deces(coord_infectes, coord_deces, d)
+        coord_infectes, coord_deces = deces(coord_infectes, coord_deces, coord_immunises, d)
         for k in range(len(coord_infectes)):
             for j in range(len(coord_sains)):
                 if distance(np.array(coord_infectes)[k, :],np.array(coord_sains)[j, :]) < rayon_contamination and np.array(coord_sains)[j,:] not in np.array(coord_infectes) and chance_infecte(infectiosite):
@@ -264,7 +264,7 @@ def nieme_vague(n, nb_individu, var_population, rayon_contamination, infectiosit
     for i in range(n - 2):
         non_sains = []
         coord_infectes, coord_immunises = immuniser(coord_infectes, coord_immunises, p)
-        coord_infectes, coord_deces = deces(coord_infectes, coord_deces, d)
+        coord_infectes, coord_deces = deces(coord_infectes, coord_deces, coord_immunises, d)
         for k in range(len(coord_infectes)):
             for j in range(len(coord_sains)):
                 if distance(np.array(coord_infectes)[k, :],np.array(coord_sains)[j, :]) < rayon_contamination and np.array(coord_sains)[j,:] not in np.array(coord_infectes) and chance_infecte(infectiosite):
