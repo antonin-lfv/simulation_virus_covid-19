@@ -222,11 +222,11 @@ def n_vagues_anim(n, nb_individu, var_population, rayon_contamination, infectios
                     non_sains.append(list(np.array(coord_sains)[j, :]))
         coord_sains = remove_(coord_sains, non_sains)
         if coord_sains != []:
-        plt.scatter(np.array(coord_sains)[:, 0], np.array(coord_sains)[:, 1], c='dodgerblue')
+            plt.scatter(np.array(coord_sains)[:, 0], np.array(coord_sains)[:, 1], c='dodgerblue')
         if coord_infectes != []:
-        plt.scatter(np.array(coord_infectes)[:, 0], np.array(coord_infectes)[:, 1], c='firebrick')
+            plt.scatter(np.array(coord_infectes)[:, 0], np.array(coord_infectes)[:, 1], c='firebrick')
         if coord_immunises != []:
-        plt.scatter(np.array(coord_immunises)[:, 0], np.array(coord_immunises)[:, 1], c='g')
+            plt.scatter(np.array(coord_immunises)[:, 0], np.array(coord_immunises)[:, 1], c='g')
         if coord_deces != []:
             plt.scatter(np.array(coord_deces)[:, 0], np.array(coord_deces)[:, 1], c='k', alpha=0.7)
         plt.axis('off')
