@@ -33,18 +33,18 @@ def immuniser(l, l2, p): #l: infectés; l2: immunisés précédents
         proba = int(p * 100)
         if rd.randint(0, 100) <= proba:
             coord_immu.append(l_p[i])
-            list(np.delete(l, (i), axis=0))
+            l.remove(l_p[i])
     coord_immu += l2 #on ajoute les immunisés précédents
-    return l, coord_immu
+    return list(l), coord_immu
 
-def deces(l, l2, l3, p): #l: infectés; l2: décès précedents; l3: immunisés (pour ne pas qu'un immunisé décède)
+def deces(l, l2, l3, p): #l: infectés; l2: décès précédents; l3: immunisés
     coord_deces = []
     l_p = l[:]  # création d'une copie pour éviter d'erreur d'indice
     for i in range(len(l_p)):
         proba = int(p * 100)
         if rd.randint(0, 100) <= proba and np.array(l_p[i]) not in np.array(l3) :
             coord_deces.append(l_p[i])
-            list(np.delete(l, (i), axis=0))
+            l.remove(l_p[i])
     coord_deces += l2 #on ajoute les décès précédents
     return (l, coord_deces)
 
