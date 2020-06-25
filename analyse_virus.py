@@ -105,7 +105,7 @@ def virus(nb_individu, variance_population, rayon_contamination, infectiosite, p
     coord_infectes, coord_deces = deces(coord_infectes, [], coord_immunises, d)
     for k in range(len(coord_infectes)):
         for j in range(len(coord_sains)):
-            if distance(np.array(coord_infectes)[k, :], np.array(coord_sains)[j, :]) < 0.5 and np.array(coord_sains)[j,:] not in np.array(coord_infectes) and chance_infecte(infectiosite):
+            if distance(np.array(coord_infectes)[k, :], np.array(coord_sains)[j, :]) < rayon_contamination and np.array(coord_sains)[j,:] not in np.array(coord_infectes) and chance_infecte(infectiosite):
                 coord_infectes.append(np.array(coord_sains)[j, :])
                 non_sains.append(list(np.array(coord_sains)[j, :]))
 
@@ -128,7 +128,7 @@ def virus(nb_individu, variance_population, rayon_contamination, infectiosite, p
     coord_infectes, coord_deces = deces(coord_infectes, coord_deces, coord_immunises, d)
     for k in range(len(coord_infectes)):
         for j in range(len(coord_sains)):
-            if distance(np.array(coord_infectes)[k, :], np.array(coord_sains)[j, :]) < 0.5 and np.array(coord_sains)[j,:] not in np.array(coord_infectes) and chance_infecte(infectiosite):
+            if distance(np.array(coord_infectes)[k, :], np.array(coord_sains)[j, :]) < rayon_contamination and np.array(coord_sains)[j,:] not in np.array(coord_infectes) and chance_infecte(infectiosite):
                 coord_infectes.append(np.array(coord_sains)[j, :])
                 non_sains.append(list(np.array(coord_sains)[j, :]))
     coord_sains = remove_(coord_sains, non_sains)
@@ -151,7 +151,7 @@ def virus(nb_individu, variance_population, rayon_contamination, infectiosite, p
     coord_infectes, coord_deces = deces(coord_infectes, coord_deces, coord_immunises, d)
     for k in range(len(coord_infectes)):
         for j in range(len(coord_sains)):
-            if distance(np.array(coord_infectes)[k, :], np.array(coord_sains)[j, :]) < 0.5 and np.array(coord_sains)[j,:] not in np.array(coord_infectes) and chance_infecte(infectiosite):
+            if distance(np.array(coord_infectes)[k, :], np.array(coord_sains)[j, :]) < rayon_contamination and np.array(coord_sains)[j,:] not in np.array(coord_infectes) and chance_infecte(infectiosite):
                 coord_infectes.append(np.array(coord_sains)[j, :])
                 non_sains.append(list(np.array(coord_sains)[j, :]))
     coord_sains = remove_(coord_sains, non_sains)
