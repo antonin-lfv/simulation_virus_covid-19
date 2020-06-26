@@ -1,6 +1,7 @@
 ## creation et etude d'un virus
 
-Ce début de projet vous propose de créer une population et un virus, et de voir sa propagation au sein de cette population. Les individus infectés pourront transmettre le virus avec une certaine probabilité, et peuvent aussi devenir immunisés.
+Ce projet vous propose de créer une population et un virus, et de voir sa propagation au sein de cette population. Les individus infectés pourront transmettre le virus avec une certaine probabilité, et peuvent aussi devenir immunisés ou décéder. 
+En utilisant les paramètres propres du covid-19 on peut le modeliser grossièrement.
 
 Vous pouvez selectionner plusieurs paramètres :
   
