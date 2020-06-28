@@ -2,6 +2,7 @@
 
 Ce projet vous propose de créer une population et un virus, et de voir sa propagation au sein de cette population. Les individus infectés pourront transmettre le virus avec une certaine probabilité, et peuvent aussi devenir immunisés ou décéder. 
 En utilisant les paramètres propres du covid-19 on peut le modeliser grossièrement.
+On choisira des populations de quelques dizaines à quelques milliers d'individus.
 
 Vous pouvez selectionner plusieurs paramètres :
   
