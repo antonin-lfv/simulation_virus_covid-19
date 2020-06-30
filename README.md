@@ -6,7 +6,7 @@ On choisira des populations de quelques dizaines à quelques milliers d'individu
 
 Vous pouvez selectionner plusieurs paramètres :
   
-	• nb_population : le nombre d'individu au départ
+	• nb_population : le nombre d'individus au départ
   
 	• variance_population : pour avoir une population plus ou moins étalée
  
