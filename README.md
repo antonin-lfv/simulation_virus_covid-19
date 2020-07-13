@@ -6,6 +6,12 @@ Ce projet vous propose de créer une population et un virus, et de voir sa propa
 En utilisant les paramètres propres du covid-19 on peut le modeliser grossièrement.
 On choisira des populations de quelques dizaines à quelques milliers d'individus.
 
+Cette modélisation sera réalisé avec matplotlib et avec plotly dans 2 fichiers différents.
+
+Si vous n'avez jamais utilisé plotly pensez à le télécharger :
+
+	pip install plotly
+
 Vous pouvez selectionner plusieurs paramètres :
   
 	• nb_population : le nombre d'individus au départ
