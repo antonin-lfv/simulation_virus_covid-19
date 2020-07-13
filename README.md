@@ -8,6 +8,9 @@ On choisira des populations de quelques dizaines à quelques milliers d'individu
 
 Cette modélisation sera réalisé avec matplotlib et avec plotly dans 2 fichiers différents.
 
+Si vous n'avez jamais utilisé plotly pensez à le télécharger :
+
+	pip install plotly
 
 Vous pouvez selectionner plusieurs paramètres :
   
