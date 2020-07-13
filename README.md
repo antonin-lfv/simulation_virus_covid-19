@@ -33,11 +33,11 @@ On peut également simuler un confinement de la population, en diminuant la vari
 
 Par exemple avec les paramètres :
 
-	nb_population = 1200
+		nb_population = 1200
 	
-	variance_population = 1
+		variance_population = 1
 	
-	centers = 7
+		centers = 7
 
 
 Les autres paramètres peuvent être évidemment changés.
