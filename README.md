@@ -29,7 +29,7 @@ Vous pouvez selectionner plusieurs paramètres :
 	• d : probabilité qu'une personne infectée décède 
 
 
-On peut également simuler un confinement de la population, en diminuant la variance de la population et en augmentant le nombre de centres.
+On peut également simuler un confinement de la population, en diminuant la variance de celle-ci et en augmentant le nombre de centres.
 
 Par exemple avec les paramètres :
 
