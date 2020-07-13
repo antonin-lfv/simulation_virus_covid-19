@@ -8,9 +8,11 @@ On choisira des populations de quelques dizaines à quelques milliers d'individu
 
 Cette modélisation sera réalisé avec matplotlib et avec plotly dans 2 fichiers différents.
 
+
 Si vous n'avez jamais utilisé plotly pensez à le télécharger :
 
 	pip install plotly
+
 
 Vous pouvez selectionner plusieurs paramètres :
   
@@ -25,3 +27,17 @@ Vous pouvez selectionner plusieurs paramètres :
 	• p : probabilité qu'une personne infectée devienne immunisée
 	
 	• d : probabilité qu'une personne infectée décède 
+
+
+On peut également simuler un confinement de la population, en diminuant la variance de la population et en augmentant le nombre de centres.
+
+Par exemple avec les paramètres :
+
+	nb_population = 1200
+	
+	variance_population = 1
+	
+	centers = 7
+
+
+Les autres paramètres peuvent être évidemment changés.
