@@ -10,7 +10,7 @@ Cette modélisation sera réalisée avec matplotlib et avec plotly dans 2 fichie
 
 ### Exemple de résultat
 
-![derniere_vague_plotly](https://user-images.githubusercontent.com/63207451/87424699-b0ecb000-c5dc-11ea-82cb-bcb36c6b7ac1.png)
+![simulation](https://user-images.githubusercontent.com/63207451/87425516-11c8b800-c5de-11ea-855a-641e82b8ee96.png)
 
 ### Librairie
 
@@ -18,6 +18,10 @@ Si vous n'avez jamais utilisé plotly pensez à le télécharger :
 
 
 	pip install plotly
+
+
+A chaque run d'une fonction sous plotly, une page html s'ouvrira avec le résultat.
+Pour matplotlib une simple fenêtre python s'ouvrira.
 
 
 ### Simulation
