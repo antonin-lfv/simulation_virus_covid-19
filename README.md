@@ -10,7 +10,7 @@ Cette modélisation sera réalisée avec matplotlib et avec plotly dans 2 fichie
 
 ### Exemple de résultat
 
-
+![derniere_vague_plotly](https://user-images.githubusercontent.com/63207451/87424699-b0ecb000-c5dc-11ea-82cb-bcb36c6b7ac1.png)
 
 ### Librairie
 
