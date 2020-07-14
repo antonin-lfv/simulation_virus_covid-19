@@ -8,7 +8,6 @@ On choisira des populations de quelques dizaines à quelques milliers d'individu
 
 Cette modélisation sera réalisée avec matplotlib et avec plotly dans 2 fichiers différents.
 
-![Alt text](/Users/antoninlefevre/Documents/GitHub/creation_et_propagation_virus/Résultats/derniere_vague_plotly.png?raw=true "Plotly") 
 
 Si vous n'avez jamais utilisé plotly pensez à le télécharger :
 
@@ -30,6 +29,7 @@ Vous pouvez selectionner plusieurs paramètres :
 	
 	• d : probabilité qu'une personne infectée décède 
 
+## Confinement 
 
 On peut également simuler un confinement de la population, en diminuant la variance de celle-ci et en augmentant le nombre de centres.
 
