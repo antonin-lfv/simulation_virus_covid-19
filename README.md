@@ -8,12 +8,19 @@ On choisira des populations de quelques dizaines à quelques milliers d'individu
 
 Cette modélisation sera réalisée avec matplotlib et avec plotly dans 2 fichiers différents.
 
+### Exemple de résultat
+
+
+
+### Librairie
 
 Si vous n'avez jamais utilisé plotly pensez à le télécharger :
 
 
 	pip install plotly
 
+
+### Simulation
 
 Lors de la simulation, plusieurs paramètres peuvent être changés.
 
