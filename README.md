@@ -8,8 +8,10 @@ On choisira des populations de quelques dizaines à quelques milliers d'individu
 
 Cette modélisation sera réalisée avec matplotlib et avec plotly dans 2 fichiers différents.
 
+![Alt text](/Users/antoninlefevre/Documents/GitHub/creation_et_propagation_virus/Résultats/derniere_vague_plotly.png?raw=true "Plotly") 
 
 Si vous n'avez jamais utilisé plotly pensez à le télécharger :
+
 
 	pip install plotly
 
@@ -41,3 +43,4 @@ Par exemple avec les paramètres :
 
 
 Les autres paramètres peuvent être évidemment changés.
+
