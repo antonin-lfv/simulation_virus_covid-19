@@ -1,4 +1,4 @@
-## creation et etude d'un virus
+# creation et etude d'un virus
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/1be197d831a742f5af9d86e04a70721f)](https://app.codacy.com/manual/antoninlefevre45/simulation_virus_covid-19?utm_source=github.com&utm_medium=referral&utm_content=antonin-lfv/simulation_virus_covid-19&utm_campaign=Badge_Grade_Dashboard)
 
@@ -15,7 +15,9 @@ Si vous n'avez jamais utilisé plotly pensez à le télécharger :
 	pip install plotly
 
 
-Vous pouvez selectionner plusieurs paramètres :
+Lors de la simulation, plusieurs paramètres peuvent être changés.
+
+Vous pouvez selectionner :
   
 	• nb_population : le nombre d'individus au départ
   
@@ -29,7 +31,7 @@ Vous pouvez selectionner plusieurs paramètres :
 	
 	• d : probabilité qu'une personne infectée décède 
 
-# Confinement 
+### Confinement 
 
 On peut également simuler un confinement de la population, en diminuant la variance de celle-ci et en augmentant le nombre de centres.
 
