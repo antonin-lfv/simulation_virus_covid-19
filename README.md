@@ -42,6 +42,7 @@ Vous pouvez selectionner :
 	
 	• d : probabilité qu'une personne infectée décède 
 
+
 ### Confinement 
 
 On peut également simuler un confinement de la population, en diminuant la variance de celle-ci et en augmentant le nombre de centres.
