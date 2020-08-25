@@ -91,7 +91,7 @@ def virus_px():
     "1er infecté"
     numero_infecte_1 = rd.randint(0, taille_pop) # au hasard un individu dans la population
     coord_1er_infecte = [x[:, 0][numero_infecte_1], x[:, 1][numero_infecte_1]]
-    fig.add_trace(go.Scatter(x=x[:, 0],y=x[:, 1],mode="markers",marker=dict(color="Blue"),showlegend=False),1,1) # on trace les individus sains
+    fig.add_trace(go.Scatter(x=x[:, 0],y=x[:, 1],mode="markers",marker=dict(color='#636EFA'),showlegend=False),1,1) # on trace les individus sains
     fig.add_trace(go.Scatter(x=[x[:, 0][numero_infecte_1]],y=[x[:, 1][numero_infecte_1]],mode="markers",marker=dict(color="Red"),showlegend=False),1,1) # on trace l'individu infecté
     
     "pie"
