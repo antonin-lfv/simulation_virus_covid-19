@@ -67,12 +67,12 @@ def deces(l, l2, l3, p):  # l: infectés; l2: décès précédents; l3: immunis�
 def virus_px():
     
     #paramètres
-    nb_individu = 1000 
-    variance_population = 5
-    rayon_contamination = 2
-    infectiosite = 0.7 # proba d'être infecté
-    p = 0.4 # proba d'être immunisé
-    d = 0.2 # proba de décès
+    nb_individu = 200
+    variance_population = 6
+    rayon_contamination = 5
+    infectiosite = 0.7
+    p = 0.2 #proba immunisé
+    d = 0.2 #proba de décès
 
     fig = go.Figure() #création de la figure
     
@@ -112,12 +112,12 @@ def virus_px():
         if [x[:, 0][k], x[:, 1][k]] == coord_1er_infecte:
             coord_infectes.append(coord_1er_infecte)
         elif distance(coord_1er_infecte, [x[:, 0][k], x[:, 1][k]]) < rayon_contamination and chance_infecte(infectiosite):
-            fig.add_trace(go.Scatter(x=[x[:, 0][k]], y=[x[:, 1][k]], mode="markers", marker=dict(color="DarkOrange"), showlegend=False),2,1)
+            fig.add_trace(go.Scatter(x=[x[:, 0][k]], y=[x[:, 1][k]], mode="markers", marker=dict(color='#EF553B'), showlegend=False),2,1)
             coord_infectes.append([x[:, 0][k], x[:, 1][k]])
         else:
-            fig.add_trace(go.Scatter(x=[x[:, 0][k]], y=[x[:, 1][k]], mode="markers", marker=dict(color="Blue"), showlegend=False),2,1)
+            fig.add_trace(go.Scatter(x=[x[:, 0][k]], y=[x[:, 1][k]], mode="markers", marker=dict(color='#636EFA'), showlegend=False),2,1)
             coord_sains.append([x[:, 0][k], x[:, 1][k]])
-            fig.add_trace(go.Scatter(x=[x[:, 0][numero_infecte_1]], y=[x[:, 1][numero_infecte_1]], mode="markers",marker=dict(color="Red"), showlegend=False),2,1)
+            fig.add_trace(go.Scatter(x=[x[:, 0][numero_infecte_1]], y=[x[:, 1][numero_infecte_1]], mode="markers",marker=dict(color='#EF553B'), showlegend=False),2,1)
     fig.update_xaxes(showgrid=False, visible=False, row=1, col=1) # on supprime les axes
     fig.update_yaxes(showgrid=False, visible=False, row=1, col=1)
     
@@ -141,13 +141,13 @@ def virus_px():
 
     coord_sains = remove_(coord_sains, non_sains)
     if coord_sains != []:
-        fig.add_trace(go.Scatter(x=np.array(coord_sains)[:, 0], y=np.array(coord_sains)[:, 1], mode="markers", marker=dict(color="Blue"), showlegend=False),3,1)
+        fig.add_trace(go.Scatter(x=np.array(coord_sains)[:, 0], y=np.array(coord_sains)[:, 1], mode="markers", marker=dict(color='#636EFA'), showlegend=False),3,1)
     if coord_infectes != []:
-        fig.add_trace(go.Scatter(x=np.array(coord_infectes)[:, 0], y=np.array(coord_infectes)[:, 1], mode="markers",marker=dict(color="Red"), showlegend=False),3,1)
+        fig.add_trace(go.Scatter(x=np.array(coord_infectes)[:, 0], y=np.array(coord_infectes)[:, 1], mode="markers",marker=dict(color='#EF553B'), showlegend=False),3,1)
     if coord_immunises != []:
-        fig.add_trace(go.Scatter(x=np.array(coord_immunises)[:, 0], y=np.array(coord_immunises)[:, 1], mode="markers",marker=dict(color="Green"), showlegend=False),3,1)
+        fig.add_trace(go.Scatter(x=np.array(coord_immunises)[:, 0], y=np.array(coord_immunises)[:, 1], mode="markers",marker=dict(color='#00CC96'), showlegend=False),3,1)
     if coord_deces != []:
-        fig.add_trace(go.Scatter(x=np.array(coord_deces)[:, 0], y=np.array(coord_deces)[:, 1], mode="markers",marker=dict(color="Purple"), showlegend=False),3,1)
+        fig.add_trace(go.Scatter(x=np.array(coord_deces)[:, 0], y=np.array(coord_deces)[:, 1], mode="markers",marker=dict(color='#AB63FA'), showlegend=False),3,1)
     fig.update_xaxes(showgrid=False, visible=False, row=2, col=1)
     fig.update_yaxes(showgrid=False, visible=False, row=2, col=1)
     
@@ -172,13 +172,13 @@ def virus_px():
                 non_sains.append(list(np.array(coord_sains)[j, :]))
     coord_sains = remove_(coord_sains, non_sains) # on enlève les individus sains qui sont maintenant infectés
     if coord_sains != []:
-        fig.add_trace(go.Scatter(x=np.array(coord_sains)[:, 0], y=np.array(coord_sains)[:, 1], mode="markers", marker=dict(color="Blue"), showlegend=False),4,1)
+        fig.add_trace(go.Scatter(x=np.array(coord_sains)[:, 0], y=np.array(coord_sains)[:, 1], mode="markers", marker=dict(color='#636EFA'), showlegend=False),4,1)
     if coord_infectes != []:
-        fig.add_trace(go.Scatter(x=np.array(coord_infectes)[:, 0], y=np.array(coord_infectes)[:, 1], mode="markers",marker=dict(color="Red"), showlegend=False),4,1)
+        fig.add_trace(go.Scatter(x=np.array(coord_infectes)[:, 0], y=np.array(coord_infectes)[:, 1], mode="markers",marker=dict(color='#EF553B'), showlegend=False),4,1)
     if coord_immunises != []:
-        fig.add_trace(go.Scatter(x=np.array(coord_immunises)[:, 0], y=np.array(coord_immunises)[:, 1], mode="markers",marker=dict(color="Green"), showlegend=False),4,1)
+        fig.add_trace(go.Scatter(x=np.array(coord_immunises)[:, 0], y=np.array(coord_immunises)[:, 1], mode="markers",marker=dict(color='#00CC96'), showlegend=False),4,1)
     if coord_deces != []:
-        fig.add_trace(go.Scatter(x=np.array(coord_deces)[:, 0], y=np.array(coord_deces)[:, 1], mode="markers",marker=dict(color="Purple"), showlegend=False),4,1)
+        fig.add_trace(go.Scatter(x=np.array(coord_deces)[:, 0], y=np.array(coord_deces)[:, 1], mode="markers",marker=dict(color='#AB63FA'), showlegend=False),4,1)
     fig.update_xaxes(showgrid=False, visible=False, row=3, col=1)
     fig.update_yaxes(showgrid=False, visible=False, row=3, col=1)
     
@@ -203,13 +203,13 @@ def virus_px():
                 non_sains.append(list(np.array(coord_sains)[j, :]))
     coord_sains = remove_(coord_sains, non_sains)
     if coord_sains != []:
-        fig.add_trace(go.Scatter(x=np.array(coord_sains)[:, 0], y=np.array(coord_sains)[:, 1], mode="markers", marker=dict(color="Blue"), showlegend=False),5,1)
+        fig.add_trace(go.Scatter(x=np.array(coord_sains)[:, 0], y=np.array(coord_sains)[:, 1], mode="markers", marker=dict(color='#636EFA'), showlegend=False),5,1)
     if coord_infectes != []:
-        fig.add_trace(go.Scatter(x=np.array(coord_infectes)[:, 0], y=np.array(coord_infectes)[:, 1], mode="markers",marker=dict(color="Red"), showlegend=False),5,1)
+        fig.add_trace(go.Scatter(x=np.array(coord_infectes)[:, 0], y=np.array(coord_infectes)[:, 1], mode="markers",marker=dict(color='#EF553B'), showlegend=False),5,1)
     if coord_immunises != []:
-        fig.add_trace(go.Scatter(x=np.array(coord_immunises)[:, 0], y=np.array(coord_immunises)[:, 1], mode="markers",marker=dict(color="Green"), showlegend=False),5,1)
+        fig.add_trace(go.Scatter(x=np.array(coord_immunises)[:, 0], y=np.array(coord_immunises)[:, 1], mode="markers",marker=dict(color='#00CC96'), showlegend=False),5,1)
     if coord_deces != []:
-        fig.add_trace(go.Scatter(x=np.array(coord_deces)[:, 0], y=np.array(coord_deces)[:, 1], mode="markers",marker=dict(color="Purple"), showlegend=False),5,1)
+        fig.add_trace(go.Scatter(x=np.array(coord_deces)[:, 0], y=np.array(coord_deces)[:, 1], mode="markers",marker=dict(color='#AB63FA'), showlegend=False),5,1)
     fig.update_xaxes(showgrid=False, visible=False, row=4, col=1)
     fig.update_yaxes(showgrid=False, visible=False, row=4, col=1)
     
@@ -224,10 +224,10 @@ def virus_px():
     "courbes"
     x_courbe = list(np.arange(0, len(courbe_sains)))
     # on trace les courbes finales
-    fig.add_trace(go.Scatter(x=x_courbe,y=courbe_sains,marker=dict(color="Blue"), name="sain",showlegend=False),6,1)
-    fig.add_trace(go.Scatter(x=x_courbe,y=courbe_infectes,marker=dict(color="Red"), name="infecté",showlegend=False),6,1)
-    fig.add_trace(go.Scatter(x=x_courbe,y=courbe_immunises,marker=dict(color="Green"), name="immunisé", showlegend=False),6,1)
-    fig.add_trace(go.Scatter(x=x_courbe,y=courbe_deces,marker=dict(color="Black"),name="décédé",showlegend=False),6,1)
+    fig.add_trace(go.Scatter(x=x_courbe,y=courbe_sains,marker=dict(color='#636EFA'), name="sain",showlegend=False),6,1)
+    fig.add_trace(go.Scatter(x=x_courbe,y=courbe_infectes,marker=dict(color='#EF553B'), name="infecté",showlegend=False),6,1)
+    fig.add_trace(go.Scatter(x=x_courbe,y=courbe_immunises,marker=dict(color='#00CC96'), name="immunisé", showlegend=False),6,1)
+    fig.add_trace(go.Scatter(x=x_courbe,y=courbe_deces,marker=dict(color='#AB63FA'),name="décédé",showlegend=False),6,1)
     fig.update_traces(
         hoverinfo="name+x+y", # affichage du curseur avec la souris
         line={"width": 1.2},
