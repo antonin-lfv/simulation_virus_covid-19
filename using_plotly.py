@@ -67,8 +67,8 @@ def deces(l, l2, l3, p):  # l: infectés; l2: décès précédents; l3: immunis�
 def virus_px():
     
     #paramètres
-    nb_individu = 200
-    variance_population = 6
+    nb_individu = 300
+    variance_population = 7
     rayon_contamination = 5
     infectiosite = 0.7
     p = 0.2 #proba immunisé
