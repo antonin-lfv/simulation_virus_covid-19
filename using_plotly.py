@@ -70,9 +70,9 @@ def virus_px():
     nb_individu = 1000 
     variance_population = 5
     rayon_contamination = 2
-    infectiosite = 0.7
-    p = 0.4 
-    d = 0.2 #proba de décès
+    infectiosite = 0.7 # proba d'être infecté
+    p = 0.4 # proba d'être immunisé
+    d = 0.2 # proba de décès
 
     fig = go.Figure() #création de la figure
     
