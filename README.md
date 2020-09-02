@@ -1,4 +1,5 @@
 Ce projet est accompagné d'un article disponible sur le site MachineLearnia à l'adresse suivante : 
+
 ( à venir )
 
 # simulation épidémiologique 
