@@ -1,4 +1,6 @@
-# création et étude d'un virus
+Ce projet est accompagné d'un article disponible sur le site MachineLearnia à l'adresse suivante : ( à venir )
+
+# simulation épidémiologique 
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/1be197d831a742f5af9d86e04a70721f)](https://app.codacy.com/manual/antoninlefevre45/simulation_virus_covid-19?utm_source=github.com&utm_medium=referral&utm_content=antonin-lfv/simulation_virus_covid-19&utm_campaign=Badge_Grade_Dashboard)
 
