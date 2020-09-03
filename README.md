@@ -1,14 +1,13 @@
-Ce projet est accompagné d'un article disponible sur le site MachineLearnia à l'adresse suivante : 
-
-( à venir )
 
 # simulation épidémiologique 
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/1be197d831a742f5af9d86e04a70721f)](https://app.codacy.com/manual/antoninlefevre45/simulation_virus_covid-19?utm_source=github.com&utm_medium=referral&utm_content=antonin-lfv/simulation_virus_covid-19&utm_campaign=Badge_Grade_Dashboard)
 
-Ce projet vous propose de créer un virus, et de simuler sa propagation au sein d'une population. Les individus infectés pourront transmettre le virus avec une certaine probabilité, et peuvent aussi devenir immunisés ou bien décéder. 
-En utilisant les paramètres propres du covid-19 on peut le modeliser grossièrement.
-On choisira des populations de quelques dizaines à quelques milliers d'individus.
+Article lié à ce github : ( à venir )
+
+Ce projet à pour but de créer un virus, et de simuler sa propagation au sein d'une population. Les individus infectés pourront transmettre le virus avec une certaine probabilité, et peuvent aussi devenir immunisés ou bien décéder. 
+En utilisant les paramètres propres du covid-19 on peut modeliser grossièrement ce dernier.
+On choisira des populations de quelques dizaines à quelques milliers d'individus et on supposera qu'un individu immunisé ne peut plus devenir infecté.
 
 Cette modélisation sera réalisée avec matplotlib et avec plotly dans 2 fichiers différents.
 
@@ -18,7 +17,13 @@ Cette modélisation sera réalisée avec matplotlib et avec plotly dans 2 fichie
 
 ### Librairie
 
-Si vous n'avez jamais utilisé plotly pensez à le télécharger :
+on importera Matplotlib.pyplot sous plt :
+
+	
+	import matplotlib.pyplot as plt
+	
+
+Et si vous n'avez jamais utilisé plotly pensez à le télécharger :
 
 
 	pip install plotly
