@@ -23,7 +23,7 @@ Si vous n'avez jamais utilisé plotly pensez à le télécharger via la console 
 	pip install plotly
 
 
-Documentation plotly : https://plotly.com/python/
+Documentation plotly: <https://plotly.com/python/>
 
 A chaque exécution d'une fonction sous plotly, une page html s'ouvrira avec le résultat.
 
