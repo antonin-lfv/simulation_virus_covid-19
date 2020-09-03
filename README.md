@@ -9,7 +9,7 @@ Ce projet à pour objectifs de créer un virus, et de simuler sa propagation au 
 En utilisant les paramètres propres du covid-19 on peut modeliser grossièrement ce dernier.
 
 On choisira des populations de quelques dizaines à quelques milliers d'individus et on supposera qu'un individu immunisé ne peut plus être infecté.
-Cette modélisation sera réalisée avec matplotlib et avec plotly dans 2 fichiers différents.
+Cette modélisation sera réalisée avec matplotlib puis avec plotly dans 2 fichiers différents.
 
 ### Exemple de résultat sous plotly
 
