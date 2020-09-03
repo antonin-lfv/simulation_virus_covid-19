@@ -16,25 +16,21 @@ Cette modélisation sera réalisée avec matplotlib et avec plotly dans 2 fichie
 
 ![simulation](https://user-images.githubusercontent.com/63207451/87425516-11c8b800-c5de-11ea-855a-641e82b8ee96.png)
 
-### Librairie
+### Librairies
 
-on importera Matplotlib.pyplot sous plt :
-
-	
-	import matplotlib.pyplot as plt
-	
-
-Et si vous n'avez jamais utilisé plotly pensez à le télécharger :
+Si vous n'avez jamais utilisé plotly pensez à le télécharger via la console :
 
 
 	pip install plotly
 
 
-A chaque run d'une fonction sous plotly, une page html s'ouvrira avec le résultat.
-Pour matplotlib une simple fenêtre python s'ouvrira.
+Documentation plotly : https://plotly.com/python/
+
+A chaque exécution d'une fonction sous plotly, une page html s'ouvrira avec le résultat.
+Pour matplotlib une simple fenêtre python s'ouvrira (ou plus).
 
 
-### Simulation
+### Simulation de la propagation
 
 Lors de la simulation, plusieurs paramètres peuvent être changés.
 
@@ -44,7 +40,7 @@ Vous pouvez selectionner :
   
 	• variance_population : pour avoir une population plus ou moins étalée
  
- 	• rayon_contamination : qui détermine le rayon dans lequel un individu infecté infecte un individu sain
+ 	• rayon_contamination : qui détermine le rayon dans lequel un individu infecté peut infecter un individu sain
 	
 	• infectiosité : probabilité qu'un infecté transmette le virus dans son rayon de contamination
 
@@ -52,9 +48,9 @@ Vous pouvez selectionner :
 	
 	• d : probabilité qu'une personne infectée décède 
 
-Au début de chaques fonctions, des paramètres vous sont recommandés pour profiter au mieux du résultat.
+Au début de chaques fonctions, des paramètres vous sont recommandés pour profiter au mieux du résultat. 
 
-### Confinement 
+### Simuler un confinement 
 
 On peut également simuler un confinement de la population, en diminuant la variance de celle-ci et en augmentant le nombre de centres.
 
