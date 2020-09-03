@@ -6,6 +6,7 @@
 Article lié à ce github : ( à venir )
 
 Ce projet à pour but de créer un virus, et de simuler sa propagation au sein d'une population. Les individus infectés pourront transmettre le virus avec une certaine probabilité, et peuvent aussi devenir immunisés ou bien décéder. 
+
 En utilisant les paramètres propres du covid-19 on peut modeliser grossièrement ce dernier.
 On choisira des populations de quelques dizaines à quelques milliers d'individus et on supposera qu'un individu immunisé ne peut plus devenir infecté.
 
@@ -51,6 +52,7 @@ Vous pouvez selectionner :
 	
 	• d : probabilité qu'une personne infectée décède 
 
+Au début de chaques fonctions, des paramètres vous sont recommandés pour profiter au mieux du résultat.
 
 ### Confinement 
 
