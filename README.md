@@ -6,10 +6,9 @@
 Article lié à ce github : ( à venir )
 
 Ce projet à pour objectifs de créer un virus, et de simuler sa propagation au sein d'une population. Les individus infectés pourront transmettre le virus avec une certaine probabilité, et peuvent aussi devenir immunisés ou bien décéder. 
-
 En utilisant les paramètres propres du covid-19 on peut modeliser grossièrement ce dernier.
-On choisira des populations de quelques dizaines à quelques milliers d'individus et on supposera qu'un individu immunisé ne peut plus devenir infecté.
 
+On choisira des populations de quelques dizaines à quelques milliers d'individus et on supposera qu'un individu immunisé ne peut plus être infecté.
 Cette modélisation sera réalisée avec matplotlib et avec plotly dans 2 fichiers différents.
 
 ### Exemple de résultat sous plotly
