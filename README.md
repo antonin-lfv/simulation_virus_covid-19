@@ -72,7 +72,20 @@ Par exemple avec les paramètres :
 	
 	variance_population = 1
 	
-	centers = 7
+	centers = 7 ( dans la fonction make_blobs de l'algorithme )
+	
+	rayon = 2
+	
+	infectiosité = 0.7
+	
+	p = 0.4
+	
+	d = 0.3
+
+<br/>
+
+On obtient :
+
 <br/>
 
 Les autres paramètres peuvent être évidemment changés.
