@@ -10,12 +10,12 @@ En utilisant les paramètres propres du covid-19 on peut modeliser grossièremen
 
 On choisira des populations de quelques dizaines à quelques milliers d'individus et on supposera qu'un individu immunisé ne peut plus être infecté.
 Cette modélisation sera réalisée avec matplotlib puis avec plotly dans 2 fichiers différents.
-<br/>
+<br/><br/>
 
 ## Exemple de résultats sous plotly 
 
 ![simulation](https://user-images.githubusercontent.com/63207451/87425516-11c8b800-c5de-11ea-855a-641e82b8ee96.png)
-<br/>
+<br/><br/>
 
 ## Librairies 
 
@@ -30,7 +30,7 @@ Documentation plotly: <https://plotly.com/python/>
 A chaque exécution d'une fonction sous plotly, une page html s'ouvrira avec le résultat.
 
 Pour matplotlib une simple fenêtre python apparaîtra (ou plus).
-<br/>
+<br/><br/>
 
 ## Simulation de la propagation
 
@@ -63,7 +63,7 @@ Probabilité entre 0 et 1, qui détermine si les individus peuvent résister à 
 Pribabilité comprise entre 0 et 1, qui renseigne sur la létalité du virus.<br/><br/>
 
 Au début de chaques fonctions, des paramètres vous sont recommandés pour profiter au mieux du résultat. 
-<br/>
+<br/><br/>
 
 ## Simuler un confinement 
 
