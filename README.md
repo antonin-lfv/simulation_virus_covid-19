@@ -1,6 +1,6 @@
 
 # simulation épidémiologique 
-
+<br/>
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/1be197d831a742f5af9d86e04a70721f)](https://app.codacy.com/manual/antoninlefevre45/simulation_virus_covid-19?utm_source=github.com&utm_medium=referral&utm_content=antonin-lfv/simulation_virus_covid-19&utm_campaign=Badge_Grade_Dashboard)
 
 Article lié à ce github : ( à venir )
@@ -14,11 +14,13 @@ Cette modélisation sera réalisée avec matplotlib puis avec plotly dans 2 fich
 
 ## Exemple de résultats sous plotly 
 
+<br/>
 ![simulation](https://user-images.githubusercontent.com/63207451/87425516-11c8b800-c5de-11ea-855a-641e82b8ee96.png)
 <br/><br/>
 
 ## Librairies 
 
+<br/>
 Si vous n'avez jamais utilisé plotly pensez à le télécharger via la console :
 
 
@@ -34,6 +36,7 @@ Pour matplotlib une simple fenêtre python apparaîtra (ou plus).
 
 ## Simulation de la propagation
 
+<br/>
 Lors de la simulation, plusieurs paramètres peuvent être changés.
 
 Vous pouvez selectionner :
@@ -67,6 +70,7 @@ Au début de chaques fonctions, des paramètres vous sont recommandés pour prof
 
 ## Simuler un confinement 
 
+<br/>
 On peut également simuler un confinement de la population, en diminuant la variance de celle-ci et en augmentant le nombre de centres.<br/>
 
 Par exemple avec les paramètres :
