@@ -38,7 +38,7 @@ Vous pouvez selectionner :
   
 		• nb_population : le nombre d'individus au départ
 
-Ce chiffre peut varier entre 0 et 2000 pour optimiser le temps d'éxecution. </br>
+Ce chiffre peut varier entre 0 et 2000 pour optimiser le temps d'éxecution.  
   
   
   
