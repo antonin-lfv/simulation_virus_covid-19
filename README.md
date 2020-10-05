@@ -38,46 +38,33 @@ Vous pouvez selectionner :
   
 		• nb_population : le nombre d'individus au départ. 
 
-Ce chiffre peut varier entre 0 et 2000 pour optimiser le temps d'éxecution.  
-  
-<br/>
+Ce chiffre peut varier entre 0 et 2000 pour optimiser le temps d'éxecution.<br/><br/>
   
 		• variance_population : pour avoir une population plus ou moins étalée. 
 
-Elle variera entre 0 et 10 pour des populations inférieures à 2000 individus.
-  
-  
+Elle variera entre 0 et 10 pour des populations inférieures à 2000 individus.<br/><br/>
  
  		• rayon_contamination : qui détermine le rayon dans lequel un individu infecté peut infecter un individu sain. 
 
-Il devra être choisi en fonction de la variance, pour éviter l'arrêt prématuré de la simulation.
+Il devra être choisi en fonction de la variance, pour éviter l'arrêt prématuré de la simulation.<br/><br/>
   
-  
-	
 		• infectiosité : probabilité qu'un infecté transmette le virus dans son rayon de contamination. 
 
-Probabilité compris entre 0 et 1, à choisir selon le degrés d'infectiosité de l'épidémie à simuler.
-  
-  
+Probabilité compris entre 0 et 1, à choisir selon le degrés d'infectiosité de l'épidémie à simuler.<br/><br/>
 
 		• p : probabilité qu'une personne infectée devienne immunisée. 
 	
-Probabilité entre 0 et 1, qui détermine si les individus peuvent résister à l'épidémie.
-  
-  
+Probabilité entre 0 et 1, qui détermine si les individus peuvent résister à l'épidémie.<br/><br/>
 	  
 		• d : probabilité qu'une personne infectée décède.    
 
-Pribabilité comprise entre 0 et 1, qui renseigne sur la létalité du virus.
-  
-  
-  
+Pribabilité comprise entre 0 et 1, qui renseigne sur la létalité du virus.<br/><br/>
 
 Au début de chaques fonctions, des paramètres vous sont recommandés pour profiter au mieux du résultat. 
 
 ### Simuler un confinement 
 
-On peut également simuler un confinement de la population, en diminuant la variance de celle-ci et en augmentant le nombre de centres.
+On peut également simuler un confinement de la population, en diminuant la variance de celle-ci et en augmentant le nombre de centres.<br/>
 
 Par exemple avec les paramètres :
 
@@ -86,7 +73,7 @@ Par exemple avec les paramètres :
 	variance_population = 1
 	
 	centers = 7
-
+<br/>
 
 Les autres paramètres peuvent être évidemment changés.
 
