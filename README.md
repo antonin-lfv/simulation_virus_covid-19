@@ -40,7 +40,7 @@ Pour matplotlib une simple fenêtre python apparaîtra (ou plus).
 
 <br/>
 Lors de la simulation, plusieurs paramètres peuvent être changés.
-
+<br/>
 Vous pouvez selectionner :
   
 		• nb_population : le nombre d'individus au départ. 
