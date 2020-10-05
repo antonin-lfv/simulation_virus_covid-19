@@ -86,6 +86,8 @@ Par exemple avec les paramètres :
 
 On obtient :
 
+![confinement](https://user-images.githubusercontent.com/63207451/95127775-d5c66e80-0758-11eb-9a50-2f7285ea596f.png)
+
 <br/>
 
 Les autres paramètres peuvent être évidemment changés.
