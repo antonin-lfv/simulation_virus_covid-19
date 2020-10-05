@@ -17,7 +17,7 @@ Cette modélisation sera réalisée avec matplotlib puis avec plotly dans 2 fich
 ![simulation](https://user-images.githubusercontent.com/63207451/87425516-11c8b800-c5de-11ea-855a-641e82b8ee96.png)
 <br/>
 
-### Librairies 
+## Librairies 
 
 Si vous n'avez jamais utilisé plotly pensez à le télécharger via la console :
 
@@ -32,7 +32,7 @@ A chaque exécution d'une fonction sous plotly, une page html s'ouvrira avec le 
 Pour matplotlib une simple fenêtre python apparaîtra (ou plus).
 <br/>
 
-### Simulation de la propagation
+## Simulation de la propagation
 
 Lors de la simulation, plusieurs paramètres peuvent être changés.
 
@@ -65,7 +65,7 @@ Pribabilité comprise entre 0 et 1, qui renseigne sur la létalité du virus.<br
 Au début de chaques fonctions, des paramètres vous sont recommandés pour profiter au mieux du résultat. 
 <br/>
 
-### Simuler un confinement 
+## Simuler un confinement 
 
 On peut également simuler un confinement de la population, en diminuant la variance de celle-ci et en augmentant le nombre de centres.<br/>
 
