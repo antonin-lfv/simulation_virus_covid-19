@@ -37,12 +37,10 @@ Pour matplotlib une simple fenêtre python apparaîtra (ou plus).
 <br/><br/>
 
 ## Simulation de la propagation
-
-<br/>
 Lors de la simulation, plusieurs paramètres peuvent être changés.  
-<br/>
+ <br/>
 Vous pouvez selectionner :  
-<br/>
+ <br/>
   
 		• nb_population : le nombre d'individus au départ. 
 
