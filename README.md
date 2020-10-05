@@ -99,5 +99,4 @@ On obtient la simulation suivante :
 
 <br/>
 
-Les autres paramètres peuvent être évidemment changés.
 
