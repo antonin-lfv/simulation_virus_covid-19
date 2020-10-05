@@ -36,27 +36,27 @@ Lors de la simulation, plusieurs paramètres peuvent être changés.
 
 Vous pouvez selectionner :
   
-	• nb_population : le nombre d'individus au départ
+		• nb_population : le nombre d'individus au départ
 
 Ce chiffre peut varier entre 0 et 2000 pour optimiser le temps d'éxecution. 
   
-	• variance_population : pour avoir une population plus ou moins étalée
+		• variance_population : pour avoir une population plus ou moins étalée
 
 Elle variera entre 0 et 10 pour des populations inférieures à 2000 individus.
  
- 	• rayon_contamination : qui détermine le rayon dans lequel un individu infecté peut infecter un individu sain
+ 		• rayon_contamination : qui détermine le rayon dans lequel un individu infecté peut infecter un individu sain
 
 Il devra être choisi en fonction de la variance, pour éviter l'arrêt prématuré de la simulation.
 	
-	• infectiosité : probabilité qu'un infecté transmette le virus dans son rayon de contamination
+		• infectiosité : probabilité qu'un infecté transmette le virus dans son rayon de contamination
 
 Probabilité compris entre 0 et 1, à choisir selon le degrés d'infectiosité de l'épidémie à simuler.
 
-	• p : probabilité qu'une personne infectée devienne immunisée
-
+		• p : probabilité qu'une personne infectée devienne immunisée
+	
 Probabilité entre 0 et 1, qui détermine si les individus peuvent résister à l'épidémie.
 	
-	• d : probabilité qu'une personne infectée décède 
+		• d : probabilité qu'une personne infectée décède 
 
 Pribabilité comprise entre 0 et 1, qui renseigne sur la létalité du virus.
 
