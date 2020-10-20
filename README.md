@@ -24,6 +24,7 @@ Lien utile pour comprendre le modèle SIR : <https://interstices.info/modeliser-
 
 <img width="1369" alt="Capture d’écran 2020-10-20 à 20 19 08" src="https://user-images.githubusercontent.com/63207451/96627714-8ca61b00-1311-11eb-9add-7888a22c6732.png">
 
+<br/>
 
 ## Librairies 
 
