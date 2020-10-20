@@ -267,6 +267,7 @@ def vague_seuil_px():
     courbe_infectes = []
     courbe_immunises = []
     courbe_deces = []
+    courbe_removed = [] # somme des immunisés + décès
 
     # dataset
     x, y = make_blobs(n_samples=nb_individu, centers=2, cluster_std=variance_population)  # création du dataset
@@ -278,6 +279,7 @@ def vague_seuil_px():
     courbe_infectes.append(1)
     courbe_immunises.append(0)
     courbe_deces.append(0)
+    courbe_removed.append(0)
 
     # 1er vague
     coord_infectes = []  # cette liste sera implémentée des nouveaux cas
@@ -295,6 +297,7 @@ def vague_seuil_px():
     courbe_infectes.append(len(coord_infectes))
     courbe_immunises.append(0)
     courbe_deces.append(0)
+    courbe_removed.append(0)
 
     # vagues 2 à la fin
     coord_immunises = []  # on initialise
@@ -317,6 +320,7 @@ def vague_seuil_px():
         courbe_infectes.append(len(coord_infectes))
         courbe_immunises.append(len(coord_immunises))
         courbe_deces.append(len(coord_deces))
+        courbe_removed.append(len(coord_deces)+len(coord_immunises))
         i += 1 # vague suivante
         
     # on trace les individus de la dernière vague si il y en a 
@@ -343,10 +347,11 @@ def vague_seuil_px():
     fig.add_trace(go.Scatter(x=x_courbe, y=courbe_infectes,  marker=dict(color='#EF553B'), showlegend=False, name="infectés", yaxis="y2",),2,1)
     fig.add_trace(go.Scatter(x=x_courbe, y=courbe_immunises, marker=dict(color='#00CC96'), showlegend=False, name="immunisés", yaxis="y3",),2,1)
     fig.add_trace(go.Scatter(x=x_courbe, y=courbe_deces, marker=dict(color='#AB63FA'), showlegend=False, name="décédés", yaxis="y4",),2,1)
+    fig.add_trace(go.Scatter(x=x_courbe, y=courbe_removed, marker=dict(color='#000000'), showlegend=False, name="removed", yaxis="y5",),2,1)
     fig.update_xaxes(title_text="vague", row=2, col=1) # nom abscisses
     fig.update_yaxes(title_text="nombre d'individus", row=2, col=1) # nom ordonnées
     fig.add_annotation(text="Maximum d'infectés", x=courbe_infectes.index(max(courbe_infectes)), # ajouter un texte avec une flèche au pic d'infectés
-                   y=max(courbe_infectes)+0.05*taille_pop, arrowhead=1, showarrow=True,row=2,col=1)
+                   y=max(courbe_infectes)+0.03*taille_pop, arrowhead=1, showarrow=True,row=2,col=1)
     fig.update_traces(
         hoverinfo="name+x+y", # affichage du curseur de la souris sur le point
         line={"width": 1.2},
