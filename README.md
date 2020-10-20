@@ -6,7 +6,7 @@
 
 Article lié à ce github : ( à venir )
 
-Ce projet à pour objectifs de créer un virus, et de simuler sa propagation au sein d'une population. Les individus infectés pourront transmettre le virus avec une certaine probabilité, et peuvent aussi devenir immunisés ou bien décéder. 
+Ce projet à pour objectifs de créer un __virus__, et de simuler sa propagation au sein d'une population. Les individus infectés pourront transmettre le virus avec une certaine probabilité, et peuvent aussi devenir immunisés ou bien décéder. 
 En utilisant les paramètres propres du covid-19 on peut modeliser grossièrement ce dernier.
 
 On choisira des populations de quelques dizaines à quelques milliers d'individus et on supposera qu'un individu immunisé ne peut plus être infecté.
@@ -77,7 +77,7 @@ Au début de chaques fonctions, des paramètres vous sont recommandés pour prof
 
 ## Simuler un confinement 
 <br/>
-On peut également simuler un confinement de la population, en diminuant la variance de celle-ci et en augmentant le nombre de centres, c'est à dire le nombre de groupes d'individus dans la population.  
+On peut également simuler un __confinement__ de la population, en diminuant la variance de celle-ci et en augmentant le nombre de centres, c'est à dire le nombre de groupes d'individus dans la population.  
 <br/>
 
 Par exemple avec les paramètres :
