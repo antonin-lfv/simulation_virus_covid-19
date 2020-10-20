@@ -13,7 +13,7 @@ On choisira des populations de quelques dizaines à quelques milliers d'individu
 Cette modélisation sera réalisée avec matplotlib puis avec plotly dans 2 fichiers différents.
 <br/><br/>
 
-## Exemple de résultats sous plotly 
+## Résultats sous plotly 
 <br/>
 
 __UPDATE :__ 
