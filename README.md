@@ -16,6 +16,10 @@ Cette modélisation sera réalisée avec matplotlib puis avec plotly dans 2 fich
 ## Exemple de résultats sous plotly 
 
 <br/>
+####Update 
+Ajout de la courbe 'removed' qui correspond aux personnes ne pouvant plus transmettre le virus, il correspond à la somme des personnes immunisés et décédés. Elle est ajoutée dans le but de pouvoir comparer les résultats à un modèle mathématiques, le modèle SIR.
+
+<br/>
 
 ![simulation](https://user-images.githubusercontent.com/63207451/87425516-11c8b800-c5de-11ea-855a-641e82b8ee96.png)
 <br/><br/>
