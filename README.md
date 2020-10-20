@@ -100,7 +100,8 @@ Par exemple avec les paramètres :
 
 On obtient la simulation suivante :
 
-![confinement](https://user-images.githubusercontent.com/63207451/95127775-d5c66e80-0758-11eb-9a50-2f7285ea596f.png)
+<img width="1440" alt="Capture d’écran 2020-10-20 à 22 00 20" src="https://user-images.githubusercontent.com/63207451/96637946-b2d2b780-131f-11eb-9695-5abf95c5b6dd.png">
+
 
 <br/>
 
