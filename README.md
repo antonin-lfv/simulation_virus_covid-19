@@ -77,7 +77,7 @@ Au début de chaques fonctions, des paramètres vous sont recommandés pour prof
 
 ## Simuler un confinement 
 <br/>
-On peut également simuler un __confinement__ de la population, en diminuant la variance de celle-ci et en augmentant le nombre de centres, c'est à dire le nombre de groupes d'individus dans la population.  
+On peut également simuler un __confinement__  de la population, en diminuant la variance de celle-ci et en augmentant le nombre de centres, c'est à dire le nombre de groupes d'individus dans la population.  
 <br/>
 
 Par exemple avec les paramètres :
