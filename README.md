@@ -18,7 +18,7 @@ Cette modélisation sera réalisée avec matplotlib puis avec plotly dans 2 fich
 
 __UPDATE :__ 
 Ajout de la courbe 'removed', courbe noire, qui correspond aux personnes ne pouvant plus transmettre le virus, il correspond à la somme des personnes immunisés et décédés. Elle est ajoutée dans le but de pouvoir comparer les résultats de la simulation à un modèle mathématiques, le modèle SIR. <br/><br/>
-Lien utile pour comprendre le modèle SIR : [Modèle SIR](https://interstices.info/modeliser-la-propagation-dune-epidemie/) .
+Lien utile pour comprendre le [Modèle SIR](https://interstices.info/modeliser-la-propagation-dune-epidemie/) .
 
 <br/>
 
@@ -35,7 +35,7 @@ Si vous n'avez jamais utilisé plotly pensez à le télécharger via la console 
 	pip install plotly
 
 
-Documentation plotly: [Plotly](https://plotly.com/python/)
+Documentation [Plotly](https://plotly.com/python/) .
 
 A chaque exécution d'une fonction sous plotly, une page html s'ouvrira avec le résultat.
 
@@ -48,11 +48,11 @@ Lors de la simulation, plusieurs paramètres peuvent être changés.
 Vous pouvez selectionner :  
  <br/>
   
-		* nb_population : le nombre d'individus au départ. 
+* nb_population : le nombre d'individus au départ. 
 
 Ce chiffre peut varier entre 0 et 2000 pour optimiser le temps d'éxecution.<br/><br/>
   
-		* variance_population : pour avoir une population plus ou moins étalée. 
+* variance_population : pour avoir une population plus ou moins étalée. 
 
 Elle variera entre 0 et 10 pour des populations inférieures à 2000 individus.<br/><br/>
  
