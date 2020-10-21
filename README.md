@@ -18,7 +18,7 @@ Cette modélisation sera réalisée avec matplotlib puis avec plotly dans 2 fich
 
 __UPDATE :__ 
 Ajout de la courbe 'removed', courbe noire, qui correspond aux personnes ne pouvant plus transmettre le virus, il correspond à la somme des personnes immunisés et décédés. Elle est ajoutée dans le but de pouvoir comparer les résultats de la simulation à un modèle mathématiques, le modèle SIR. <br/><br/>
-Lien utile pour comprendre le modèle SIR : <https://interstices.info/modeliser-la-propagation-dune-epidemie/>
+Lien utile pour comprendre le modèle SIR : [Modèle SIR](https://interstices.info/modeliser-la-propagation-dune-epidemie/) .
 
 <br/>
 
@@ -35,7 +35,7 @@ Si vous n'avez jamais utilisé plotly pensez à le télécharger via la console 
 	pip install plotly
 
 
-Documentation plotly: <https://plotly.com/python/>
+Documentation plotly: [Plotly](https://plotly.com/python/)
 
 A chaque exécution d'une fonction sous plotly, une page html s'ouvrira avec le résultat.
 
@@ -48,27 +48,27 @@ Lors de la simulation, plusieurs paramètres peuvent être changés.
 Vous pouvez selectionner :  
  <br/>
   
-		• nb_population : le nombre d'individus au départ. 
+		* nb_population : le nombre d'individus au départ. 
 
 Ce chiffre peut varier entre 0 et 2000 pour optimiser le temps d'éxecution.<br/><br/>
   
-		• variance_population : pour avoir une population plus ou moins étalée. 
+		* variance_population : pour avoir une population plus ou moins étalée. 
 
 Elle variera entre 0 et 10 pour des populations inférieures à 2000 individus.<br/><br/>
  
- 		• rayon_contamination : qui détermine le rayon dans lequel un individu infecté peut infecter un individu sain. 
+ 		* rayon_contamination : qui détermine le rayon dans lequel un individu infecté peut infecter un individu sain. 
 
 Il devra être choisi en fonction de la variance, pour éviter l'arrêt prématuré de la simulation.<br/><br/>
   
-		• infectiosité : probabilité qu'un infecté transmette le virus dans son rayon de contamination à un individu sain. 
+		* infectiosité : probabilité qu'un infecté transmette le virus dans son rayon de contamination à un individu sain. 
 
 Probabilité compris entre 0 et 1, à choisir selon le degrés d'infectiosité de l'épidémie à simuler.<br/><br/>
 
-		• p : probabilité qu'une personne infectée devienne immunisée. 
+		* p : probabilité qu'une personne infectée devienne immunisée. 
 	
 Probabilité entre 0 et 1, qui détermine si les individus peuvent résister à l'épidémie.<br/><br/>
 	  
-		• d : probabilité qu'une personne infectée décède.    
+		* d : probabilité qu'une personne infectée décède.    
 
 Pribabilité comprise entre 0 et 1, qui renseigne sur la létalité du virus.<br/><br/>
 
