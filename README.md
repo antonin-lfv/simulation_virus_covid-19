@@ -82,19 +82,19 @@ On peut également simuler un confinement de la population, en diminuant la vari
 
 Par exemple avec les paramètres :
 
-	nb_population = 1200
+		nb_population = 1200
 	
-	variance_population = 1
+		variance_population = 1
 	
-	centers = 7 ( dans la fonction make_blobs de l'algorithme )
+		centers = 7 ( dans la fonction make_blobs de l'algorithme )
 	
-	rayon = 2
+		rayon = 2
 	
-	infectiosité = 0.7
+		infectiosité = 0.7
 	
-	p = 0.4
+		p = 0.4
 	
-	d = 0.3
+		d = 0.3
 
 <br/>
 
