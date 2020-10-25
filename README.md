@@ -13,15 +13,16 @@ On choisira des populations de quelques dizaines à quelques milliers d'individu
 Cette modélisation sera réalisée avec matplotlib puis avec plotly dans 2 fichiers différents.
 <br/><br/>
 
-## Résultats sous plotly 
-<br/>
-
 __UPDATE :__ 
 Ajout de la courbe 'removed', courbe noire, qui correspond aux personnes ne pouvant plus transmettre le virus, elle correspond à la somme des personnes immunisées et décédées. Elle est ajoutée dans le but de pouvoir comparer les résultats de la simulation à un modèle mathématiques, le modèle SIR. <br/><br/>
 Lien utile pour comprendre le [Modèle SIR](https://interstices.info/modeliser-la-propagation-dune-epidemie/) .
 
 <br/>
 
+## Résultats globales sous plotly 
+<br/>
+Simulation effectuée avec des valeurs de paramètres standars.
+<br/>
 <img width="1369" alt="Capture d’écran 2020-10-20 à 20 19 08" src="https://user-images.githubusercontent.com/63207451/96627714-8ca61b00-1311-11eb-9add-7888a22c6732.png">
 
 <br/>
