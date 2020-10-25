@@ -29,7 +29,7 @@ Lien utile pour comprendre le [Modèle SIR](https://interstices.info/modeliser-l
 ## Librairies 
 
 <br/>
-Si vous n'avez jamais utilisé plotly pensez à le télécharger via la console :
+Si vous n'avez jamais utilisé plotly pensez à le télécharger via la console :  <br/>
 <br/>
 
 	pip install plotly
