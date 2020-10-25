@@ -53,11 +53,11 @@ Dans les 3 simulations qui suivent on ne s'intéressera qu'aux courbes et non à
 ## Simulation avec différents taux d'infection
 
 <br/>
-Variation du nombre d'individus infectés en fonction de différents taux d'infection : 
+Variation du nombre d'individus infectés en fonction de différents taux d'infection : 10%, 15%, 30%, 50%, 70% <br/>
 <br/>
 <img width="1403" alt="infectés_variation_infectiosité" src="https://user-images.githubusercontent.com/63207451/97112938-6b657600-16e7-11eb-9c86-d197de969450.png">
 <br/>
-Variation du nombre de décès en fonction de différents taux d'infection : 
+Variation du nombre de décès en fonction de différents taux d'infection : 10%, 15%, 30%, 50%, 70% <br/>
 <br/>
 <img width="1403" alt="morts_variation_infectiosité" src="https://user-images.githubusercontent.com/63207451/97112882-204b6300-16e7-11eb-9d9f-f3619ead67c1.png">
 <br/>
@@ -65,11 +65,11 @@ Variation du nombre de décès en fonction de différents taux d'infection :
 ## Simulation avec différentes létalités
 
 <br/>
-Variation du nombre d'individus infectés en fonction de différentes létalités : 
+Variation du nombre d'individus infectés en fonction de différentes létalités : 5%, 10%, 25%, 30%, 40% <br/>
 <br/>
 <img width="1403" alt="infectés_variation_letalité" src="https://user-images.githubusercontent.com/63207451/97112986-b1223e80-16e7-11eb-9fc4-eab052247d2a.png">
 <br/>
-Variation du nombre de décès en fonction de différentes létalités : 
+Variation du nombre de décès en fonction de différentes létalités : 5%, 10%, 25%, 30%, 40% <br/> 
 <br/>
 <img width="1403" alt="morts_variation_letalité" src="https://user-images.githubusercontent.com/63207451/97112993-bda69700-16e7-11eb-8e8a-eccd3c6e9531.png">
 <br/>
@@ -77,11 +77,11 @@ Variation du nombre de décès en fonction de différentes létalités :
 ## Simulation avec différents taux d'immunité
 
 <br/>
-Variation du nombre d'individus infectés en fonction de différents taux d'immunité : 
+Variation du nombre d'individus infectés en fonction de différents taux d'immunité : 10%, 20%, 40%, 50%, 70% <br/>
 <br/>
 <img width="1403" alt="infectés_variation_immunité" src="https://user-images.githubusercontent.com/63207451/97113003-c9925900-16e7-11eb-8c9e-6bb57f5b8014.png">
 <br/>
-Variation du nombre de décès en fonction de différents taux d'immunité : 
+Variation du nombre de décès en fonction de différents taux d'immunité : 10%, 20%, 40%, 50%, 70% <br/>
 <br/>
 <img width="1403" alt="morts_variation_immunité" src="https://user-images.githubusercontent.com/63207451/97113011-d44cee00-16e7-11eb-9db0-c87facbbca32.png">
 <br/>
