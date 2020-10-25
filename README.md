@@ -43,27 +43,9 @@ Pour matplotlib une simple fenêtre python apparaîtra (ou plus).
 <br/><br/>
 
 ## Simulation
-Lors de la simulation, plusieurs paramètres sont en jeux. Il y a tout d'abord le nombre d'invidus dans la population, ici on choisira une population entre 0 et 5000 individus pour avoir un temps d'exécution raisonnable. La repartition de ces individus sera donnée par le paramètre variance_population, et qui variera entre 0 et 10 environ. Plus ce nombre est grand, plus la population sera étalée. Ensuite, le paramètre rayon_contamination donnera la portée maximale d'un individu infecté pour avoir une chance de transmettre son virus à un individu sain, avec une probabilté nommée infectiosité, 
-  
- 
- 		• rayon_contamination : qui détermine le rayon dans lequel un individu infecté peut infecter un individu sain. 
 
-Il devra être choisi en fonction de la variance, pour éviter l'arrêt prématuré de la simulation.<br/><br/>
-  
-		• infectiosité : probabilité qu'un infecté transmette le virus dans son rayon de contamination à un individu sain. 
+Lors de la simulation, plusieurs paramètres sont en jeux. Il y a tout d'abord le nombre d'invidus dans la population, ici on choisira une population entre 0 et 5000 individus pour avoir un temps d'exécution raisonnable. La repartition de ces individus sera donnée par le paramètre variance_population, et qui variera entre 0 et 10 environ. Plus ce nombre est grand, plus la population sera étalée. Ensuite, le paramètre rayon_contamination donnera la portée maximale d'un individu infecté pour avoir une chance de transmettre son virus à un individu sain, avec une probabilté nommée infectiosité, qui est comprise entre 0 et 1. Après qu'un individu soit infecté, il a une probabilité p de devenir immunisé et donc de ne plus transmettre le virus, et une probabilité d de décéder suite à l'infection. Ces deux paramètres sont compris entre 0 et 1 également.
 
-Probabilité compris entre 0 et 1, à choisir selon le degrés d'infectiosité de l'épidémie à simuler.<br/><br/>
-
-		• p : probabilité qu'une personne infectée devienne immunisée. 
-	
-Probabilité entre 0 et 1, qui détermine si les individus peuvent résister à l'épidémie.<br/><br/>
-	  
-		• d : probabilité qu'une personne infectée décède.    
-
-Pribabilité comprise entre 0 et 1, qui renseigne sur la létalité du virus.<br/><br/>
-
-Au début de chaques fonctions, des paramètres vous sont recommandés pour profiter au mieux du résultat. 
-<br/><br/>
 
 ## Simuler un confinement 
 <br/>
