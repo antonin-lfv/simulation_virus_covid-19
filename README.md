@@ -42,19 +42,9 @@ A chaque exécution d'une fonction sous plotly, une page html s'ouvrira avec le 
 Pour matplotlib une simple fenêtre python apparaîtra (ou plus).
 <br/><br/>
 
-## Simulation de la propagation
-Lors de la simulation, plusieurs paramètres peuvent être changés.  
- <br/>
-Vous pouvez selectionner :  
- <br/>
+## Simulation
+Lors de la simulation, plusieurs paramètres sont en jeux. Il y a tout d'abord le nombre d'invidus dans la population, ici on choisira une population entre 0 et 5000 individus pour avoir un temps d'exécution raisonnable. La repartition de ces individus sera donnée par le paramètre variance_population, et qui variera entre 0 et 10 environ. Plus ce nombre est grand, plus la population sera étalée. Ensuite, le paramètre rayon_contamination donnera la portée maximale d'un individu infecté pour avoir une chance de transmettre son virus à un individu sain, avec une probabilté nommée infectiosité, 
   
-		• nb_population : le nombre d'individus au départ. 
-
-Ce chiffre peut varier entre 0 et 2000 pour optimiser le temps d'éxecution.<br/><br/>
-  
-		• variance_population : pour avoir une population plus ou moins étalée. 
-
-Elle variera entre 0 et 10 pour des populations inférieures à 2000 individus.<br/><br/>
  
  		• rayon_contamination : qui détermine le rayon dans lequel un individu infecté peut infecter un individu sain. 
 
