@@ -69,7 +69,7 @@ Lors de la simulation, plusieurs paramètres sont en jeux. Il y a tout d'abord l
 <br/>
 On peut simuler un confinement de la population, en diminuant la variance de celle-ci et en augmentant le nombre de cluster, c'est à dire le nombre de groupes distincts physiquement, d'individus dans la population.  
 <br/>
-Par exemple avec une variance de 2 et 7 centers (modifiable dans la fonction make_blobs), on observe que l'épidémie est très rapidement sous contrôle. On compte à la fin, moins de 4% de décès sur l'ensemble de la population.
+Par exemple avec une variance de 2 et 7 centers (modifiable dans la fonction make_blobs), on observe que l'épidémie est très rapidement sous contrôle. On compte à la fin, moins de 4% de décès sur l'ensemble de la population. <br/>
 <br/>
 <img width="1440" alt="Capture d’écran 2020-10-20 à 22 00 20" src="https://user-images.githubusercontent.com/63207451/96637946-b2d2b780-131f-11eb-9695-5abf95c5b6dd.png">
 <br/>
