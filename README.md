@@ -84,13 +84,16 @@ Le nombre de décès avec une létalité de 40% est 7 fois plus grand qu'avec un
 ## Simulation avec différents taux d'immunité
 
 <br/>
-Variation du nombre d'individus infectés en fonction de différents taux d'immunité : 10%, 20%, 40%, 50%, 70% <br/>
+Enfin, faisons varier le taux d'immunité entre 10%, 20%, 40%, 50% et 70%; et observons les courbes du nombre d'individus infectés. <br/>
 <br/>
 <img width="1403" alt="infectés_variation_immunité" src="https://user-images.githubusercontent.com/63207451/97113003-c9925900-16e7-11eb-8c9e-6bb57f5b8014.png">
 <br/>
-Variation du nombre de décès en fonction de différents taux d'immunité : 10%, 20%, 40%, 50%, 70% <br/>
+Sans grande surprise, si le taux d'immunité est très élevé, le maximum de personnes infectés et drastiquement réduit par rapport à un taux d'immunité plus faible, mais il est également atteint plus lentement. La propagation est freinée. 
+On observe cette même tendance si l'on compare maintenant les courbes des décès. <br/>
 <br/>
 <img width="1403" alt="morts_variation_immunité" src="https://user-images.githubusercontent.com/63207451/97113011-d44cee00-16e7-11eb-9db0-c87facbbca32.png">
+<br/>
+Le nombre de décès est immensément plus grand lorsque l'immunité est quasi inexistante. Avec un taux d'immunité égale à 10%, on a 6 fois plus de décès qu'avec un taux à 70%.
 <br/>
 
 ## Avec confinement 
