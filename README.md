@@ -53,13 +53,16 @@ Dans les 3 simulations qui suivent on ne s'intéressera qu'aux courbes et non à
 ## Simulation avec différents taux d'infection
 
 <br/>
-Variation du nombre d'individus infectés en fonction de différents taux d'infection : 10%, 15%, 30%, 50%, 70% <br/>
+Faisons varier le taux d'infection entre 10%, 15%, 30%, 50% et 70% et observons la courbe du nombre de personnes infectés.<br/>
 <br/>
 <img width="1403" alt="infectés_variation_infectiosité" src="https://user-images.githubusercontent.com/63207451/97112938-6b657600-16e7-11eb-9c86-d197de969450.png">
 <br/>
-Variation du nombre de décès en fonction de différents taux d'infection : 10%, 15%, 30%, 50%, 70% <br/>
+On remarque naturellement que plus l'infectiosité est grande, plus le nombre maximum de personnes infectés est grand. Mais également que le nombre d'infectés chute plus rapidement avec une infectiosité élevée. 
+Intéressons nous maintenant au nombre de décès en fonction de ces différentes valeurs d'infectiosité. <br/>
 <br/>
 <img width="1403" alt="morts_variation_infectiosité" src="https://user-images.githubusercontent.com/63207451/97112882-204b6300-16e7-11eb-9d9f-f3619ead67c1.png">
+<br/>
+Les courbes sont quasiment linéaire sur une grande partie, jusqu'à atteindre un certain seuil qui est très proche malgrès des infectiosité très différentes. La différence se fait dans la vitesse à laquelle le seuil est atteint, plus l'infectiosité est grande plus le seuil est atteint rapidement.
 <br/>
 
 ## Simulation avec différentes létalités
