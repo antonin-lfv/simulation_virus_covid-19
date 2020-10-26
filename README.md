@@ -32,7 +32,7 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 (courbe noire : somme des personnes immunisées et décédées) <br/>
 <br/>
 
-### Index
+## Index
 - [Librairies](#librairies)
 - [Principe de la simulation](#principe-de-la-simulation)
 	- [Simulation avec différents taux d'infection](#Simulation-avec-différents-taux-d'infection)
