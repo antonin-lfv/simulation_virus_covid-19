@@ -32,7 +32,7 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 
 ### Index
 <br/>
-1. [Librairies](#librairies) <br/>
+1. [Librairies](#Librairies) <br/>
 2. [Principe de la simulation](#Principe de la simulation)<br/>
 3. [Simulation avec différents taux d'infection](#Simulation avec différents taux d'infection)<br/>
 4. [Simulation avec différentes létalités](#Simulation avec différentes létalités)<br/>
@@ -41,6 +41,7 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 7. [Simuler le SARS-cov-2](#Simuler le SARS-cov-2)<br/>
 8. [Conclusion](#Conclusion)<br/>
 <br/>
+<div id='Librairies'/>  
 
 ## Librairies 
 
@@ -57,6 +58,7 @@ A chaque exécution d'une fonction sous plotly, une page html s'ouvrira avec le 
 
 Pour matplotlib une simple fenêtre python apparaîtra (ou plus).
 <br/><br/>
+<div id='Principe de la simulation'/>  
 
 ## Principe de la simulation
 
@@ -65,6 +67,7 @@ Lors de la simulation, plusieurs paramètres sont en jeux. Il y a tout d'abord l
 <br/>
 Dans les 3 simulations qui suivent on ne s'intéressera qu'aux courbes et non à la représentation 2D de la population.
 <br/>
+<div id='Simulation avec différents taux d'infection'/>
 
 ## Simulation avec différents taux d'infection
 
@@ -80,7 +83,8 @@ Intéressons nous maintenant au nombre de décès en fonction de ces différente
 <br/>
 Les courbes sont quasiment linéaires sur une grande partie, jusqu'à atteindre un certain seuil, qui est très proche malgrès des infectiosités très différentes. La différence se fait dans la vitesse à laquelle le seuil est atteint, plus l'infectiosité est grande plus le seuil est atteint rapidement, il est atteint en une dizaine de jours pour une infectiosité de l'ordre de 70% et en une quinzaine pour une infectiosité de l'ordre de 10%.
 <br/>
-
+<div id='Simulation avec différentes létalités'/>
+						     
 ## Simulation avec différentes létalités
 
 <br/>
@@ -96,6 +100,7 @@ Cependant même si le nombre d'infectés est plus faible avec une grande létali
 <br/>
 Le nombre de décès avec une létalité de 40% est 7 fois plus grand qu'avec une létalité de 5%. Ce qui représente des différences énormes sur une population de plusieurs millions d'individus.
 <br/>
+<div id='Simulation avec différents taux d'immunité'/>
 
 ## Simulation avec différents taux d'immunité
 
@@ -111,7 +116,8 @@ On observe cette même tendance si l'on compare maintenant les courbes des déc�
 <br/>
 Le nombre de décès est immensément plus grand lorsque l'immunité est quasi inexistante. Avec un taux d'immunité égale à 10%, on a 6 fois plus de décès qu'avec un taux à 70%.
 <br/>
-
+<div id='Avec confinement'/>
+						    
 ## Avec confinement 
 
 <br/>
@@ -121,6 +127,7 @@ Par exemple avec une variance de 2 et 7 centers (modifiable dans la fonction mak
 <br/>
 <img width="1440" alt="Capture d’écran 2020-10-20 à 22 00 20" src="https://user-images.githubusercontent.com/63207451/96637946-b2d2b780-131f-11eb-9695-5abf95c5b6dd.png">
 <br/>
+<div id='Simuler le SARS-cov-2'/>
 
 ## Simuler le SARS-cov-2
 
@@ -131,6 +138,7 @@ Cette simulation est à prendre avec beaucoup de précautions, car elle ne refl�
 
 Avec cette simulation on observe que le nombre d'infectés augmente très rapidement dès le début, puis diminue très lentement. Au final on compte quasiment 1/3 de décès, et plus de la moitié deviennent immunisés.
 <br/>
+<div id='Conclusion'/>
 
 ## Conclusion
 
