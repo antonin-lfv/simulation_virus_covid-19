@@ -108,4 +108,9 @@ Par exemple avec une variance de 2 et 7 centers (modifiable dans la fonction mak
 <img width="1440" alt="Capture d’écran 2020-10-20 à 22 00 20" src="https://user-images.githubusercontent.com/63207451/96637946-b2d2b780-131f-11eb-9695-5abf95c5b6dd.png">
 <br/>
 
+## Simuler le SARS-cov-2
+
+<br/> 
+Cette simulation est à prendre avec beaucoup de précautions, car elle ne reflète pas la réalité. Nous prendrons ici comme paramètres, un taux d'infection de 17%, un taux d'immunité de 10% et une létalité de 0.5%. <br/>
+
 ---------------------------
