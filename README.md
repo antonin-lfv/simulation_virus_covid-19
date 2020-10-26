@@ -32,8 +32,8 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 
 ### Index
 <br/>
-1. [Librairies](#Librairies) <br/>
-2. [Principe de la simulation](#Principe de la simulation)<br/>
+1. [Librairies](#librairies) <br/>
+2. [Principe de la simulation](#Principe-de-la-simulation)<br/>
 3. [Simulation avec différents taux d'infection](#Simulation avec différents taux d'infection)<br/>
 4. [Simulation avec différentes létalités](#Simulation avec différentes létalités)<br/>
 5. [Simulation avec différents taux d'immunité](#Simulation avec différents taux d'immunité)<br/>
