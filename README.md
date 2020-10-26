@@ -112,5 +112,16 @@ Par exemple avec une variance de 2 et 7 centers (modifiable dans la fonction mak
 
 <br/> 
 Cette simulation est à prendre avec beaucoup de précautions, car elle ne reflète pas la réalité. Nous prendrons ici comme paramètres, un taux d'infection de 17%, un taux d'immunité de 10% et une létalité de 0.5%. <br/>
+<img width="1401" alt="Capture d’écran 2020-10-26 à 19 51 58" src="https://user-images.githubusercontent.com/63207451/97215962-6ecf2f00-17c5-11eb-9f05-518d3e4872b8.png">
+
+<br/>
+
+## Conclusion
+
+<br/>
+L'étude épidémiologique reste tout de fois un domaine très théorique. Même si les résultats et observations obtenues sembles assez proches de la réalité, ces modélisations ne prennent pas en compte certains autres facteurs, tels que la vaccination, la mise en quarantaine des individus infectés, ou même le déplacement des individus dans la population. <br/>
+Néanmoins, cela nous aident à comprendre comment un virus se comporte dans une population, et quel est l'influence de certains paramètres sur sa propagation.
+<br/>
+<br/>
 
 ---------------------------
