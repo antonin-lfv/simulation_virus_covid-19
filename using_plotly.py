@@ -303,7 +303,7 @@ def vague_seuil_px():
     coord_immunises = []  # on initialise
     coord_deces = []
     i = 1
-    while len(coord_infectes)>0.2*taille_pop or len(courbe_sains)<5 : # conditions d'état stationnaire
+    while len(coord_infectes)>0.1*taille_pop or len(courbe_sains)<5 : # conditions d'état stationnaire
         non_sains = []
         coord_infectes1, coord_immunises = immuniser(coord_infectes, coord_immunises, p) # on sépare immunisés et infectés
         coord_infectes, coord_deces = deces(coord_infectes1, coord_deces, coord_immunises, d) # on sépare les décès des infectés qu'ils restent
