@@ -29,7 +29,7 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 <br/>
 (courbe noire : somme des personnes immunisées et décédées) <br/>
 
-
+[Librairies](https://github.com/antonin-lfv/simulation_virus_covid-19/blob/master/README.md#résultat-global-sous-plotly)
 ### Index
 <br/>
 1. [Librairies](https://github.com/antonin-lfv/simulation_virus_covid-19/blob/master/README.md#résultat-global-sous-plotly) <br/>
