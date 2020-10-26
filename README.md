@@ -41,7 +41,7 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 - [Avec confinement](#Avec-confinement)
 - [Simuler le SARS-cov-2](#Simuler-le-SARS-cov-2)
 - [Conclusion](#Conclusion)
-<br/>
+
 
 ## Librairies 
 
