@@ -453,7 +453,7 @@ def vague_seuil(nb_individu, var_population, rayon_contamination, infectiosite, 
     coord_deces = []
     #for i in range(n - 2):
     i = 1
-    while len(courbe_infectes)!=0 and  len(coord_infectes)>0.05*taille_pop :
+    while len(coord_infectes)>0.2*taille_pop or len(courbe_sains)<5 :
         non_sains = []
         coord_infectes1, coord_immunises = immuniser(coord_infectes, coord_immunises, p)
         coord_infectes, coord_deces = deces(coord_infectes1, coord_deces, coord_immunises, d)
