@@ -32,14 +32,14 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 
 ### Index
 <br/>
-1. Librairies
-2. Principe de la simulation
-3. Simulation avec différents taux d'infection
-4. Simulation avec différentes létalités
-5. Simulation avec différents taux d'immunité
-6. Avec confinement 
-7. Simuler le SARS-cov-2
-8. Conclusion
+1. Librairies<br/>
+2. Principe de la simulation<br/>
+3. Simulation avec différents taux d'infection<br/>
+4. Simulation avec différentes létalités<br/>
+5. Simulation avec différents taux d'immunité<br/>
+6. Avec confinement<br/>
+7. Simuler le SARS-cov-2<br/>
+8. Conclusion<br/>
 <br/>
 
 ## Librairies 
