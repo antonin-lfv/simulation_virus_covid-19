@@ -25,7 +25,7 @@ Ajout de la courbe 'removed', courbe noire, qui correspond aux personnes ne pouv
 <br/>
 Simulation effectuée avec des valeurs de paramètres standars. <br/> 
 <br/>
-<img width="1313" alt="Capture d’écran 2020-10-26 à 20 25 46" src="https://user-images.githubusercontent.com/63207451/97218997-b35cc980-17c9-11eb-9501-6971373be0df.png">
+<img width="1407" alt="Capture d’écran 2020-10-26 à 20 42 48" src="https://user-images.githubusercontent.com/63207451/97220491-d8ead280-17cb-11eb-84b7-fa4ba0778bcf.png">
 <br/>
 
 ## Librairies 
