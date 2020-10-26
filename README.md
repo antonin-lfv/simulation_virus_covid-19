@@ -31,15 +31,14 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 
 
 ### Index
-<br/>
-- [Librairies](#librairies) <br/>
-- [Principe de la simulation](#principe-de-la-simulation) <br/>
-- [Simulation avec différents taux d'infection](#Simulation avec différents taux d'infection)<br/>
-- [Simulation avec différentes létalités](#Simulation avec différentes létalités)<br/>
-- [Simulation avec différents taux d'immunité](#Simulation avec différents taux d'immunité)<br/>
-- [Avec confinement](#Avec confinement)<br/>
-- [Simuler le SARS-cov-2](#Simuler le SARS-cov-2)<br/>
-- [Conclusion](#Conclusion)<br/>
+- [Librairies](#librairies)
+- [Principe de la simulation](#principe-de-la-simulation)
+- [Simulation avec différents taux d'infection](#Simulation avec différents taux d'infection)
+- [Simulation avec différentes létalités](#Simulation avec différentes létalités)
+- [Simulation avec différents taux d'immunité](#Simulation avec différents taux d'immunité)
+- [Avec confinement](#Avec confinement)
+- [Simuler le SARS-cov-2](#Simuler le SARS-cov-2)
+- [Conclusion](#Conclusion)
 <br/>
 
 ## Librairies 
