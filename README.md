@@ -28,7 +28,7 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 <img width="1407" alt="Capture d’écran 2020-10-26 à 20 42 48" src="https://user-images.githubusercontent.com/63207451/97220491-d8ead280-17cb-11eb-84b7-fa4ba0778bcf.png">
 <br/>
 (courbe noire : somme des personnes immunisées et décédées) <br/>
-
+<br/>
 
 ### Index
 - [Librairies](#librairies)
