@@ -23,7 +23,7 @@ Ajout de la courbe 'removed', courbe noire, qui correspond aux personnes ne pouv
 
 ## Résultats globales sous plotly 
 <br/>
-Simulation effectuée avec des valeurs de paramètres standars.
+Simulation effectuée avec des valeurs de paramètres standars. <br/> 
 <br/>
 <img width="1313" alt="Capture d’écran 2020-10-26 à 20 25 46" src="https://user-images.githubusercontent.com/63207451/97218997-b35cc980-17c9-11eb-9501-6971373be0df.png">
 <br/>
