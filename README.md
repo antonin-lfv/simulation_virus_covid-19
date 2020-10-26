@@ -31,8 +31,16 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 
 
 ### Index
-*[oui](https://github.com/antonin-lfv/simulation_virus_covid-19#simulation-épidémiologique)
-
+<br/>
+1. Librairies
+2. Principe de la simulation
+3. Simulation avec différents taux d'infection
+4. Simulation avec différentes létalités
+5. Simulation avec différents taux d'immunité
+6. Avec confinement 
+7. Simuler le SARS-cov-2
+8. Conclusion
+<br/>
 
 ## Librairies 
 
