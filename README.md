@@ -32,7 +32,7 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 
 ### Index
 <br/>
-1. [Librairies](https://github.com/antonin-lfv/simulation_virus_covid-19/blob/master/README.md#résultat-global-sous-plotly)<br/>
+1. [Librairies](https://github.com/antonin-lfv/simulation_virus_covid-19/blob/master/README.md#résultat-global-sous-plotly) <br/>
 2. Principe de la simulation<br/>
 3. Simulation avec différents taux d'infection<br/>
 4. Simulation avec différentes létalités<br/>
