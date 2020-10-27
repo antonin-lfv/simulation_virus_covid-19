@@ -163,4 +163,10 @@ Néanmoins, cela nous aident à comprendre comment un virus se comporte dans une
 	</a>
 <p/>
 
+<p align="center">
+  <a href="https://github.com/zxdawn" class="fancybox" target="_blank" rel="external"><img src="http://i.imgur.com/0o48UoR.png" width="40" height="15" alt="GitHub" title="GitHub"></a>
+  <a href="https://twitter.com/zhangxin_dawn" class="fancybox" target="_blank" rel="external"><img src="http://i.imgur.com/tXSoThF.png" width="40" height="15" alt="Twitter" title="Twitter"></a>
+  <a href="https://www.facebook.com/zxdawn" class="fancybox" target="_blank" rel="external"><img src="http://i.imgur.com/P3YfQoD.png" width="40" height="15" alt="Facebook" title="Facebook"></a>
+</p>
+
 ---------------------------
