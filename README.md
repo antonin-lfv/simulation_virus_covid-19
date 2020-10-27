@@ -73,12 +73,16 @@ Dans les 3 simulations qui suivent on ne s'intéressera qu'aux courbes et non à
 <br/>
 Faisons varier le taux d'infection entre 10%, 15%, 30%, 50% et 70% et observons la courbe du nombre de personnes infectés.<br/>
 <br/>
+<p align="center">
 <img width="1403" alt="infectés_variation_infectiosité" src="https://user-images.githubusercontent.com/63207451/97112938-6b657600-16e7-11eb-9c86-d197de969450.png">
+	<p/>
 <br/>
 On remarque naturellement que plus l'infectiosité est grande, plus le nombre maximum de personnes infectés est grand. Mais également que le nombre d'infectés chute plus rapidement avec une infectiosité élevée. <br/>
 Intéressons nous maintenant au nombre de décès en fonction de ces différentes valeurs d'infectiosité. <br/>
 <br/>
+<p align="center">
 <img width="1403" alt="morts_variation_infectiosité" src="https://user-images.githubusercontent.com/63207451/97112882-204b6300-16e7-11eb-9d9f-f3619ead67c1.png">
+	<p/>
 <br/>
 Les courbes sont quasiment linéaires sur une grande partie, jusqu'à atteindre un certain seuil, qui est très proche malgrès des infectiosités très différentes. La différence se fait dans la vitesse à laquelle le seuil est atteint, plus l'infectiosité est grande plus le seuil est atteint rapidement, il est atteint en une dizaine de jours pour une infectiosité de l'ordre de 70% et en une quinzaine pour une infectiosité de l'ordre de 10%.
 <br/>
@@ -88,13 +92,17 @@ Les courbes sont quasiment linéaires sur une grande partie, jusqu'à atteindre 
 <br/>
 Faisons à présent varier la létalité entre 5%, 10%, 25%, 30% et 40%. Et observons l'évolution des courbes du nombre d'individus infectés. <br/>
 <br/>
+<p align="center">
 <img width="1403" alt="infectés_variation_letalité" src="https://user-images.githubusercontent.com/63207451/97112986-b1223e80-16e7-11eb-9fc4-eab052247d2a.png">
+	<p/>
 <br/>
 Ici, une létalité élevée aplatit la courbe des infectés, en hauteur et largeur. En effet, si le virus ne tue pas beaucoup, il y a alors plus de personnes susceptibles de le transmettre, et sur une plus grande période. Au contraire d'une létalité élevée, qui élimine rapidement les individus infectés, avant qu'ils puissent transmettre le virus.   
 <br/>
 Cependant même si le nombre d'infectés est plus faible avec une grande létalité, le nombre de décès est nettement plus élevé. Comme le montre le graphique ci-dessous. <br/> 
 <br/>
+<p align="center">
 <img width="1403" alt="morts_variation_letalité" src="https://user-images.githubusercontent.com/63207451/97112993-bda69700-16e7-11eb-8e8a-eccd3c6e9531.png">
+	<p/>
 <br/>
 Le nombre de décès avec une létalité de 40% est 7 fois plus grand qu'avec une létalité de 5%. Ce qui représente des différences énormes sur une population de plusieurs millions d'individus.
 <br/>
@@ -104,12 +112,16 @@ Le nombre de décès avec une létalité de 40% est 7 fois plus grand qu'avec un
 <br/>
 Enfin, faisons varier le taux d'immunité entre 10%, 20%, 40%, 50% et 70%; et observons les courbes du nombre d'individus infectés. <br/>
 <br/>
+<p align="center">
 <img width="1403" alt="infectés_variation_immunité" src="https://user-images.githubusercontent.com/63207451/97113003-c9925900-16e7-11eb-8c9e-6bb57f5b8014.png">
+	<p/>
 <br/>
 Sans grande surprise, si le taux d'immunité est très élevé, le maximum de personnes infectés et drastiquement réduit par rapport à un taux d'immunité plus faible, mais il est également atteint plus lentement. La propagation est freinée. 
 On observe cette même tendance si l'on compare maintenant les courbes des décès. <br/>
 <br/>
+<p align="center">
 <img width="1403" alt="morts_variation_immunité" src="https://user-images.githubusercontent.com/63207451/97113011-d44cee00-16e7-11eb-9db0-c87facbbca32.png">
+	<p/>
 <br/>
 Le nombre de décès est immensément plus grand lorsque l'immunité est quasi inexistante. Avec un taux d'immunité égale à 10%, on a 6 fois plus de décès qu'avec un taux à 70%.
 <br/>
@@ -121,15 +133,18 @@ On peut simuler un confinement de la population, en diminuant la variance de cel
 <br/>
 Par exemple avec une variance de 2 et 7 centers (modifiable dans la fonction make_blobs), on observe que l'épidémie est très rapidement sous contrôle. On compte à la fin, moins de 4% de décès sur l'ensemble de la population. <br/>
 <br/>
+<p align="center">
 <img width="1440" alt="Capture d’écran 2020-10-20 à 22 00 20" src="https://user-images.githubusercontent.com/63207451/96637946-b2d2b780-131f-11eb-9695-5abf95c5b6dd.png">
+	<p/>
 <br/>
 
 ## Simuler le SARS-cov-2
 
 <br/> 
 Cette simulation est à prendre avec beaucoup de précautions, car elle ne reflète pas la réalité. Nous prendrons ici comme paramètres, un taux d'infection de 17%, un taux d'immunité de 10% et une létalité de 0.5%. <br/>
-
+<p align="center">
 <img width="1401" alt="Capture d’écran 2020-10-26 à 19 51 58" src="https://user-images.githubusercontent.com/63207451/97215962-6ecf2f00-17c5-11eb-9f05-518d3e4872b8.png">
+	<p/>
 <br/>
 
 Avec cette simulation on observe que le nombre d'infectés augmente très rapidement dès le début, puis diminue très lentement. Au final on compte quasiment 1/3 de décès, et plus de la moitié deviennent immunisés.
