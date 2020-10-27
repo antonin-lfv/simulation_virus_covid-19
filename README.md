@@ -22,7 +22,7 @@ Cette modélisation sera réalisée avec matplotlib puis avec plotly dans 2 fich
 
 - Comprendre le [Modèle SIR](https://interstices.info/modeliser-la-propagation-dune-epidemie/). <br/>
 
-- [Thèse](https://tel.archives-ouvertes.fr/tel-00841444/file/BicharaPhDThesis.pdf) de Derdei Bichara sur l'étude de modèles épidémiologiques: Stabilité, observation et estimation de paramètres.
+- Thèse de Derdei Bichara sur l'[étude de modèles épidémiologiques](https://tel.archives-ouvertes.fr/tel-00841444/file/BicharaPhDThesis.pdf): Stabilité, observation et estimation de paramètres.
 
 <br/>
 
