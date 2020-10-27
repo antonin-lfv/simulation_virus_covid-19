@@ -1,7 +1,4 @@
-
-<p align="center">
-# simulation épidémiologique 
-<p/>
+# simulation épidémiologique
 <br/>
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/1be197d831a742f5af9d86e04a70721f)](https://app.codacy.com/manual/antoninlefevre45/simulation_virus_covid-19?utm_source=github.com&utm_medium=referral&utm_content=antonin-lfv/simulation_virus_covid-19&utm_campaign=Badge_Grade_Dashboard)
@@ -29,7 +26,9 @@ Cette modélisation sera réalisée avec matplotlib puis avec plotly dans 2 fich
 <br/>
 Simulation effectuée avec des valeurs de paramètres standars. <br/>
 <br/>
+<p align="center">
 <img width="1407" alt="Capture d’écran 2020-10-26 à 20 42 48" src="https://user-images.githubusercontent.com/63207451/97220491-d8ead280-17cb-11eb-84b7-fa4ba0778bcf.png">
+	<p/>
 <br/>
 (courbe noire : somme des personnes immunisées et décédées) <br/>
 <br/>
