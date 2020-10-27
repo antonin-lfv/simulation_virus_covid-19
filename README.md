@@ -143,6 +143,6 @@ Néanmoins, cela nous aident à comprendre comment un virus se comporte dans une
 <br/>
 
 <p align="center">
-<b>[haut de la page](#simulation-épidémiologique)</b>
+<b> [haut de la page](#simulation-épidémiologique) </b>
 <p/>
 ---------------------------
