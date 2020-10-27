@@ -164,7 +164,7 @@ Néanmoins, cela nous aident à comprendre comment un virus se comporte dans une
 <p/>
 
 <p align="center">
-  <a href="https://github.com/zxdawn"><img src="![iconfinder_github_social_media_logo_1221583](https://user-images.githubusercontent.com/63207451/97302854-e484da80-1859-11eb-9374-5b319ca51197.png)
+  <a href="https://github.com/zxdawn"><img src="(https://user-images.githubusercontent.com/63207451/97302854-e484da80-1859-11eb-9374-5b319ca51197.png)
 " alt="GitHub" title="GitHub"></a>
   <a href="https://twitter.com/zhangxin_dawn" ><img src="http://i.imgur.com/tXSoThF.png" width="40" height="15" alt="Twitter" title="Twitter"></a>
   <a href="https://www.facebook.com/zxdawn"><img src="http://i.imgur.com/P3YfQoD.png" width="40" height="15" alt="Facebook" title="Facebook"></a>
