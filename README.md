@@ -127,6 +127,7 @@ Par exemple avec une variance de 2 et 7 centers (modifiable dans la fonction mak
 
 <br/> 
 Cette simulation est à prendre avec beaucoup de précautions, car elle ne reflète pas la réalité. Nous prendrons ici comme paramètres, un taux d'infection de 17%, un taux d'immunité de 10% et une létalité de 0.5%. <br/>
+
 <img width="1401" alt="Capture d’écran 2020-10-26 à 19 51 58" src="https://user-images.githubusercontent.com/63207451/97215962-6ecf2f00-17c5-11eb-9f05-518d3e4872b8.png">
 <br/>
 
