@@ -1,4 +1,4 @@
-''' modélisation avec plotly '''
+''' modélisation avec utilisation de plotly '''
 
 """ importation """
 
