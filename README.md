@@ -11,7 +11,7 @@ Ce projet à pour objectifs de créer un __virus__, et de simuler sa propagation
 En utilisant les paramètres propres du covid-19 on peut modeliser grossièrement ce dernier.
 
 On choisira des populations de quelques dizaines à quelques milliers d'individus et on supposera qu'un individu immunisé ne peut plus être infecté.
-Cette modélisation sera réalisée avec matplotlib puis avec plotly dans 2 fichiers différents.
+Cette modélisation sera réalisée avec matplotlib et plotly indépendamment.
 <br/><br/>
 
 >__UPDATE :__ Ajout de la courbe 'removed', courbe noire, qui correspond aux personnes ne pouvant plus transmettre le virus, elle correspond à la somme des personnes immunisées et décédées. Elle est ajoutée dans le but de pouvoir comparer les résultats de la simulation à un modèle mathématiques, le modèle SIR. 
