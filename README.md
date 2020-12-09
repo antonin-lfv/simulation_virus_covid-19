@@ -132,7 +132,9 @@ Le nombre de décès est immensément plus grand lorsque l'immunité est quasi i
 <br/>
 						    
 ## Avec confinement 
+
 <br>
+
 ### Confinement dès le premier cas detecté
 
 <br/>
@@ -144,7 +146,9 @@ Par exemple avec une variance de 2 et 7 centers (modifiable dans la fonction mak
 <img width="1440" alt="Capture d’écran 2020-10-20 à 22 00 20" src="https://user-images.githubusercontent.com/63207451/96637946-b2d2b780-131f-11eb-9695-5abf95c5b6dd.png">
 	<p/>
 <br/>
+
 ### Confinement après dépacement de la capacité hospitalière
+
 <br/>
 Une fois le seuil dépassé, l'infectiosité est divisé par 10 et le rayon de contamination est divisé par 5.
 <br/>
@@ -154,6 +158,7 @@ Ici, la courbe pleine représente l'épidémie sans l'application du confinement
 <img width="1440" alt="Capture d’écran 2020-10-20 à 22 00 20" src="https://user-images.githubusercontent.com/63207451/96637946-b2d2b780-131f-11eb-9695-5abf95c5b6dd.png">
 	<p/>
 <br/>
+
 ## Simuler le SARS-cov-2
 
 <br/> 
