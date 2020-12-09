@@ -44,6 +44,8 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 	- [Simulation avec différentes létalités](#simulation-avec-différentes-létalités)
 	- [Simulation avec différents taux d'immunité](#simulation-avec-différents-taux-dimmunité)
 - [Avec confinement](#avec-confinement)
+	- [Confinement immédiat](#confinement-dès-le-premier-cas-detecté)
+	- [Confinement après dépassement du seuil hospitalier](#confinement-après-dépacement-de-la-capacité-hospitalière) 
 - [Simuler le SARS-cov-2](#simuler-le-SARS-cov-2)
 - [Conclusion](#conclusion)
 
