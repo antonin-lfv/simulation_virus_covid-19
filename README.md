@@ -164,7 +164,9 @@ Ici, la courbe pleine représente l'épidémie sans l'application du confinement
 ## Simuler le SARS-cov-2
 
 <br/> 
-Cette simulation est à prendre avec beaucoup de précautions, car elle ne reflète pas la réalité. Nous prendrons ici comme paramètres, un taux d'infection de 17%, un taux d'immunité de 10% et une létalité de 0.5%. <br/>
+Cette simulation est à prendre avec beaucoup de précautions, car elle ne reflète pas la réalité. Nous prendrons ici comme paramètres, un taux d'infection de 17%, un taux d'immunité de 10% et une létalité de 0.5%.
+<br/>
+
 <p align="center">
 <img width="1183" alt="Capture d’écran 2020-12-09 à 19 04 48" src="https://user-images.githubusercontent.com/63207451/101672837-a7198c80-3a56-11eb-8ba0-6310230bfa15.png">
 	<p/>
