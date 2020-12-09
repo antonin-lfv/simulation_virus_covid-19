@@ -132,6 +132,8 @@ Le nombre de décès est immensément plus grand lorsque l'immunité est quasi i
 <br/>
 						    
 ## Avec confinement 
+<br>
+### Confinement dès le premier cas detecté
 
 <br/>
 On peut simuler un confinement de la population, en diminuant la variance de celle-ci et en augmentant le nombre de cluster, c'est à dire le nombre de groupes distincts physiquement, d'individus dans la population.  
@@ -142,7 +144,16 @@ Par exemple avec une variance de 2 et 7 centers (modifiable dans la fonction mak
 <img width="1440" alt="Capture d’écran 2020-10-20 à 22 00 20" src="https://user-images.githubusercontent.com/63207451/96637946-b2d2b780-131f-11eb-9695-5abf95c5b6dd.png">
 	<p/>
 <br/>
-
+### Confinement après dépacement de la capacité hospitalière
+<br/>
+Une fois le seuil dépassé, l'infectiosité est divisé par 10 et le rayon de contamination est divisé par 5.
+<br/>
+Ici, la courbe pleine représente l'épidémie sans l'application du confinement, et la courbe en pointillé avec application du confinement à partir du jour ou le nombre de personnes infectés est superieur à la capacité hospitalière. On remarque que le nombre de personnes infectés diminue quelques jours après le début du confinement, et que le nombre de décès journaliers devient nul.  <br/>
+<br/>
+<p align="center">
+<img width="1440" alt="Capture d’écran 2020-10-20 à 22 00 20" src="https://user-images.githubusercontent.com/63207451/96637946-b2d2b780-131f-11eb-9695-5abf95c5b6dd.png">
+	<p/>
+<br/>
 ## Simuler le SARS-cov-2
 
 <br/> 
