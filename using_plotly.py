@@ -244,7 +244,7 @@ def vague_seuil_px_opti():
 
     start = time.time()
 
-    nb_individu = 1500  # recommandé : 2000
+    nb_individu = 1500  # recommandé : 2000 environ 35 secondes
     variance_pop = 4
     rayon_contamination = 2
     infectiosite = 0.17
