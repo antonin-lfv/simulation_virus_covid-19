@@ -7,12 +7,8 @@ import matplotlib.pyplot as plt
 from sklearn.datasets import make_blobs
 import random as rd
 
-def distance(x,y): #distance entre 2 points du plan cartésien
-    x1 = x[0]
-    x2 = x[1]
-    y1 = y[0]
-    y2 = y[1]
-    return(abs(np.sqrt((y1-x1)**2+(y2-x2)**2)))
+def distance_e(x, y):  # distance entre 2 points du plan cartésien
+    return distance.euclidean([x[0],x[1]],[y[0],y[1]])
 
 def remove_(a,l): #pour supprimer de la liste des sains (a) les nouveaux infectés (l)
     for i in range (len(l)):
