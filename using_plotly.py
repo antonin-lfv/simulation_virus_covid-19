@@ -8,6 +8,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.datasets import make_blobs
 import random as rd
+import time
+from scipy.spatial import distance
 
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot,iplot # pour travailler en offline!
 import plotly.express as px
