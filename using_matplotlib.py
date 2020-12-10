@@ -218,6 +218,8 @@ def virus(nb_individu, variance_population, rayon_contamination, infectiosite, p
     
 """ afficher toutes les vagues (dans des fenetres différentes) jusqu'a la n-ième et les graphiques du virus """
     
+# version non optimisée 
+
 def n_vagues_anim(n, nb_individu, var_population, rayon_contamination, infectiosite,p, d):
     x, y = make_blobs(n_samples=nb_individu, centers=1, cluster_std=var_population)  # création du dataset
     taille_pop = len(x)
@@ -297,6 +299,8 @@ def n_vagues_anim(n, nb_individu, var_population, rayon_contamination, infectios
 
     
 """ Afficher la n-ième vague avec les pourcentages et graphiques du virus """
+
+## version non optimisée
 
 def nieme_vague(n, nb_individu, var_population, rayon_contamination, infectiosite, p, d):
     if n < 2:
@@ -391,6 +395,8 @@ def nieme_vague(n, nb_individu, var_population, rayon_contamination, infectiosit
 
     
 """ Afficher la vague où le virus ne circule plus, avec les graphiques  """
+
+## version non optimisée, voir version plotly
 
 def vague_seuil(nb_individu, var_population, rayon_contamination, infectiosite, p, d):
 
