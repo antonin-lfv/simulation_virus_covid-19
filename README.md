@@ -172,7 +172,7 @@ Cette simulation est à prendre avec beaucoup de précautions, car elle ne refl�
 	<p/>
 <br/>
 
-Avec cette simulation on observe que le nombre d'infectés augmente très rapidement dès le début, puis diminue très lentement. Au final on compte quasiment 1/3 de décès, et plus de la moitié deviennent immunisés.
+Avec cette simulation on observe que le nombre d'infectés augmente rapidement dès le début pour arriver à son maximum au bout de 8 jours, puis diminue très lentement pendant 16 jours. Au final on compte quasiment 30% de décès, et plus de la moitié deviennent immunisés.
 <br/>
 
 ## Conclusion
