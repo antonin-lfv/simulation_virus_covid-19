@@ -168,7 +168,7 @@ Cette simulation est à prendre avec beaucoup de précautions, car elle ne refl�
 <br/>
 
 <p align="center">
-<img width="1183" alt="Capture d’écran 2020-12-09 à 19 57 59" src="https://user-images.githubusercontent.com/63207451/101674506-e3e68300-3a58-11eb-99f2-b003181e6c7f.png">
+<img width="1356" alt="Capture d’écran 2020-12-11 à 15 51 16" src="https://user-images.githubusercontent.com/63207451/101917618-bddff080-3bc8-11eb-83eb-46a68c3b803f.png">
 	<p/>
 <br/>
 
