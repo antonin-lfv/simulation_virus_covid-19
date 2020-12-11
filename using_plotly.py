@@ -313,7 +313,7 @@ def vague_seuil_px_opti():
     # vagues 2 à n
 
     i = 1
-    while len(coord['coord_infectes']) > 1  or len(courbes['courbe_sains']) < 100: #on s'arrête quand il y a 0 infectés ou quand on dépasse 100 jours
+    while len(coord['coord_infectes']) > 0.08*taille_pop or len(courbes['courbe_sains']) < 20: #condition d'arrêt
         non_sains = []
         coord_infectes1, coord['coord_immunises'] = immuniser(coord['coord_infectes'], coord['coord_immunises'], p)
         coord['coord_infectes'], coord['coord_deces'] = deces(coord_infectes1, coord['coord_deces'], coord['coord_immunises'], d)
