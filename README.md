@@ -31,7 +31,7 @@ Cette modélisation sera réalisée avec matplotlib et plotly indépendamment.
 Simulation effectuée avec des valeurs de paramètres standars. <br/>
 <br/>
 <p align="center">
-<img width="1407" alt="Capture d’écran 2020-10-26 à 20 42 48" src="https://user-images.githubusercontent.com/63207451/97220491-d8ead280-17cb-11eb-84b7-fa4ba0778bcf.png">
+<img width="1356" alt="Capture d’écran 2020-12-11 à 15 45 03" src="https://user-images.githubusercontent.com/63207451/101916898-dac7f400-3bc7-11eb-95f7-9b4c6256edfc.png">
 	<p/>
 <br/>
 (courbe noire : somme des personnes immunisées et décédées) <br/>
