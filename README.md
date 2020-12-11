@@ -142,7 +142,7 @@ Le nombre de décès est immensément plus grand lorsque l'immunité est quasi i
 <br/>
 On peut simuler un confinement de la population, en diminuant la variance de celle-ci et en augmentant le nombre de cluster, c'est à dire le nombre de groupes distincts physiquement, d'individus dans la population.  
 <br/>
-Par exemple avec une variance de 2 et 7 centers (modifiable dans la fonction make_blobs), on observe que l'épidémie est très rapidement sous contrôle. On compte à la fin, moins de 4% de décès sur l'ensemble de la population. <br/>
+Par exemple avec une variance de 1 et 30 centers (modifiable dans la fonction make_blobs), on observe que l'épidémie est globalement sous contrôle, le pic d'infectés est très bas. On compte à la fin, 21% de décès sur l'ensemble de la population. <br/>
 <br/>
 <p align="center">
 <img width="1356" alt="Capture d’écran 2020-12-11 à 16 46 09" src="https://user-images.githubusercontent.com/63207451/101924066-7cebda00-3bd0-11eb-9db3-cc1143af095f.png">
