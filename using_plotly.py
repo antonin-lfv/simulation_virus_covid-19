@@ -242,14 +242,15 @@ def virus_px():
 
 def vague_seuil_px_opti():
 
+    print('Début de la simulation ... \n')
     start = time.time()
 
-    nb_individu = 1500  # recommandé : 2000 environ 35 secondes
-    variance_pop = 4
-    rayon_contamination = 2
-    infectiosite = 0.17
-    p = 0.2
-    d = 0.05
+    nb_individu = 3000  # recommandé : 500 à 5000 
+    variance_pop = 1  # recommandé : 1
+    rayon_contamination = 0.5  # recommandé : 0.5
+    infectiosite = 0.10  # recommandé : 10%
+    p = 0.10  # recommandé : 10%
+    d = 0.05  # recommandé : 5%
 
     # NOTE : si les courbes restent constantes, augmentez le rayon de contamination
     # si le virus est trés mortel il n'y aura pas beaucoup de propagation
@@ -382,8 +383,7 @@ def vague_seuil_px_opti():
     fig.update_layout(hovermode="x")
     fig.update_layout(title_text="simulation virus")
     fig.update_layout(title_font_color='#EF553B')
-    print('temps d\'éxecution:')
-    print(time.time()-start)
+    print('Simulation terminée en '+str(time.time()-start)+' secondes')
     plot(fig)
 
 
