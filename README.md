@@ -33,6 +33,11 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 <p align="center">
 <img width="1356" alt="Capture d’écran 2020-12-11 à 15 45 03" src="https://user-images.githubusercontent.com/63207451/101916898-dac7f400-3bc7-11eb-95f7-9b4c6256edfc.png">
 	<p/>
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/63207451/101951720-c13ea080-3bf7-11eb-9dbd-c3cb50136b29.png">
+	<p/>
+	
 <br/>
 (courbe noire : somme des personnes immunisées et décédées) <br/>
 <br/>
