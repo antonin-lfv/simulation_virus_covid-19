@@ -335,30 +335,26 @@ def vague_seuil_px_opti():
         fig.add_trace(go.Scatter(x=np.array(coord['coord_sains'])[:, 0], y=np.array(coord['coord_sains'])[:, 1], name="sain", mode="markers",
                                  marker=dict(
                                      line=dict(
-
                                          color='#636EFA')
-                                 ), showlegend=False), 1, 1)
+                                 ), marker_line=dict(width=1), showlegend=False), 1, 1)
     if coord['coord_infectes'] != []:
         fig.add_trace(go.Scatter(x=np.array(coord['coord_infectes'])[:, 0], y=np.array(coord['coord_infectes'])[:, 1], name="infecté",mode="markers",
                                  marker=dict(
                                      line=dict(
-
                                          color='#EF553B')
-                                 ), showlegend=False), 1, 1)
+                                 ), marker_line=dict(width=1), showlegend=False), 1, 1)
     if coord['coord_immunises'] != []:
         fig.add_trace(go.Scatter(x=np.array(coord['coord_immunises'])[:, 0], y=np.array(coord['coord_immunises'])[:, 1], name='immunisé',mode="markers",
                                  marker=dict(
                                      line=dict(
-
                                          color='#00CC96')
-                                 ), showlegend=False), 1, 1)
+                                 ), marker_line=dict(width=1), showlegend=False), 1, 1)
     if coord['coord_deces'] != []:
         fig.add_trace(go.Scatter(x=np.array(coord['coord_deces'])[:, 0], y=np.array(coord['coord_deces'])[:, 1], name="décédé", mode="markers",
                                  marker=dict(
                                      line=dict(
-
                                          color='#AB63FA')
-                                 ), showlegend=False), 1, 1)
+                                 ), marker_line=dict(width=1), showlegend=False), 1, 1)
 
     fig.update_traces(hoverinfo="name")
     fig.update_xaxes(showgrid=False, visible=False, row=1, col=1)
