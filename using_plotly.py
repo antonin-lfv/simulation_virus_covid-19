@@ -54,185 +54,6 @@ def deces(l, l2, l3, p):  # l: infectés; l2: décès précédents; l3: immunis�
     coord_deces += l2  # on ajoute les décès précédents
     return list(l), coord_deces
 
-
-# Afficher les 4 premières vagues avec proportions
-# Cette fonction n'est pas optimisée
-
-def virus_px():
-    
-    #paramètres
-    nb_individu = 300
-    variance_population = 7
-    rayon_contamination = 5
-    infectiosite = 0.7
-    p = 0.2 #proba immunisé
-    d = 0.2 #proba de décès
-
-    fig = go.Figure() #création de la figure
-    
-    x, y = make_blobs(n_samples=nb_individu, centers=2, cluster_std=variance_population, shuffle=True) #dataset population
-    taille_pop = len(x)
-    
-    # création des subplots - 'xy' pour des courbes et 'domain' pour des pies | colspan pour étendre un subplot sur 2 colonnes
-    fig = make_subplots(rows=6, cols=2,column_widths=[0.8, 0.2],specs=[[{'type':'xy'},{'type':'domain'}],[{'type':'xy'},{'type':'domain'}],[{'type':'xy'},{'type':'domain'}],[{'type':'xy'},{'type':'domain'}],[{'type':'xy'},{'type':'domain'}],[{'type':'xy', "colspan": 2},None]])
-    
-    # initialisation des courbes finales
-    courbe_sains = []
-    courbe_infectes = []
-    courbe_immunises = []
-    courbe_deces = []
-    
-    "1er infecté"
-    numero_infecte_1 = rd.randint(0, taille_pop) # au hasard un individu dans la population
-    coord_1er_infecte = [x[:, 0][numero_infecte_1], x[:, 1][numero_infecte_1]]
-    fig.add_trace(go.Scatter(x=x[:, 0],y=x[:, 1],mode="markers",marker=dict(color='#636EFA'),showlegend=False),1,1) # on trace les individus sains
-    fig.add_trace(go.Scatter(x=[x[:, 0][numero_infecte_1]],y=[x[:, 1][numero_infecte_1]],mode="markers",marker=dict(color="Red"),showlegend=False),1,1) # on trace l'individu infecté
-    
-    "pie"
-    labels = ["sains","infectés","immunisés","décédés"]
-    fig.add_trace(go.Pie(labels=labels, values=[taille_pop-1,1,0,0],sort=False),1,2) # création du pie (graphe fromage)
-    fig.update_xaxes(showgrid=False, visible= False, row=1, col=1)
-    fig.update_yaxes(showgrid=False, visible= False, row=1, col=1)
-    #actualisation des courbes
-    courbe_sains.append(taille_pop - 1)
-    courbe_infectes.append(1)
-    courbe_immunises.append(0)
-    courbe_deces.append(0)
-    
-    "1er vague"
-    coord_infectes = []  # cette liste sera implémentée des nouveaux cas
-    coord_sains = []  # liste des cas sains
-    for k in range(taille_pop):
-        if [x[:, 0][k], x[:, 1][k]] == coord_1er_infecte:
-            coord_infectes.append(coord_1er_infecte)
-        elif distance(coord_1er_infecte, [x[:, 0][k], x[:, 1][k]]) < rayon_contamination and chance_infecte(infectiosite):
-            fig.add_trace(go.Scatter(x=[x[:, 0][k]], y=[x[:, 1][k]], mode="markers", marker=dict(color='#EF553B'), showlegend=False),2,1)
-            coord_infectes.append([x[:, 0][k], x[:, 1][k]])
-        else:
-            fig.add_trace(go.Scatter(x=[x[:, 0][k]], y=[x[:, 1][k]], mode="markers", marker=dict(color='#636EFA'), showlegend=False),2,1)
-            coord_sains.append([x[:, 0][k], x[:, 1][k]])
-            fig.add_trace(go.Scatter(x=[x[:, 0][numero_infecte_1]], y=[x[:, 1][numero_infecte_1]], mode="markers",marker=dict(color='#EF553B'), showlegend=False),2,1)
-    fig.update_xaxes(showgrid=False, visible=False, row=1, col=1) # on supprime les axes
-    fig.update_yaxes(showgrid=False, visible=False, row=1, col=1)
-    
-    "pie"
-    labels = ["sains","infectés","immunisés","décédés"]
-    fig.add_trace(go.Pie(values=[ len(coord_sains),len(coord_infectes),0,0], labels=labels,sort=False),2,2)
-    courbe_sains.append(len(coord_sains))
-    courbe_infectes.append(len(coord_infectes))
-    courbe_immunises.append(0)
-    courbe_deces.append(0)
-    
-    "2e vague"
-    non_sains = []
-    coord_infectes1, coord_immunises = immuniser(coord_infectes, [], p)
-    coord_infectes, coord_deces = deces(coord_infectes1, [], coord_immunises, d)
-    for k in range(len(coord_infectes)):
-        for j in range(len(coord_sains)):
-            if distance(np.array(coord_infectes)[k, :], np.array(coord_sains)[j, :]) < rayon_contamination and list(np.array(coord_sains)[j, :]) not in coord_infectes:
-                coord_infectes.append(list(np.array(coord_sains)[j, :]))
-                non_sains.append(list(np.array(coord_sains)[j, :]))
-
-    coord_sains = remove_(coord_sains, non_sains)
-    if coord_sains != []:
-        fig.add_trace(go.Scatter(x=np.array(coord_sains)[:, 0], y=np.array(coord_sains)[:, 1], mode="markers", marker=dict(color='#636EFA'), showlegend=False),3,1)
-    if coord_infectes != []:
-        fig.add_trace(go.Scatter(x=np.array(coord_infectes)[:, 0], y=np.array(coord_infectes)[:, 1], mode="markers",marker=dict(color='#EF553B'), showlegend=False),3,1)
-    if coord_immunises != []:
-        fig.add_trace(go.Scatter(x=np.array(coord_immunises)[:, 0], y=np.array(coord_immunises)[:, 1], mode="markers",marker=dict(color='#00CC96'), showlegend=False),3,1)
-    if coord_deces != []:
-        fig.add_trace(go.Scatter(x=np.array(coord_deces)[:, 0], y=np.array(coord_deces)[:, 1], mode="markers",marker=dict(color='#AB63FA'), showlegend=False),3,1)
-    fig.update_xaxes(showgrid=False, visible=False, row=2, col=1)
-    fig.update_yaxes(showgrid=False, visible=False, row=2, col=1)
-    
-    "pie"
-    labels = ["sains","infectés","immunisés","décédés"]
-    fig.add_trace(go.Pie(values=[len(coord_sains),len(coord_infectes) ,len(coord_immunises), len(coord_deces)], labels=labels,sort=False),3,2)
-    courbe_sains.append(len(coord_sains))
-    courbe_infectes.append(len(coord_infectes))
-    courbe_immunises.append(len(coord_immunises))
-    courbe_deces.append(len(coord_deces))
-    
-    "3e vague"
-    non_sains = []
-    coord_infectes1, coord_immunises = immuniser(coord_infectes, coord_immunises, p)
-    coord_infectes, coord_deces = deces(coord_infectes1, coord_deces, coord_immunises, d)
-    for k in range(len(coord_infectes)):
-        for j in range(len(coord_sains)):
-            if distance(np.array(coord_infectes)[k, :], np.array(coord_sains)[j, :]) < rayon_contamination and list(
-                    np.array(coord_sains)[j, :]) \
-                    not in coord_infectes and chance_infecte(infectiosite):
-                coord_infectes.append(list(np.array(coord_sains)[j, :]))
-                non_sains.append(list(np.array(coord_sains)[j, :]))
-    coord_sains = remove_(coord_sains, non_sains) # on enlève les individus sains qui sont maintenant infectés
-    if coord_sains != []:
-        fig.add_trace(go.Scatter(x=np.array(coord_sains)[:, 0], y=np.array(coord_sains)[:, 1], mode="markers", marker=dict(color='#636EFA'), showlegend=False),4,1)
-    if coord_infectes != []:
-        fig.add_trace(go.Scatter(x=np.array(coord_infectes)[:, 0], y=np.array(coord_infectes)[:, 1], mode="markers",marker=dict(color='#EF553B'), showlegend=False),4,1)
-    if coord_immunises != []:
-        fig.add_trace(go.Scatter(x=np.array(coord_immunises)[:, 0], y=np.array(coord_immunises)[:, 1], mode="markers",marker=dict(color='#00CC96'), showlegend=False),4,1)
-    if coord_deces != []:
-        fig.add_trace(go.Scatter(x=np.array(coord_deces)[:, 0], y=np.array(coord_deces)[:, 1], mode="markers",marker=dict(color='#AB63FA'), showlegend=False),4,1)
-    fig.update_xaxes(showgrid=False, visible=False, row=3, col=1)
-    fig.update_yaxes(showgrid=False, visible=False, row=3, col=1)
-    
-    "pie"
-    labels = ["sains","infectés","immunisés","décédés"]
-    fig.add_trace(go.Pie(values=[len(coord_sains),len(coord_infectes) ,len(coord_immunises), len(coord_deces)], labels=labels,sort=False),4,2)
-    courbe_sains.append(len(coord_sains))
-    courbe_infectes.append(len(coord_infectes))
-    courbe_immunises.append(len(coord_immunises))
-    courbe_deces.append(len(coord_deces))
-    
-    "4e vague"
-    non_sains = []
-    coord_infectes1, coord_immunises = immuniser(coord_infectes, coord_immunises, p)
-    coord_infectes, coord_deces = deces(coord_infectes1, coord_deces, coord_immunises, d)
-    for k in range(len(coord_infectes)):
-        for j in range(len(coord_sains)):
-            if distance(np.array(coord_infectes)[k, :], np.array(coord_sains)[j, :]) < rayon_contamination and list(
-                    np.array(coord_sains)[j, :]) not in \
-                    coord_infectes and chance_infecte(infectiosite):
-                coord_infectes.append(list(np.array(coord_sains)[j, :]))
-                non_sains.append(list(np.array(coord_sains)[j, :]))
-    coord_sains = remove_(coord_sains, non_sains)
-    if coord_sains != []:
-        fig.add_trace(go.Scatter(x=np.array(coord_sains)[:, 0], y=np.array(coord_sains)[:, 1], mode="markers", marker=dict(color='#636EFA'), showlegend=False),5,1)
-    if coord_infectes != []:
-        fig.add_trace(go.Scatter(x=np.array(coord_infectes)[:, 0], y=np.array(coord_infectes)[:, 1], mode="markers",marker=dict(color='#EF553B'), showlegend=False),5,1)
-    if coord_immunises != []:
-        fig.add_trace(go.Scatter(x=np.array(coord_immunises)[:, 0], y=np.array(coord_immunises)[:, 1], mode="markers",marker=dict(color='#00CC96'), showlegend=False),5,1)
-    if coord_deces != []:
-        fig.add_trace(go.Scatter(x=np.array(coord_deces)[:, 0], y=np.array(coord_deces)[:, 1], mode="markers",marker=dict(color='#AB63FA'), showlegend=False),5,1)
-    fig.update_xaxes(showgrid=False, visible=False, row=4, col=1)
-    fig.update_yaxes(showgrid=False, visible=False, row=4, col=1)
-    
-    "pie"
-    labels = ["sains","infectés","immunisés","décédés"]
-    fig.add_trace(go.Pie(values=[len(coord_sains),len(coord_infectes) ,len(coord_immunises), len(coord_deces)], labels=labels,sort=False),5,2)
-    courbe_sains.append(len(coord_sains))
-    courbe_infectes.append(len(coord_infectes))
-    courbe_immunises.append(len(coord_immunises))
-    courbe_deces.append(len(coord_deces))
-    
-    "courbes"
-    x_courbe = list(np.arange(0, len(courbe_sains)))
-    # on trace les courbes finales
-    fig.add_trace(go.Scatter(x=x_courbe,y=courbe_sains,marker=dict(color='#636EFA'), name="sain",showlegend=False),6,1)
-    fig.add_trace(go.Scatter(x=x_courbe,y=courbe_infectes,marker=dict(color='#EF553B'), name="infecté",showlegend=False),6,1)
-    fig.add_trace(go.Scatter(x=x_courbe,y=courbe_immunises,marker=dict(color='#00CC96'), name="immunisé", showlegend=False),6,1)
-    fig.add_trace(go.Scatter(x=x_courbe,y=courbe_deces,marker=dict(color='#AB63FA'),name="décédé",showlegend=False),6,1)
-    fig.update_traces(
-        hoverinfo="name+x+y", # affichage du curseur avec la souris
-        line={"width": 1.2},
-        marker={"size": 6},
-        mode="lines+markers",
-        showlegend=False, row=2, col=1) 
-    fig.update_layout(hovermode="x")
-    
-    plot(fig)
-
-
 # affiche la vague pour laquelle le virus ne se propage plus, avec les proportions et courbes évolutives
 ## Version optimisée !
 
@@ -241,9 +62,9 @@ def vague_seuil_px_opti():
     print('Début de la simulation ... \n')
     start = time.time()
 
-    nb_individu = 4000  # recommandé : 500 à 5000
+    nb_individu = 2000  # recommandé : 500 à 5000
     variance_pop = 1  # recommandé : 1
-    rayon_contamination = 0.5  # recommandé : 0.5
+    rayon_contamination = 4  # recommandé : 0.5
     infectiosite = 0.10  # recommandé : 10%
     p = 0.10  # recommandé : 10%
     d = 0.05  # recommandé : 5%
@@ -276,7 +97,7 @@ def vague_seuil_px_opti():
     data = dict(courbe_sains = [],courbe_infectes = [],courbe_immunises = [],courbe_deces = [],courbe_removed = [],coord_infectes=[],coord_sains=[],coord_immunises=[],coord_deces=[])
 
     # dataset
-    x, y = make_blobs(n_samples=nb_individu, centers=1, cluster_std=variance_pop)
+    x, y = make_blobs(n_samples=nb_individu, centers=50, cluster_std=variance_pop)
     df = pd.DataFrame(dict(x=x[:,0],
                            y=x[:,1]))
     taille_pop = len(df['x'])
@@ -331,6 +152,7 @@ def vague_seuil_px_opti():
     if data['coord_sains'] != []:
         fig.add_trace(go.Scatter(x=np.array(data['coord_sains'])[:, 0], y=np.array(data['coord_sains'])[:, 1], name="sain", mode="markers",
                                  marker=dict(
+                                     color='#636EFA',
                                      line=dict(
                                          width=0.4,
                                          color='#636EFA')
@@ -338,6 +160,7 @@ def vague_seuil_px_opti():
     if data['coord_infectes'] != []:
         fig.add_trace(go.Scatter(x=np.array(data['coord_infectes'])[:, 0], y=np.array(data['coord_infectes'])[:, 1], name="infecté",mode="markers",
                                  marker=dict(
+                                     color='#EF553B',
                                      line=dict(
                                          width=0.4,
                                          color='#EF553B')
@@ -345,6 +168,7 @@ def vague_seuil_px_opti():
     if data['coord_immunises'] != []:
         fig.add_trace(go.Scatter(x=np.array(data['coord_immunises'])[:, 0], y=np.array(data['coord_immunises'])[:, 1], name='immunisé',mode="markers",
                                  marker=dict(
+                                     color='#00CC96',
                                      line=dict(
                                          width=0.4,
                                          color='#00CC96')
@@ -352,6 +176,7 @@ def vague_seuil_px_opti():
     if data['coord_deces'] != []:
         fig.add_trace(go.Scatter(x=np.array(data['coord_deces'])[:, 0], y=np.array(data['coord_deces'])[:, 1], name="décédé", mode="markers",
                                  marker=dict(
+                                     color='#AB63FA',
                                      line=dict(
                                          width=0.4,
                                          color='#AB63FA')
@@ -388,6 +213,7 @@ def vague_seuil_px_opti():
     sec = round(t-min*60,1)
     print('Simulation terminée en '+str(min)+' minutes \net '+str(sec)+' secondes')
     plot(fig)
+
 
 
 # Simulation du confinement après dépassement du seuil hospitalier
