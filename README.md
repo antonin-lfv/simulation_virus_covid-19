@@ -158,7 +158,7 @@ Une fois le seuil dépassé, l'infectiosité est divisé par 10 et le rayon de c
 Ici, la courbe pleine représente l'épidémie sans l'application du confinement, et la courbe en pointillé avec application du confinement à partir du jour ou le nombre de personnes infectés est superieur à la capacité hospitalière. On remarque que le nombre de personnes infectés diminue quelques jours après le début du confinement, et que le nombre de décès journaliers devient nul.  <br/>
 <br/>
 <p align="center">
-<img width="1183" alt="Capture d’écran 2020-12-09 à 19 04 48" src="https://user-images.githubusercontent.com/63207451/101672837-a7198c80-3a56-11eb-8ba0-6310230bfa15.png">
+<img src="https://user-images.githubusercontent.com/63207451/101983272-4cf91100-3c7a-11eb-8282-cb5eb8df8240.png">
 	<p/>
 <br/>
 
