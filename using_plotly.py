@@ -21,38 +21,38 @@ from plotly.subplots import make_subplots
 def distance_e(x, y):  # distance entre 2 points du plan cartésien
     return distance.euclidean([x[0],x[1]],[y[0],y[1]])
 
+
 def remove_(a, l): # enlever les éléments de l dans a
     for i in range(len(l)):
         a.remove(l[i])
-    return (list(a))
+    return a
 
 
 def chance_infecte(p):  # return True si il devient infecté avec une proba p
     proba = int(p * 100)
     return rd.randint(0, 100) <= proba
 
+
 def immuniser(l, l2, p):  # l: infectés; l2: immunisés précédents
-    coord_immu = []
-    l_p = l[:]  # création d'une copie pour éviter d'erreur d'indice
-    for i in range(len(l_p)):
+    drop = 0
+    for i in range(len(l)):
         proba = int(p * 100)
         if rd.randint(0, 100) <= proba:
-            coord_immu.append(l_p[i])
-            l.remove(l_p[i])
-    coord_immu += l2  # on ajoute les immunisés précédents
-    return list(l), coord_immu
+            l2.append(l[i-drop])
+            l.remove(l[i-drop])
+            drop+=1
+    return l, l2
 
 
 def deces(l, l2, l3, p):  # l: infectés; l2: décès précédents; l3: immunisés
-    coord_deces = []
     l_p = l[:]  # création d'une copie pour éviter d'erreur d'indice
     for i in range(len(l_p)):
         proba = int(p * 100)
         if rd.randint(0, 100) <= proba and l_p[i] not in l3:
-            coord_deces.append(l_p[i])
+            l2.append(l_p[i])
             l.remove(l_p[i])
-    coord_deces += l2  # on ajoute les décès précédents
-    return list(l), coord_deces
+    return l, l2
+
 
 # affiche la vague pour laquelle le virus ne se propage plus, avec les proportions et courbes évolutives
 ## Version optimisée !
