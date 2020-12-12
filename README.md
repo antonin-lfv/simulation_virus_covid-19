@@ -134,6 +134,8 @@ On observe cette même tendance si l'on compare maintenant les courbes des déc�
 	<p/>
 <br/>
 Le nombre de décès est immensément plus grand lorsque l'immunité est quasi inexistante. Avec un taux d'immunité égale à 10%, on a 6 fois plus de décès qu'avec un taux à 70%.
+
+<br/>
 <br/>
 						    
 ## Avec confinement 
