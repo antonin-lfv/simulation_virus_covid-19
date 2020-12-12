@@ -153,9 +153,9 @@ Par exemple avec une variance de 1 et 30 centers (modifiable dans la fonction ma
 ### Confinement après dépacement de la capacité hospitalière
 
 <br/>
-Une fois le seuil dépassé, l'infectiosité est divisé par 10 et le rayon de contamination est divisé par 5.
+Une fois le seuil dépassé, l'infectiosité est divisé par 8 et le rayon de contamination est divisé par 4.
 <br/>
-Ici, la courbe pleine représente l'épidémie sans l'application du confinement, et la courbe en pointillé avec application du confinement à partir du jour ou le nombre de personnes infectés est superieur à la capacité hospitalière. On remarque que le nombre de personnes infectés diminue quelques jours après le début du confinement, et que le nombre de décès journaliers devient nul.  <br/>
+Ici, la courbe pleine représente l'épidémie sans l'application du confinement, et la courbe en pointillé avec application du confinement à partir du jour ou le nombre de personnes infectés est superieur à la capacité hospitalière. On remarque que le nombre de personnes infectés diminue quelques jours après le début du confinement, et que le nombre de décès journaliers atteint un seuil inférieur au cas ou il n'y a pas de confinement.  <br/>
 <br/>
 <p align="center">
 <img src="https://user-images.githubusercontent.com/63207451/101983272-4cf91100-3c7a-11eb-8282-cb5eb8df8240.png">
