@@ -57,12 +57,12 @@ def deces(l, l2, l3, p):  # l: infectés; l2: décès précédents; l3: immunis�
 # affiche la vague pour laquelle le virus ne se propage plus, avec les proportions et courbes évolutives
 ## Version optimisée !
 
-def vague_seuil_px_opti2():
+def vague_seuil_px_opti():
 
     print('Début de la simulation ... \n')
     start = time.time()
 
-    nb_individu = 3000  # recommandé : 500 à 10000
+    nb_individu = 2000  # recommandé : 500 à 10000
     variance_pop = 1  # recommandé : 1
     rayon_contamination = 0.5  # recommandé : 0.5
     infectiosite = 0.10  # recommandé : 10%
@@ -213,5 +213,6 @@ def vague_seuil_px_opti2():
     sec = round(t-min*60,1)
     print('Simulation terminée en '+str(min)+' minutes \net '+str(sec)+' secondes')
     plot(fig)
+
 
 
