@@ -87,7 +87,6 @@ def vague_seuil_px_opti2():
         return 'error, d must be in [0,1]'
 
     # création des figures
-    fig = go.Figure()
     fig = make_subplots(rows=2, cols=2, column_widths=[0.8, 0.2], row_heights=[0.5, 0.5],
                         subplot_titles=["population", "", ""],
                         specs=[[{'type': 'xy'}, {'type': 'domain'}], [{'type': 'xy', 'colspan': 2}, None]],
@@ -151,6 +150,7 @@ def vague_seuil_px_opti2():
         fig.add_trace(go.Scatter(x=np.array(data['coord_sains'])[:, 0], y=np.array(data['coord_sains'])[:, 1], name="sain", mode="markers",
                                  marker=dict(
                                      color='#636EFA',
+                                     size=5,
                                      line=dict(
                                          width=0.4,
                                          color='#636EFA')
@@ -159,6 +159,7 @@ def vague_seuil_px_opti2():
         fig.add_trace(go.Scatter(x=np.array(data['coord_infectes'])[:, 0], y=np.array(data['coord_infectes'])[:, 1], name="infecté",mode="markers",
                                  marker=dict(
                                      color='#EF553B',
+                                     size=5,
                                      line=dict(
                                          width=0.4,
                                          color='#EF553B')
@@ -167,6 +168,7 @@ def vague_seuil_px_opti2():
         fig.add_trace(go.Scatter(x=np.array(data['coord_immunises'])[:, 0], y=np.array(data['coord_immunises'])[:, 1], name='immunisé',mode="markers",
                                  marker=dict(
                                      color='#00CC96',
+                                     size=5,
                                      line=dict(
                                          width=0.4,
                                          color='#00CC96')
@@ -175,6 +177,7 @@ def vague_seuil_px_opti2():
         fig.add_trace(go.Scatter(x=np.array(data['coord_deces'])[:, 0], y=np.array(data['coord_deces'])[:, 1], name="décédé", mode="markers",
                                  marker=dict(
                                      color='#AB63FA',
+                                     size=5,
                                      line=dict(
                                          width=0.4,
                                          color='#AB63FA')
@@ -186,11 +189,11 @@ def vague_seuil_px_opti2():
     fig.add_trace(go.Pie(values=[len(data['coord_sains']), len(data['coord_infectes']), len(data['coord_immunises']), len(data['coord_deces'])], labels=labels, sort=False), 1, 2)
 
     x_courbe = list(np.arange(0, len(data['courbe_sains'])))
-    fig.add_trace(go.Scatter(x=x_courbe, y=data['courbe_sains'], marker=dict(color='#636EFA'), showlegend=False, name="sains",yaxis="y", ), 2, 1)
-    fig.add_trace(go.Scatter(x=x_courbe, y=data['courbe_infectes'], marker=dict(color='#EF553B'), showlegend=False, name="infectés",yaxis="y2", ), 2, 1)
-    fig.add_trace(go.Scatter(x=x_courbe, y=data['courbe_immunises'], marker=dict(color='#00CC96'), showlegend=False, name="immunisés",yaxis="y3", ), 2, 1)
-    fig.add_trace(go.Scatter(x=x_courbe, y=data['courbe_deces'], marker=dict(color='#AB63FA'), showlegend=False, name="décédés",yaxis="y4", ), 2, 1)
-    fig.add_trace(go.Scatter(x=x_courbe, y=data['courbe_removed'], marker=dict(color='#000000'), showlegend=False, name="removed",yaxis="y5", ), 2, 1)
+    fig.add_trace(go.Scatter(x=x_courbe, y=data['courbe_sains'], marker=dict(color='#636EFA',size=1), marker_line=dict(width=1),showlegend=False, name="sains",yaxis="y", ), 2, 1)
+    fig.add_trace(go.Scatter(x=x_courbe, y=data['courbe_infectes'], marker=dict(color='#EF553B',size=1), marker_line=dict(width=1),showlegend=False, name="infectés",yaxis="y2", ), 2, 1)
+    fig.add_trace(go.Scatter(x=x_courbe, y=data['courbe_immunises'], marker=dict(color='#00CC96',size=1), marker_line=dict(width=1),showlegend=False, name="immunisés",yaxis="y3", ), 2, 1)
+    fig.add_trace(go.Scatter(x=x_courbe, y=data['courbe_deces'], marker=dict(color='#AB63FA',size=1), marker_line=dict(width=1),showlegend=False, name="décédés",yaxis="y4", ), 2, 1)
+    fig.add_trace(go.Scatter(x=x_courbe, y=data['courbe_removed'], marker=dict(color='#000000',size=1), marker_line=dict(width=1), showlegend=False, name="removed",yaxis="y5", ), 2, 1)
     fig.update_xaxes(title_text="jours", row=2, col=1)
     fig.update_yaxes(title_text="nombre d'individus", row=2, col=1)
     fig.add_annotation(text="Maximum d'infectés", x=data['courbe_infectes'].index(max(data['courbe_infectes'])),# ajouter un texte avec une flèche
@@ -210,4 +213,5 @@ def vague_seuil_px_opti2():
     sec = round(t-min*60,1)
     print('Simulation terminée en '+str(min)+' minutes \net '+str(sec)+' secondes')
     plot(fig)
+
 
