@@ -129,11 +129,11 @@ def vague_seuil_px_opti():
     # vagues 2 à n
 
     while len(data['coord_infectes']) > 0.08*taille_pop or len(data['courbe_sains']) < 20: #condition d'arrêt
-        non_sains = 0
         coord_infectes1, data['coord_immunises'] = immuniser(data['coord_infectes'], data['coord_immunises'], p)
         data['coord_infectes'], data['coord_deces'] = deces(coord_infectes1, data['coord_deces'], data['coord_immunises'], d)
 
         for k in range(len(data['coord_infectes'])):
+            non_sains = 0
             for j in range(len(data['coord_sains'])):
                 if distance_e(data['coord_infectes'][k],data['coord_sains'][j-non_sains]) < rayon_contamination and data['coord_sains'][j-non_sains] not in data['coord_infectes'] and chance_infecte(infectiosite):
                     data['coord_infectes'].append(data['coord_sains'][j-non_sains])
