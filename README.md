@@ -16,9 +16,7 @@ Cette modélisation sera réalisée avec matplotlib et plotly indépendamment.
 <br/><br/>
 
 >__UPDATE :__ 1. Ajout de la courbe 'removed', courbe noire, qui correspond aux personnes ne pouvant plus transmettre le virus, elle correspond à la somme des personnes immunisées et décédées. Elle est ajoutée dans le but de pouvoir comparer les résultats de la simulation à un modèle mathématiques, le modèle SIR. 
-<br/> 
-
-> 2. Optimisation drastique du code, temps d'exécution réduit de façon considérable.  
+<br/> 2. Optimisation drastique du code, temps d'exécution réduit de façon considérable.  
 
 <br/>
 <br/>
