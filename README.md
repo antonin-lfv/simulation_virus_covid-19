@@ -204,7 +204,7 @@ Le modèle SIR peut donc être representé par le diagramme suivant :
 <p align="center">
 <img width="692" alt="Capture d’écran 2021-01-12 à 15 44 43" src="https://user-images.githubusercontent.com/63207451/104329401-246c6d00-54ed-11eb-95f2-55974f363be7.png">
 	<p/>
-<br/>
+
 Avec β l'infectiosité du virus et λ le taux de retirement.
 Ainsi, les équations différentielles qui régissent ce modèle sont :
 
