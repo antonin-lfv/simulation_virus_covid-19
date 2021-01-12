@@ -195,6 +195,12 @@ Avec cette simulation on observe que le nombre d'infectés augmente rapidement d
 
 <br/>
 
+<p align="center">
+<img width="692" alt="Capture d’écran 2021-01-12 à 15 44 43" src="https://user-images.githubusercontent.com/63207451/104329401-246c6d00-54ed-11eb-95f2-55974f363be7.png">
+	<p/>
+
+<br/>
+
 ### Validation du modèle statistique par le modèle SIR
 
 <br/>
