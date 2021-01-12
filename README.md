@@ -214,9 +214,21 @@ Ainsi, les équations différentielles qui régissent ce modèle sont :
 <img width="1112" alt="Capture d’écran 2021-01-12 à 16 44 25" src="https://user-images.githubusercontent.com/63207451/104337207-8335e480-54f5-11eb-92c3-e221b2c94644.png">
 	<p/>
 
-
+Le vecteur unitaire [S0, I0, R0] correspond aux nombres d'individus sains, infectés et retirés à t=0. Dans ce projet, aucun individu n'est immunisé à t=0 et la valeur de I0 est 1. 
 
 ### Validation du modèle statistique par le modèle SIR
+
+<br/>
+
+Comparaison du modèle mathématique SIR et du modèle statistique, pour des paramètres similaires :
+
+<p align="center">
+<img width="1301" alt="modèle SIR" src="https://user-images.githubusercontent.com/63207451/104339610-140dbf80-54f8-11eb-9e49-ab1a4b170137.png">
+	<p/>
+
+<p align="center">
+<img width="1301" alt="modèle SIR" src="https://user-images.githubusercontent.com/63207451/104339685-2982e980-54f8-11eb-8f69-ac9a18a2ba26.png">
+	<p/>
 
 <br/>
 
