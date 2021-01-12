@@ -191,11 +191,11 @@ Avec cette simulation on observe que le nombre d'infectés augmente rapidement d
 
 <br/>
 
-# Modèle mathématique
+### Modèle mathématique
 
 <br/>
 
-# Validation du modèle statistique par le modèle SIR
+### Validation du modèle statistique par le modèle SIR
 
 <br/>
 
