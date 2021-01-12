@@ -202,7 +202,7 @@ Avec cette simulation on observe que le nombre d'infectés augmente rapidement d
 ## Conclusion
 
 <br/>
-L'étude épidémiologique reste au final un domaine très théorique. Même si les résultats et observations obtenues sembles assez proches de la réalité, ces modélisations ne prennent pas en compte certains autres facteurs, tels que la vaccination, la mise en quarantaine des individus infectés, ou même le déplacement des individus dans la population. <br/>
+L'étude épidémiologique reste au final un domaine très théorique. Même si les résultats et observations obtenues sembles assez proches de la réalité et du modèle mathématique SIR, ces modélisations ne prennent pas en compte certains autres facteurs, tels que la vaccination, la mise en quarantaine des individus dès qu'ils sont infectés, ou même le déplacement des individus dans la population. <br/>
 Néanmoins, cela nous aident à comprendre comment un virus se comporte dans une population, et quel est l'influence de certains paramètres sur sa propagation.
 <br/>
 <br/>
