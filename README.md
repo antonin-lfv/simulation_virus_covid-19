@@ -208,12 +208,14 @@ Le modèle SIR peut donc être representé par le diagramme suivant :
 <img width="692" alt="Capture d’écran 2021-01-12 à 15 44 43" src="https://user-images.githubusercontent.com/63207451/104329401-246c6d00-54ed-11eb-95f2-55974f363be7.png">
 	<p/>
 
-Avec β l'infectiosité du virus et λ le taux de retirement.
+Avec β l'infectiosité du virus et λ le taux de retirement. <br/>
 Ainsi, les équations différentielles qui régissent ce modèle sont :   
 
 <p align="center">
 <img width="1051" alt="Capture d’écran 2021-01-12 à 16 19 57" src="https://user-images.githubusercontent.com/63207451/104333944-11a86700-54f2-11eb-98b0-d2003cfe6b30.png">
 	<p/>
+
+
 
 ### Validation du modèle statistique par le modèle SIR
 
