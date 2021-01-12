@@ -198,7 +198,8 @@ Le modèle SIR est un modèle à compartiments permettant de simuler de façon s
 
 <br/>     
 
-<p align="center"> ∀t	  N = S(t) + I(t) + R(t) <p/>
+<p align="center"> 
+	∀t	  N = S(t) + I(t) + R(t) <p/>
 <br/>
 
 Le modèle SIR peut donc être representé par le diagramme suivant :
