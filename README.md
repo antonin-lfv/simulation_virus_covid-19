@@ -231,7 +231,7 @@ Comparaison du modèle mathématique SIR et du modèle statistique, pour des par
 Modèle statistique :
 
 <p align="center">
-<img alt="modèle SIR" src="https://user-images.githubusercontent.com/63207451/104339685-2982e980-54f8-11eb-8f69-ac9a18a2ba26.png">
+<img alt="modèle SIR" src="https://user-images.githubusercontent.com/63207451/104345853-132c5c00-54ff-11eb-9ed8-a56aa960c267.png">
 	<p/>
 
 <br/>
