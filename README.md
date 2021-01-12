@@ -214,7 +214,7 @@ Ainsi, les équations différentielles qui régissent ce modèle sont :
 <img width="1112" alt="Capture d’écran 2021-01-12 à 16 44 25" src="https://user-images.githubusercontent.com/63207451/104337207-8335e480-54f5-11eb-92c3-e221b2c94644.png">
 	<p/>
 
-La première équation différentielle correspond au nombre de personnes saines, dont le signe est négatif, en effet la fonction S est décroissante pour tout t, car le nombre de personnes saines ne peut que diminuer (conformément au modèle dans lequel on se place, où les personnes infectés ne peuvent redevenir saines). Ensuite, la fonction I a le signe de la différence entre le nombre de personne saines (βS(t)I(t)/N) et retirés (λI(t)), et R correspond au nombre de personnes retirés.
+La première équation différentielle correspond au nombre de personnes saines, dont le signe est négatif, en effet la fonction S est décroissante pour tout t, car le nombre de personnes saines ne peut que diminuer (conformément au modèle dans lequel on se place, où les personnes infectés ne peuvent redevenir saines). Ensuite, la fonction I a le signe de la différence entre le nombre de personne saines (βS(t)I(t)/N) et retirés (λI(t)), et R correspond au nombre de personnes retirées.
 
 Le vecteur unitaire [S0, I0, R0] correspond aux nombres d'individus sains, infectés et retirés à t=0. Dans ce projet, aucun individu n'est immunisé à t=0 et la valeur de I0 est 1. 
 
