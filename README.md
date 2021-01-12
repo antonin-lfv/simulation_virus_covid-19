@@ -196,7 +196,7 @@ Avec cette simulation on observe que le nombre d'infectés augmente rapidement d
 <br/>
 Le modèle SIR est un modèle à compartiments permettant de simuler de façon simplifiée l'évolution d'une population divisée en 3 catégories, S-sains, I-infectés et R-removed (removed, c'est à dire dans l'incapacité de transmettre le virus). Ce modèle étudie la taille de ces 3 catégories au cours du temps, tel que S(t), I(t) et R(t) soient le nombre d'individus dans chaque catégorie à l'instant t. On peut donc remarquer que, soit N le nombre d'individus dans la population, on a :
 <br/>
-<p align="center"> ∀t N = S(t) + I(t) + R(t) <p/>
+<p align="center"> ∀t   N = S(t) + I(t) + R(t) <p/>
 
 <p align="center">
 <img width="692" alt="Capture d’écran 2021-01-12 à 15 44 43" src="https://user-images.githubusercontent.com/63207451/104329401-246c6d00-54ed-11eb-95f2-55974f363be7.png">
