@@ -8,7 +8,7 @@
 
 __Article lié à ce github__ : ( à venir )
 
-Ce projet à pour objectifs de créer un __virus__, et de simuler sa propagation au sein d'une population. Les individus infectés pourront transmettre le virus avec une certaine probabilité, et peuvent aussi devenir immunisés ou bien décéder. En utilisant les paramètres propres du covid-19 on peut modeliser grossièrement ce dernier.
+Ce projet à pour objectifs de créer un __virus__, et de simuler sa propagation au sein d'une population. Les individus infectés pourront transmettre le virus avec une certaine probabilité, et peuvent aussi devenir immunisés ou bien décéder. En utilisant les paramètres propres du covid-19 on peut modeliser grossièrement ce dernier. <br/>
 Ce modèle statistique sera comparé au modèle SIR, reposant sur des équations différentielles.
 
 On choisira des populations de quelques dizaines à quelques milliers d'individus et on supposera qu'un individu immunisé ne peut plus être infecté.
