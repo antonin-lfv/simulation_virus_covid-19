@@ -183,8 +183,12 @@ Cette simulation est à prendre avec beaucoup de précautions, car elle ne refl�
 
 Avec cette simulation on observe que le nombre d'infectés augmente rapidement dès le début pour arriver à son maximum au bout de 8 jours, puis diminue très lentement pendant 16 jours. Au final on compte quasiment 30% de décès, et plus de la moitié deviennent immunisés.
 <br/>
+<br/>
 
 ## Le modèle __SIR__
+
+<br/>
+
 
 <br/>
 
