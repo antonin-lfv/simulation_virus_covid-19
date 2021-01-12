@@ -23,7 +23,7 @@ Cette modélisation sera réalisée avec matplotlib et plotly indépendamment.
 
 ## Liens utiles
 
-- Comprendre le [Modèle SIR](https://interstices.info/modeliser-la-propagation-dune-epidemie/). <br/>
+- Comprendre le [Modèle SIR](https://fr.wikipedia.org/wiki/Modèles_compartimentaux_en_épidémiologie). <br/>
 
 - Thèse de Derdei Bichara sur l'[étude de modèles épidémiologiques](https://tel.archives-ouvertes.fr/tel-00841444/file/BicharaPhDThesis.pdf): Stabilité, observation et estimation de paramètres.
 
