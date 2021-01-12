@@ -49,7 +49,7 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 	- [Simulation avec différents taux d'immunité](#simulation-avec-différents-taux-dimmunité)
 - [Avec confinement](#avec-confinement)
 	- [Confinement immédiat](#confinement-dès-le-premier-cas-detecté)
-	- [Confinement après dépassement du seuil hospitalier](#confinement-après-dépacement-de-la-capacité-hospitalière) 
+	- [Confinement après dépassement du seuil hospitalier](#confinement-après-dépassement-de-la-capacité-hospitalière) 
 - [Simuler le SARS-cov-2](#simuler-le-SARS-cov-2)
 - [Le modèle SIR](#le-modèle-SIR)
 	- [Modèle mathématique](#Modèle-mathématique)
@@ -76,7 +76,7 @@ Pour matplotlib une simple fenêtre python apparaîtra (ou plus).
 ## Principe de la simulation
 
 <br/>
-Lors de la simulation, plusieurs paramètres sont en jeux. Il y a tout d'abord le nombre d'invidus dans la population, ici on choisira une population entre 0 et 5000 individus pour avoir un temps d'exécution raisonnable. Ce nombre restera constant durant toute la simulation. La repartition de ces individus sera donnée par le paramètre variance_population, et qui variera entre 0 et 10 environ. Plus ce nombre est grand, plus la population sera étalée.  
+Lors de la simulation, plusieurs paramètres sont en jeux. Il y a tout d'abord le nombre d'invidus dans la population, ici on choisira une population entre 0 et 15000 individus pour avoir un temps d'exécution raisonnable. Ce nombre restera constant durant toute la simulation. La repartition de ces individus sera donnée par le paramètre variance_population, et qui variera entre 0 et 10 environ. Plus ce nombre est grand, plus la population sera étalée.  
 <br/>
 Ensuite, le paramètre rayon_contamination donnera la portée maximale d'un individu infecté pour avoir une chance de transmettre son virus à un individu sain, avec une probabilté nommée infectiosité, qui est comprise entre 0 et 1. Chaque individu infecté reste infecté jusqu'à temps qu'il devienne immunisé ou qu'il décède. Après qu'un individu soit infecté, il a une probabilité p de devenir immunisé et donc de ne plus transmettre le virus, et une probabilité d de décéder suite à l'infection. Ces deux paramètres sont compris entre 0 et 1 également. Nous ne considérerons pas pour l'instant l'apparition d'un vaccin durant la simulation. Seule l'immunité innée des individus est prise en compte. 
 <br/>
@@ -160,7 +160,7 @@ Par exemple avec une variance de 0.6 et 10 centers (modifiable dans la fonction 
 	<p/>
 <br/>
 
-### Confinement après dépacement de la capacité hospitalière
+### Confinement après dépassement de la capacité hospitalière
 
 <br/>
 Une fois le seuil dépassé, l'infectiosité est divisé par 8 et le rayon de contamination est divisé par 4.
