@@ -212,7 +212,7 @@ Avec β l'infectiosité du virus et λ le taux de retirement. <br/>
 Ainsi, les équations différentielles qui régissent ce modèle sont :   
 
 <p align="center">
-<img width="1112" alt="Capture d’écran 2021-01-12 à 16 34 52" src="https://user-images.githubusercontent.com/63207451/104335923-25ed6380-54f4-11eb-8432-3b3cf1af1d94.png">
+<img width="1112" alt="Capture d’écran 2021-01-12 à 16 44 25" src="https://user-images.githubusercontent.com/63207451/104337207-8335e480-54f5-11eb-92c3-e221b2c94644.png">
 	<p/>
 
 
