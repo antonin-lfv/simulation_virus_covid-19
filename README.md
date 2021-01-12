@@ -52,6 +52,8 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 	- [Confinement après dépassement du seuil hospitalier](#confinement-après-dépacement-de-la-capacité-hospitalière) 
 - [Simuler le SARS-cov-2](#simuler-le-SARS-cov-2)
 - [Le modèle SIR](#le-modèle-SIR)
+	- [Modèle mathématique](#Modèle-mathématique)
+	- [Validation du modèle statistique par le modèle SIR](#Validation-du-modèle-statistique-par-le-modèle-SIR)
 - [Conclusion](#conclusion)
 
 
