@@ -226,11 +226,16 @@ Comparaison du modèle mathématique SIR et du modèle statistique, pour des par
 <img width="1301" alt="modèle SIR" src="https://user-images.githubusercontent.com/63207451/104339610-140dbf80-54f8-11eb-9e49-ab1a4b170137.png">
 	<p/>
 
+Modèle statistique :
+
 <p align="center">
 <img alt="modèle SIR" src="https://user-images.githubusercontent.com/63207451/104339685-2982e980-54f8-11eb-8f69-ac9a18a2ba26.png">
 	<p/>
 
 <br/>
+
+Les courbes sont assez similaires, la différence au niveau des abscisses est du au faite que les deux modèles n'ont pas la même représentation temporelle.
+Le modèle crée en python est donc conforme au modèle mathématique.
 
 ## Conclusion
 
