@@ -212,7 +212,7 @@ Avec β l'infectiosité du virus et λ le taux de retirement.
 Ainsi, les équations différentielles qui régissent ce modèle sont :   
 <br/>  
 
-<img width="634" alt="Capture d’écran 2021-01-12 à 16 16 54" src="https://user-images.githubusercontent.com/63207451/104333533-a2cb0e00-54f1-11eb-9e9a-d1b53943a57b.png">
+<img width="1051" alt="Capture d’écran 2021-01-12 à 16 19 57" src="https://user-images.githubusercontent.com/63207451/104333944-11a86700-54f2-11eb-98b0-d2003cfe6b30.png">
 
 ### Validation du modèle statistique par le modèle SIR
 
