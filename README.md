@@ -246,7 +246,7 @@ Le vecteur unitaire [S0, I0, R0] correspond aux nombres d'individus sains, infec
 
 <br/>
 
-Comparons maintenant le modèle mathématique SIR et le modèle statistique crée avec python. Les paramètres β et λ du modèle SIR correspondent respectivement au paramètre infectiosité et à la somme p+d du modèle python.
+Comparons maintenant le modèle mathématique SIR et le modèle statistique crée avec python. Les paramètres β et λ du modèle SIR correspondent respectivement aux paramètres infectiosité et à la somme p+d du modèle python.
 
 
 Modèle mathématique :
