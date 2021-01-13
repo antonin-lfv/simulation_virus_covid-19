@@ -223,6 +223,8 @@ On remarque que :
 <p align="center"> 
 	dS/dt + dI/dt + dR/dt = 0  <p/>
 	
+<br/>
+	
 Ce qui confirme le fait que ∀t S(t) + I(t) + R(t) = constante = N car la dérivée de la somme est nulle.
 
 <br/>
