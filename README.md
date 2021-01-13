@@ -47,6 +47,7 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 	- [Simulation avec différents taux d'infection](#Simulation-avec-différents-taux-dinfection)
 	- [Simulation avec différentes létalités](#simulation-avec-différentes-létalités)
 	- [Simulation avec différents taux d'immunité](#simulation-avec-différents-taux-dimmunité)
+- [Simulation avec différents Ro et cas limites](#Simulation-avec-différents-Ro-et-cas-limites)
 - [Avec confinement](#avec-confinement)
 	- [Confinement immédiat](#confinement-dès-le-premier-cas-detecté)
 	- [Confinement après dépassement du seuil hospitalier](#confinement-après-dépassement-de-la-capacité-hospitalière) 
@@ -84,7 +85,7 @@ Ensuite, le paramètre rayon_contamination donnera la portée maximale d'un indi
 Dans les 3 simulations qui suivent on ne s'intéressera qu'aux courbes évolutives et non à la représentation 2D de la population.
 <br/>
 
-## Simulation avec différents taux d'infection
+### Simulation avec différents taux d'infection
 
 <br/>
 Faisons varier le taux d'infection entre 10%, 15%, 30%, 50% et 70% et observons la courbe du nombre de personnes infectés.<br/>
@@ -103,7 +104,7 @@ Intéressons nous maintenant au nombre de décès en fonction de ces différente
 Les courbes sont quasiment linéaires sur une grande partie, jusqu'à atteindre un certain seuil, qui est très proche malgrès des infectiosités très différentes. La différence se fait dans la vitesse à laquelle le seuil est atteint, plus l'infectiosité est grande plus le seuil est atteint rapidement, il est atteint en une dizaine de jours pour une infectiosité de l'ordre de 70% et en une quinzaine pour une infectiosité de l'ordre de 10%.
 <br/>
 						     
-## Simulation avec différentes létalités
+### Simulation avec différentes létalités
 
 <br/>
 Faisons à présent varier la létalité entre 5%, 10%, 25%, 30% et 40%. Et observons l'évolution des courbes du nombre d'individus infectés. <br/>
@@ -123,7 +124,7 @@ Cependant même si le nombre d'infectés est plus faible avec une grande létali
 Le nombre de décès avec une létalité de 40% est 7 fois plus grand qu'avec une létalité de 5%. Ce qui représente des différences énormes sur une population de plusieurs millions d'individus.
 <br/>
 
-## Simulation avec différents taux d'immunité
+### Simulation avec différents taux d'immunité
 
 <br/>
 Enfin, faisons varier le taux d'immunité entre 10%, 20%, 40%, 50% et 70%; et observons les courbes du nombre d'individus infectés. <br/>
@@ -142,8 +143,10 @@ On observe cette même tendance si l'on compare maintenant les courbes des déc�
 Le nombre de décès est immensément plus grand lorsque l'immunité est quasi inexistante. Avec un taux d'immunité égale à 10%, on a 6 fois plus de décès qu'avec un taux à 70%.
 
 <br/>
-<br/>
-						    
+
+## Simulation avec différents Ro et cas limites
+
+
 ## Avec confinement 
 
 <br>
