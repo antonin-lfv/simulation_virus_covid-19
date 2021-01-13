@@ -147,7 +147,7 @@ Le nombre de décès est immensément plus grand lorsque l'immunité est quasi i
 
 ## Simulation avec différents Ro et cas limites
 
-On fait varier ici le taux de reproduction de base Ro du virus, dont l'epression est Ro=β/λ. On remarque en effet que la situation est très différente pour un Ro inférieur et supérieur à 1. Pour un Ro < 1, peu d'individus sont infectés, et le virus ne propage pas. À la frontière Ro=1, le nombre de personnes retirées atteint quasiment le nombre de personnes saines, mais sans l'atteindre, il faut attendre un Ro>1 pour que la courbe des individus retirées passe au dessus de celle des individus sains, et provoque ainsi la propagation du virus, qui est d'autant plus importante et rapide que la valeur du Ro est grande.
+On fait varier ici le taux de reproduction de base Ro du virus, dont l'epression est Ro=β/λ, ou ici β est l'infectiosité du virus, et λ la probabilité pour qu'un individu ne puisse plus transmettre le virus, c'est à dire p+d. On remarque que la situation est très différente pour un Ro inférieur et supérieur à 1. Pour un Ro < 1, peu d'individus sont infectés, et le virus ne propage pas. À la frontière Ro=1, le nombre de personnes retirées atteint quasiment le nombre de personnes saines, mais sans l'atteindre, il faut attendre un Ro>1 pour que la courbe des individus retirées passe au dessus de celle des individus sains, et provoque ainsi la propagation du virus, qui est d'autant plus importante et rapide que la valeur du Ro est grande.
 
 <br/>
 
