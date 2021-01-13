@@ -235,6 +235,8 @@ La dernière équation, elle, correspond au nombre de personnes retirées qui es
 
 Le vecteur unitaire [S0, I0, R0] correspond aux nombres d'individus sains, infectés et retirés à t=0. Dans ce projet, aucun individu n'est immunisé à t=0 et la valeur de I0 est 1. 
 
+<br/>
+
 ### Validation du modèle statistique par le modèle SIR
 
 <br/>
