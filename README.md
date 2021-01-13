@@ -224,7 +224,9 @@ On remarque que :
 	dS/dt + dI/dt + dR/dt = 0  <p/>
 	
 Ce qui confirme le fait que ∀t S(t) + I(t) + R(t) = constante = N car la dérivée de la somme est nulle.
+
 <br/>
+
 La première équation différentielle correspond au nombre de personnes saines, dont le signe est négatif, en effet la fonction S est décroissante pour tout t, car le nombre de personnes saines ne peut que diminuer (conformément au modèle dans lequel on se place, où les personnes infectés ne peuvent redevenir saines). <br/>
 Ensuite, la deuxième équation a le signe de la différence entre le nombre de personne saines βS(t)I(t)/N et retirés λI(t), donc le nombre de personnes infectés diminue sur une période dt quand le nombre de personne saines est plus grande que le nombre de personnes retirées. <br/>
 La dernière équation, elle, correspond au nombre de personnes retirées qui est simplement le produit du nombre d'individus infectés à l'instant t par le taux de retirement.
