@@ -152,7 +152,7 @@ On fait varier ici le taux de reproduction de base Ro du virus, dont l'epression
 <br/>
 
 <p align="center">
-<img alt="morts_variation_immunité" src="https://user-images.githubusercontent.com/63207451/104496480-578c2a80-55d9-11eb-828b-d51275a3e730.png">
+<img src="https://user-images.githubusercontent.com/63207451/104498981-b2735100-55dc-11eb-8c99-83720fae9a45.png">
 	<p/>
 <br/>
 
