@@ -220,10 +220,7 @@ Puis on introduit nos équations différentielles qui régissent le modèle :
 <img width="1112" alt="Capture d’écran 2021-01-12 à 16 44 25" src="https://user-images.githubusercontent.com/63207451/104337207-8335e480-54f5-11eb-92c3-e221b2c94644.png">
 	<p/>
 On remarque que :
-
-
 <p align="center"> 
-	<br/>
 	dS/dt + dI/dt + dR/dt = 0  <p/>
 	
 Ce qui confirme le fait que ∀t S(t) + I(t) + R(t) = constante = N car la dérivée de la somme est nulle.
