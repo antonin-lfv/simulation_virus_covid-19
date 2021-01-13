@@ -193,7 +193,7 @@ Avec cette simulation on observe que le nombre d'infectés augmente rapidement d
 
 ## Le modèle __SIR__
 
-<br/>
+
 
 ### Modèle mathématique
 
