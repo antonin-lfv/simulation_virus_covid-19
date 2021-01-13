@@ -221,7 +221,6 @@ Puis on introduit nos équations différentielles qui régissent le modèle :
 	<p/>
 On remarque que : 
 <br/>
-
 <p align="center"> 
 	<br/>
 	dS/dt + dI/dt + dR/dt = 0  <p/>
