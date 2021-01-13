@@ -199,7 +199,8 @@ Avec cette simulation on observe que le nombre d'infectés augmente rapidement d
 
 <br/>
 Le modèle SIR est un modèle mathématique déterministe à compartiments permettant de simuler de façon simplifiée l'évolution d'une population face à une épidémie. Ce modèle fait partie d'une famille de modèles compartimentaux en épidémiologie, qui ont commencé à être mis en pratique avec le SIDA dans les années 1980, ils sont à l'heure actuelle de plus en plus présents lors des décisions politiques concernant la gestion de problèmes sanitaires. <br/>
-Dans ce modèle en particulier, la population est divisée en 3 catégories : sains (S), infectés (I) et removed (R) (removed, c'est à dire dans l'incapacité de transmettre le virus). Ce modèle étudie la taille de ces 3 catégories au cours du temps, tel que S(t), I(t) et R(t) soient le nombre d'individus dans chaque catégorie à l'instant t, et ou le nombre d'individu par compartiment est gouverné par un ensemble d'équations différentielles. On peut donc remarquer que, soit N le nombre d'individus dans la population, on a : 
+Dans ce modèle en particulier, la population est divisée en 3 catégories : sains (S), infectés (I) et removed (R) (removed, c'est à dire dans l'incapacité de transmettre le virus). Ce modèle étudie la taille de ces 3 catégories au cours du temps, tel que S(t), I(t) et R(t) soient le nombre d'individus dans chaque catégorie à l'instant t, et ou le nombre d'individu par compartiment est gouverné par un ensemble d'équations différentielles. <br/> 
+On peut donc remarquer que, soit N le nombre d'individus dans la population, on a : 
 <br/>
 
 <p align="center"> 
