@@ -194,12 +194,19 @@ Avec cette simulation on observe que le nombre d'infectés augmente rapidement d
 ### Modèle mathématique
 
 <br/>
-Le modèle SIR est un modèle mathématique à compartiments permettant de simuler de façon simplifiée l'évolution d'une population face à une épidémie, divisée en 3 catégories : S-sains, I-infectés et R-removed (removed, c'est à dire dans l'incapacité de transmettre le virus). Ce modèle étudie la taille de ces 3 catégories au cours du temps, tel que S(t), I(t) et R(t) soient le nombre d'individus dans chaque catégorie à l'instant t. On peut donc remarquer que, soit N le nombre d'individus dans la population, on a : 
+Le modèle SIR est un modèle mathématique déterministe à compartiments permettant de simuler de façon simplifiée l'évolution d'une population face à une épidémie. La population est divisée en 3 catégories : sains (S), infectés (I) et removed (R) (removed, c'est à dire dans l'incapacité de transmettre le virus). Ce modèle étudie la taille de ces 3 catégories au cours du temps, tel que S(t), I(t) et R(t) soient le nombre d'individus dans chaque catégorie à l'instant t, et ou le nombre d'individu par compartiment est gouverné par un ensemble d'équations différentielles. On peut donc remarquer que, soit N le nombre d'individus dans la population, on a : 
 <br/>
 
 <p align="center"> 
 	<br/>
 	∀t	  N = S(t) + I(t) + R(t) <p/>
+
+On introduit maintenant nos paramètres : <br/>
+
+- β : le taux d'infection du virus, qui correspond à la probabilité d'être infecté après avoir été en contact avec un individu infecté 
+- λ : le taux de retirement, qui correspond à la probabilité de ne plus pouvoir transmettre le virus, soit après être immunisé soit après le décès
+
+On peut alors définir Ro le taux de reproduction de base du virus, qui vaut β/λ et qui représente le nombre moyen de personnes infectées par un seul individu. 
 
 Le modèle SIR peut donc être representé par le diagramme suivant :
 
@@ -207,12 +214,20 @@ Le modèle SIR peut donc être representé par le diagramme suivant :
 <img width="692" alt="Capture d’écran 2021-01-12 à 15 44 43" src="https://user-images.githubusercontent.com/63207451/104329401-246c6d00-54ed-11eb-95f2-55974f363be7.png">
 	<p/>
 
-Avec β l'infectiosité du virus et λ le taux de retirement. <br/>
-Ainsi, les équations différentielles qui régissent ce modèle sont :   
+Puis nos équations différentielles qui régissent le modèle :  
 
 <p align="center">
 <img width="1112" alt="Capture d’écran 2021-01-12 à 16 44 25" src="https://user-images.githubusercontent.com/63207451/104337207-8335e480-54f5-11eb-92c3-e221b2c94644.png">
 	<p/>
+
+On remarque que : 
+<br/>
+
+<p align="center"> 
+	<br/>
+	dS/dt + dI/dt + dR/dt = 0  <p/>
+	
+Ce qui confirme le fait que ∀t S(t) + I(t) + R(t) = constante = N car la dérivée de la somme est nulle.
 
 La première équation différentielle correspond au nombre de personnes saines, dont le signe est négatif, en effet la fonction S est décroissante pour tout t, car le nombre de personnes saines ne peut que diminuer (conformément au modèle dans lequel on se place, où les personnes infectés ne peuvent redevenir saines). Ensuite, la fonction I a le signe de la différence entre le nombre de personne saines (βS(t)I(t)/N) et retirés (λI(t)), et R correspond au nombre de personnes retirées.
 
