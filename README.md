@@ -43,8 +43,8 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 
 ## Index
 1. [Librairies](#librairies)
-- [Principe générale](#principe-générale)
-- [Simulations](#Simulations)
+2. [Principe générale](#principe-générale)
+3. [Simulations](#Simulations)
 	1. [Simulation avec différents taux d'infection](#Simulation-avec-différents-taux-dinfection)
 	2. [Simulation avec différentes létalités](#simulation-avec-différentes-létalités)
 	3. [Simulation avec différents taux d'immunité](#simulation-avec-différents-taux-dimmunité)
@@ -53,10 +53,10 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 		b. [Confinement après dépassement du seuil hospitalier](#confinement-après-dépassement-de-la-capacité-hospitalière) 
 	5. [Simuler le SARS-cov-2](#simuler-le-SARS-cov-2)
 	6. [Simulation avec différents Ro et cas limites](#Simulation-avec-différents-Ro-et-cas-limites)
-- [Le modèle SIR](#le-modèle-SIR)
+4. [Le modèle SIR](#le-modèle-SIR)
 	1. [Modèle mathématique](#Modèle-mathématique)
 	2. [Validation du modèle statistique par le modèle SIR](#Validation-du-modèle-statistique-par-le-modèle-SIR)
-- [Conclusion](#conclusion)
+5. [Conclusion](#conclusion)
 
 
 ## Librairies 
