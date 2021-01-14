@@ -279,7 +279,7 @@ Modèle statistique :
 
 <br/>
 
-Les courbes sont assez similaires, la différence au niveau des abscisses est du au faite que les deux modèles n'ont pas la même représentation temporelle.
+Les courbes sont assez similaires, avec un nombre d'individus infectés maximum très proche. La différence au niveau des abscisses est du au faite que les deux modèles n'ont pas la même représentation temporelle.
 Le modèle crée en python est donc conforme au modèle mathématique.
 
 <br/>
