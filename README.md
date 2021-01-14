@@ -6,7 +6,7 @@
 [![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-380/)
 <a href="https://www.python.org" class="fancybox" ><img align="right" width="110" height="110" src="https://user-images.githubusercontent.com/63207451/97306728-26fce600-185f-11eb-9784-14151a6b2c43.png"><a/>
 	
-##### Article lié à ce github : ( à venir )
+#### Article lié à ce github : ( à venir )
 
 Ce projet à pour objectifs de modéliser une __épidémie__, et de simuler sa propagation au sein d'une population d'individus. Le taux d'infection, de guérison et de létalité seront les paramètres de notre modèle, que nous étudierons afin de mieux comprendre leur impact sur la vitesse de propagation du virus. <br/>
 Ce modèle statistique sera comparé au modèle mathématique __SIR__, qui appartient à la famille des modèles compartimenantaux en épidémiologie, qui reposent sur des équations différentielles.
