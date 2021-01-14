@@ -8,10 +8,10 @@
 
 __Article lié à ce github__ : ( à venir )
 
-Ce projet à pour objectifs de créer un __virus__, et de simuler sa propagation au sein d'une population. Les individus infectés pourront transmettre le virus avec une certaine probabilité, et peuvent aussi devenir immunisés ou bien décéder. En utilisant les paramètres propres du covid-19 on peut modeliser grossièrement ce dernier. <br/>
-Ce modèle statistique sera comparé au modèle __SIR__, reposant sur des équations différentielles.
+Ce projet à pour objectifs de modéliser une __épidémie__, et de simuler sa propagation au sein d'une population d'individus. Le taux d'infection, de guérison et de létalité seront les paramètres de notre modèle, que nous étudierons afin de mieux comprendre leur impact sur la vitesse de propagation du virus. <br/>
+Ce modèle statistique sera comparé au modèle mathématique __SIR__, qui appartient à la famille des modèles compartimenantaux en épidémiologie, qui reposent sur des équations différentielles.
 
-On choisira des populations de quelques dizaines à quelques milliers d'individus et on supposera qu'un individu immunisé le reste toute sa vie.
+On choisira des populations de quelques centaines à quelques milliers d'individus et on supposera qu'un individu immunisé le reste toute sa vie.
 Cette modélisation sera réalisée avec matplotlib et plotly indépendamment.
 <br/><br/>
 
@@ -77,10 +77,10 @@ Pour matplotlib une simple fenêtre python apparaîtra (ou plus).
 ## Principe de la simulation
 
 <br/>
-Lors de la simulation, plusieurs paramètres sont en jeux. Il y a tout d'abord le nombre d'invidus dans la population, ici on choisira une population entre 0 et 15000 individus pour avoir un temps d'exécution raisonnable. Ce nombre restera constant durant toute la simulation, nous supposerons que toute la population est susceptible d'être contaminée, et que la natalité compense la mortalités. La repartition de ces individus sera donnée par le paramètre variance_population , et qui variera entre 0 et 10 environ. Plus ce nombre est grand, plus la population sera étalée.  
+Lors de la simulation, plusieurs paramètres sont en jeux. Il y a tout d'abord le nombre d'invidus dans la population, ici on choisira une population entre 1 et 20000 individus pour avoir un temps d'exécution raisonnable. Ce nombre restera constant durant toute la simulation, nous supposerons que toute la population est susceptible d'être contaminée, et que la natalité compense la mortalités. La repartition de ces individus sera donnée par le paramètre variance_population , et qui variera entre 0 et 2 environ. Plus ce nombre est grand, plus la population sera étalée.  
 <br/>
-Ensuite, le paramètre rayon_contamination donnera la portée maximale d'un individu infecté pour avoir une chance de transmettre son virus à un individu sain, avec une probabilté nommée infectiosité, qui est comprise entre 0 et 1. Chaque individu infecté reste infecté jusqu'à temps qu'il devienne immunisé ou qu'il décède. Après qu'un individu soit infecté, il a une probabilité p de devenir immunisé et donc de ne plus transmettre le virus, et une probabilité d de décéder suite à l'infection. Ces deux paramètres sont compris entre 0 et 1 également. Nous ne considérerons pas pour l'instant l'apparition d'un vaccin durant la simulation. Seule l'immunité innée des individus est prise en compte. 
-On notera Ro le taux de reproduction du virus, qui est le nombre moyen d'individus qu'une personne infectieuse infecte tant qu'elle est contagieuse, et qui est égale au rapport de l'infectiosité sur le taux de retirement ( somme de la létalité et du taux d'immunité ).
+Ensuite, le paramètre rayon_contamination correspond à la zone dans laquelle un individu infecté peut transmettre le virus à un individu sain, avec une probabilté nommée infectiosité, qui est comprise entre 0 et 1. Chaque individu infecté reste infecté jusqu'à temps qu'il devienne immunisé ou qu'il décède. Après qu'un individu soit infecté, il a une probabilité p de devenir immunisé et donc de ne plus transmettre le virus, et une probabilité d de décéder suite à l'infection. Ces deux paramètres sont compris entre 0 et 1 également. Nous ne considérerons pas pour l'instant l'apparition d'un vaccin durant la simulation. Seule l'immunité innée des individus est prise en compte. 
+On notera Ro le taux de reproduction du virus, qui est le nombre moyen d'individus qu'une personne infectieuse infecte tant qu'elle est contagieuse, et qui est égale au rapport de l'infectiosité sur le taux de retirement ( probabilité d'être immunisé ou de décéder ).
 <br/>
 <br/>
 Dans les 3 simulations qui suivent on ne s'intéressera qu'aux courbes évolutives et non à la représentation 2D de la population.
