@@ -1,5 +1,14 @@
 ''' modélisation avec utilisation de plotly '''
 
+from sklearn.datasets import make_blobs
+import random as rd
+import time
+from scipy.spatial import distance
+from plotly.offline import plot
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+import pandas as pd
+import numpy as np
 
 def distance_e(x, y):  # distance entre 2 points du plan cartésien
     return distance.euclidean([x[0],x[1]],[y[0],y[1]])
@@ -182,19 +191,3 @@ def vague_seuil_px_opti2():
     sec = round(t-min*60,1)
     print('Simulation terminée en '+str(min)+' minutes \net '+str(sec)+' secondes')
     plot(fig)
-
-
-if __name__ == "__main__":
-    from sklearn.datasets import make_blobs
-    import random as rd
-    import time
-    from scipy.spatial import distance
-    from plotly.offline import plot
-    import plotly.graph_objects as go
-    from plotly.subplots import make_subplots
-    import pandas as pd
-    import numpy as np
-    vague_seuil_px_opti2()
-
-
-
