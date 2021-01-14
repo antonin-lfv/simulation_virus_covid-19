@@ -44,17 +44,18 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 ## Index
 - [Librairies](#librairies)
 - [Principe générale](#principe-générale)
+- [Simulations](#Simulation)
 	- [Simulation avec différents taux d'infection](#Simulation-avec-différents-taux-dinfection)
 	- [Simulation avec différentes létalités](#simulation-avec-différentes-létalités)
 	- [Simulation avec différents taux d'immunité](#simulation-avec-différents-taux-dimmunité)
-- [Avec confinement](#avec-confinement)
-	- [Confinement immédiat](#confinement-dès-le-premier-cas-detecté)
-	- [Confinement après dépassement du seuil hospitalier](#confinement-après-dépassement-de-la-capacité-hospitalière) 
-- [Simuler le SARS-cov-2](#simuler-le-SARS-cov-2)
+	- [Avec confinement](#avec-confinement)
+		- [Confinement immédiat](#confinement-dès-le-premier-cas-detecté)
+		- [Confinement après dépassement du seuil hospitalier](#confinement-après-dépassement-de-la-capacité-hospitalière) 
+	- [Simuler le SARS-cov-2](#simuler-le-SARS-cov-2)
+	- [Simulation avec différents Ro et cas limites](#Simulation-avec-différents-Ro-et-cas-limites)
 - [Le modèle SIR](#le-modèle-SIR)
 	- [Modèle mathématique](#Modèle-mathématique)
 	- [Validation du modèle statistique par le modèle SIR](#Validation-du-modèle-statistique-par-le-modèle-SIR)
-- [Simulation avec différents Ro et cas limites](#Simulation-avec-différents-Ro-et-cas-limites)
 - [Conclusion](#conclusion)
 
 
@@ -84,6 +85,10 @@ On notera Ro le taux de reproduction du virus, qui est le nombre moyen d'individ
 <br/>
 <br/>
 Dans les 3 simulations qui suivent on ne s'intéressera qu'aux courbes évolutives et non à la représentation 2D de la population.
+<br/>
+
+## Simulations
+
 <br/>
 
 ### Simulation avec différents taux d'infection
@@ -145,11 +150,11 @@ Le nombre de décès est immensément plus grand lorsque l'immunité est quasi i
 
 <br/>
 
-## Avec confinement 
+### Avec confinement 
 
 <br>
 
-### Confinement dès le premier cas detecté
+#### Confinement dès le premier cas detecté
 
 <br/>
 On peut simuler un confinement de la population, en diminuant la variance de celle-ci et en augmentant le nombre de cluster, c'est à dire le nombre de groupes distincts physiquement, d'individus dans la population.  
@@ -161,7 +166,7 @@ Par exemple avec une variance de 0.6 et 10 centers (modifiable dans la fonction 
 	<p/>
 <br/>
 
-### Confinement après dépassement de la capacité hospitalière
+#### Confinement après dépassement de la capacité hospitalière
 
 <br/>
 Une fois le seuil dépassé, l'infectiosité est divisé par 8 et le rayon de contamination est divisé par 4.
@@ -173,7 +178,7 @@ Ici, la courbe pleine représente l'épidémie sans l'application du confinement
 	<p/>
 <br/>
 
-## Simuler le SARS-cov-2
+### Simuler le SARS-cov-2
 
 <br/> 
 Cette simulation est à prendre avec beaucoup de précautions, car elle ne reflète pas la réalité. Nous prendrons ici comme paramètres, un taux d'infection de 17%, un taux d'immunité de 10% et une létalité de 0.5%.
@@ -186,6 +191,18 @@ Cette simulation est à prendre avec beaucoup de précautions, car elle ne refl�
 
 Avec cette simulation on observe que le nombre d'infectés augmente rapidement dès le début pour arriver à son maximum au bout de 8 jours, puis diminue très lentement pendant 16 jours. Au final on compte quasiment 30% de décès, et plus de la moitié deviennent immunisés.
 <br/>
+<br/>
+
+### Simulation avec différents Ro et cas limites
+
+On fait varier ici le taux de reproduction de base _Ro_ du virus, dont l'epression est Ro=β/λ, ou ici __β est l'infectiosité du virus__, et __λ la probabilité pour qu'un individu ne puisse plus transmettre le virus__(pour se faire, on fixe p=0 et d=λ). On remarque que la situation est très différente pour un Ro inférieur et supérieur à 1. Pour un Ro < 1, peu d'individus sont infectés, et le virus ne propage pas. À la frontière Ro=1, le nombre de personnes retirées atteint quasiment le nombre de personnes saines, mais sans l'atteindre. On parle, pour un Ro<=1 d'équilibre. Il faut attendre un Ro>1 pour que la courbe des individus retirées passe au dessus de celle des individus sains, et provoque ainsi la propagation du virus, qui est d'autant plus importante et rapide que la valeur du Ro est grande. <br/>
+Simulation réalisée avec le modèle python.
+
+<br/>
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/63207451/104498981-b2735100-55dc-11eb-8c99-83720fae9a45.png">
+	<p/>
 <br/>
 
 ## Le modèle __SIR__
@@ -264,19 +281,6 @@ Modèle statistique :
 Les courbes sont assez similaires, la différence au niveau des abscisses est du au faite que les deux modèles n'ont pas la même représentation temporelle.
 Le modèle crée en python est donc conforme au modèle mathématique.
 
-<br/>
-
-
-## Simulation avec différents Ro et cas limites
-
-On fait varier ici le taux de reproduction de base _Ro_ du virus, dont l'epression est Ro=β/λ, ou ici __β est l'infectiosité du virus__, et __λ la probabilité pour qu'un individu ne puisse plus transmettre le virus__(pour se faire, on fixe p=0 et d=λ). On remarque que la situation est très différente pour un Ro inférieur et supérieur à 1. Pour un Ro < 1, peu d'individus sont infectés, et le virus ne propage pas. À la frontière Ro=1, le nombre de personnes retirées atteint quasiment le nombre de personnes saines, mais sans l'atteindre. On parle, pour un Ro<=1 d'équilibre. Il faut attendre un Ro>1 pour que la courbe des individus retirées passe au dessus de celle des individus sains, et provoque ainsi la propagation du virus, qui est d'autant plus importante et rapide que la valeur du Ro est grande. <br/>
-Simulation réalisée avec le modèle python.
-
-<br/>
-
-<p align="center">
-<img src="https://user-images.githubusercontent.com/63207451/104498981-b2735100-55dc-11eb-8c99-83720fae9a45.png">
-	<p/>
 <br/>
 
 ## Conclusion
