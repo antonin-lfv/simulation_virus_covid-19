@@ -44,7 +44,7 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 ## Index
 - [Librairies](#librairies)
 - [Principe générale](#principe-générale)
-- [Simulations](#Simulation)
+- [Simulations](#Simulations)
 	- [Simulation avec différents taux d'infection](#Simulation-avec-différents-taux-dinfection)
 	- [Simulation avec différentes létalités](#simulation-avec-différentes-létalités)
 	- [Simulation avec différents taux d'immunité](#simulation-avec-différents-taux-dimmunité)
@@ -73,7 +73,8 @@ Documentation [Plotly](https://plotly.com/python/) .
 A chaque exécution d'une fonction sous plotly, une page html s'ouvrira avec le résultat.
 
 Pour matplotlib une simple fenêtre python apparaîtra (ou plus).
-<br/><br/> 
+<br/>
+<br/> 
 
 ## Principe générale
 
@@ -84,7 +85,7 @@ Ensuite, le paramètre rayon_contamination correspond à la zone dans laquelle u
 On notera Ro le taux de reproduction du virus, qui est le nombre moyen d'individus qu'une personne infectieuse infecte tant qu'elle est contagieuse, et qui est égale au rapport de l'infectiosité sur le taux de retirement ( probabilité d'être immunisé ou de décéder ).
 <br/>
 <br/>
-Dans les 3 simulations qui suivent on ne s'intéressera qu'aux courbes évolutives et non à la représentation 2D de la population.
+Dans les 3 simulations qui suivent on ne s'intéressera qu'aux courbes évolutives et non à la représentation 2D de la population. <br/>
 <br/>
 
 ## Simulations
