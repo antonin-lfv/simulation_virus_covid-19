@@ -42,20 +42,20 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 <br/>
 
 ## Index
-- [Librairies](#librairies)
+1. [Librairies](#librairies)
 - [Principe générale](#principe-générale)
 - [Simulations](#Simulations)
 	1. [Simulation avec différents taux d'infection](#Simulation-avec-différents-taux-dinfection)
 	2. [Simulation avec différentes létalités](#simulation-avec-différentes-létalités)
 	3. [Simulation avec différents taux d'immunité](#simulation-avec-différents-taux-dimmunité)
 	4. [Avec confinement](#avec-confinement)
-		- [Confinement immédiat](#confinement-dès-le-premier-cas-detecté)
-		- [Confinement après dépassement du seuil hospitalier](#confinement-après-dépassement-de-la-capacité-hospitalière) 
+		a. [Confinement immédiat](#confinement-dès-le-premier-cas-detecté)
+		b. [Confinement après dépassement du seuil hospitalier](#confinement-après-dépassement-de-la-capacité-hospitalière) 
 	5. [Simuler le SARS-cov-2](#simuler-le-SARS-cov-2)
 	6. [Simulation avec différents Ro et cas limites](#Simulation-avec-différents-Ro-et-cas-limites)
 - [Le modèle SIR](#le-modèle-SIR)
-	- [Modèle mathématique](#Modèle-mathématique)
-	- [Validation du modèle statistique par le modèle SIR](#Validation-du-modèle-statistique-par-le-modèle-SIR)
+	1. [Modèle mathématique](#Modèle-mathématique)
+	2. [Validation du modèle statistique par le modèle SIR](#Validation-du-modèle-statistique-par-le-modèle-SIR)
 - [Conclusion](#conclusion)
 
 
