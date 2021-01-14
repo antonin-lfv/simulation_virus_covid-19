@@ -262,24 +262,15 @@ Le vecteur unitaire [S0, I0, R0] correspond aux nombres d'individus sains, infec
 
 <br/>
 
-Comparons maintenant le modèle mathématique SIR et le modèle statistique crée avec python. Les paramètres β et λ du modèle SIR correspondent respectivement aux paramètres infectiosité et à la somme p+d du modèle python.
-
-
-Modèle mathématique :
+Comparons maintenant le modèle mathématique SIR et le modèle statistique crée avec python en prenant différentes valeurs de Ro.
 
 <p align="center">
-<img width="1301" alt="modèle SIR" src="https://user-images.githubusercontent.com/63207451/104339610-140dbf80-54f8-11eb-9e49-ab1a4b170137.png">
-	<p/>
-
-Modèle statistique :
-
-<p align="center">
-<img alt="modèle SIR" src="https://user-images.githubusercontent.com/63207451/104345853-132c5c00-54ff-11eb-9ed8-a56aa960c267.png">
+<img width="1281" alt="Capture d’écran 2021-01-14 à 17 28 45" src="https://user-images.githubusercontent.com/63207451/104619376-17d34a80-568e-11eb-8012-f827d350b7ad.png">
 	<p/>
 
 <br/>
 
-Les courbes sont assez similaires, avec un nombre d'individus infectés maximum très proche. La différence au niveau des abscisses est du au faite que les deux modèles n'ont pas la même représentation temporelle.
+Les courbes sont assez similaires, peut importe le Ro. La petite différence au niveau des abscisses est du au faite que les deux modèles n'ont pas la même représentation temporelle.
 Le modèle crée en python est donc conforme au modèle mathématique.
 
 <br/>
