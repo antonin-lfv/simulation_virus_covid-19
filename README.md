@@ -43,7 +43,7 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 
 ## Index
 - [Librairies](#librairies)
-- [Principe de la simulation](#principe-de-la-simulation)
+- [Principe générale](#principe-générale)
 	- [Simulation avec différents taux d'infection](#Simulation-avec-différents-taux-dinfection)
 	- [Simulation avec différentes létalités](#simulation-avec-différentes-létalités)
 	- [Simulation avec différents taux d'immunité](#simulation-avec-différents-taux-dimmunité)
@@ -74,7 +74,7 @@ A chaque exécution d'une fonction sous plotly, une page html s'ouvrira avec le 
 Pour matplotlib une simple fenêtre python apparaîtra (ou plus).
 <br/><br/> 
 
-## Principe de la simulation
+## Principe générale
 
 <br/>
 Lors de la simulation, plusieurs paramètres sont en jeux. Il y a tout d'abord le nombre d'invidus dans la population, ici on choisira une population entre 1 et 20000 individus pour avoir un temps d'exécution raisonnable. Ce nombre restera constant durant toute la simulation, nous supposerons que toute la population est susceptible d'être contaminée, et que la natalité compense la mortalités. La repartition de ces individus sera donnée par le paramètre variance_population , et qui variera entre 0 et 2 environ. Plus ce nombre est grand, plus la population sera étalée.  
