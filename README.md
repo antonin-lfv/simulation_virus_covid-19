@@ -21,7 +21,7 @@ Cette modélisation sera réalisée avec matplotlib et plotly indépendamment.
 <br/>
 <br/>
 
-## Liens utiles
+# Liens utiles
 
 - Comprendre le [Modèle SIR](https://fr.wikipedia.org/wiki/Modèles_compartimentaux_en_épidémiologie). <br/>
 
@@ -29,7 +29,7 @@ Cette modélisation sera réalisée avec matplotlib et plotly indépendamment.
 
 <br/>
 
-## Résultat global sous plotly 
+# Résultat global sous plotly 
 <br/>
 Simulation effectuée avec des valeurs de paramètres standars. <br/>
 <br/>
@@ -41,7 +41,7 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 (courbe noire : somme des personnes immunisées et décédées) <br/>
 <br/>
 
-## Index
+# Index
 1. [Librairies](#librairies)
 2. [Principe générale](#principe-générale)
 3. [Simulations](#Simulations)
@@ -59,7 +59,7 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 5. [Conclusion](#conclusion)
 
 
-## Librairies 
+# Librairies 
 
 <br/>
 Si vous n'avez jamais utilisé plotly pensez à le télécharger via la console :  <br/>
@@ -76,7 +76,7 @@ Pour matplotlib une simple fenêtre python apparaîtra (ou plus).
 <br/>
 <br/> 
 
-## Principe générale
+# Principe générale
 
 <br/>
 Lors de la simulation, plusieurs paramètres sont en jeux. Il y a tout d'abord le nombre d'invidus dans la population, ici on choisira une population entre 1 et 20000 individus pour avoir un temps d'exécution raisonnable. Ce nombre restera constant durant toute la simulation, nous supposerons que toute la population est susceptible d'être contaminée, et que la natalité compense la mortalités. La repartition de ces individus sera donnée par le paramètre variance_population , et qui variera entre 0 et 2 environ. Plus ce nombre est grand, plus la population sera étalée.  <br/>
@@ -88,11 +88,11 @@ On notera Ro le taux de reproduction du virus, qui est le nombre moyen d'individ
 Les simulations de cette section sont réalisées avec le modèle python, et affichées avec la librairie plotly <br/>
 <br/>
 
-## Simulations
+# Simulations
 
 <br/>
 
-### Simulation avec différents taux d'infection
+## Simulation avec différents taux d'infection
 
 <br/>
 Faisons varier le taux d'infection entre 10%, 15%, 30%, 50% et 70% et observons la courbe du nombre de personnes infectés.<br/>
@@ -111,7 +111,7 @@ Intéressons nous maintenant au nombre de décès en fonction de ces différente
 Les courbes sont quasiment linéaires sur une grande partie, jusqu'à atteindre un certain seuil, qui est très proche malgrès des infectiosités très différentes. La différence se fait dans la vitesse à laquelle le seuil est atteint, plus l'infectiosité est grande plus le seuil est atteint rapidement, il est atteint en une dizaine de jours pour une infectiosité de l'ordre de 70% et en une quinzaine pour une infectiosité de l'ordre de 10%.
 <br/>
 						     
-### Simulation avec différentes létalités
+## Simulation avec différentes létalités
 
 <br/>
 Faisons à présent varier la létalité entre 5%, 10%, 25%, 30% et 40%. Et observons l'évolution des courbes du nombre d'individus infectés. <br/>
@@ -131,7 +131,7 @@ Cependant même si le nombre d'infectés est plus faible avec une grande létali
 Le nombre de décès avec une létalité de 40% est 7 fois plus grand qu'avec une létalité de 5%. Ce qui représente des différences énormes sur une population de plusieurs millions d'individus.
 <br/>
 
-### Simulation avec différents taux d'immunité
+## Simulation avec différents taux d'immunité
 
 <br/>
 Enfin, faisons varier le taux d'immunité entre 10%, 20%, 40%, 50% et 70%; et observons les courbes du nombre d'individus infectés. <br/>
@@ -151,11 +151,11 @@ Le nombre de décès est immensément plus grand lorsque l'immunité est quasi i
 
 <br/>
 
-### Mise en place d'un confinement
+## Mise en place d'un confinement
 
 <br>
 
-#### Confinement dès le premier cas detecté
+### Confinement dès le premier cas detecté
 
 <br/>
 On peut simuler un confinement de la population, en diminuant la variance de celle-ci et en augmentant le nombre de cluster, c'est à dire le nombre de groupes distincts physiquement, d'individus dans la population.  
@@ -167,7 +167,7 @@ Par exemple avec une variance de 0.6 et 10 centers (modifiable dans la fonction 
 	<p/>
 <br/>
 
-#### Confinement après dépassement de la capacité hospitalière
+### Confinement après dépassement de la capacité hospitalière
 
 <br/>
 Une fois le seuil dépassé, l'infectiosité est divisé par 8 et le rayon de contamination est divisé par 4.
@@ -179,7 +179,7 @@ Ici, la courbe pleine représente l'épidémie sans l'application du confinement
 	<p/>
 <br/>
 
-### Simuler le SARS-cov-2
+## Simuler le SARS-cov-2
 
 <br/> 
 Cette simulation est à prendre avec beaucoup de précautions, car elle ne reflète pas la réalité. Nous prendrons ici comme paramètres, un taux d'infection de 17%, un taux d'immunité de 10% et une létalité de 0.5%.
@@ -194,7 +194,7 @@ Avec cette simulation on observe que le nombre d'infectés augmente rapidement d
 <br/>
 <br/>
 
-### Simulation avec différents Ro et cas limites
+## Simulation avec différents Ro et cas limites
 
 On fait varier ici le taux de reproduction de base _Ro_ du virus, dont l'epression est Ro=β/λ, ou ici __β est l'infectiosité du virus__, et __λ la probabilité pour qu'un individu ne puisse plus transmettre le virus__(pour se faire, on fixe p=0 et d=λ). On remarque que la situation est très différente pour un Ro inférieur et supérieur à 1. Pour un Ro < 1, peu d'individus sont infectés, et le virus ne propage pas. À la frontière Ro=1, le nombre de personnes retirées atteint quasiment le nombre de personnes saines, mais sans l'atteindre. On parle, pour un Ro<=1 d'équilibre. Il faut attendre un Ro>1 pour que la courbe des individus retirées passe au dessus de celle des individus sains, et provoque ainsi la propagation du virus, qui est d'autant plus importante et rapide que la valeur du Ro est grande. <br/>
 Simulation réalisée avec le modèle python.
@@ -206,11 +206,11 @@ Simulation réalisée avec le modèle python.
 	<p/>
 <br/>
 
-## Le modèle __SIR__
+# Le modèle __SIR__
 
 
 
-### Modèle mathématique
+## Modèle mathématique
 
 <br/>
 Le modèle SIR est un modèle mathématique déterministe à compartiments permettant de simuler de façon simplifiée l'évolution d'une population face à une épidémie. Ce modèle fait partie d'une famille de modèles compartimentaux en épidémiologie, qui ont commencé à être mis en pratique avec le SIDA dans les années 1980, ils sont à l'heure actuelle de plus en plus présents lors des décisions politiques concernant la gestion de problèmes sanitaires. <br/>
@@ -258,7 +258,7 @@ Le vecteur unitaire [S0, I0, R0] correspond aux nombres d'individus sains, infec
 
 <br/>
 
-### Validation du modèle statistique par le modèle SIR
+## Validation du modèle statistique par le modèle SIR
 
 <br/>
 
@@ -284,7 +284,7 @@ Le modèle crée en python est donc conforme au modèle mathématique.
 
 <br/>
 
-## Conclusion
+# Conclusion
 
 <br/>
 L'étude épidémiologique reste au final un domaine très théorique. Même si les résultats et observations obtenues sembles assez proches de la réalité et du modèle mathématique SIR, ces modélisations ne prennent pas en compte certains autres facteurs, tels que la vaccination, la mise en quarantaine des individus dès qu'ils sont infectés, ou même le déplacement des individus dans la population. <br/>
