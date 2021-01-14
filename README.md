@@ -3,6 +3,7 @@
 <br/>
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/ee1396c2e13b47b4aba29ba19881758c)](https://www.codacy.com/gh/antonin-lfv/simulation_virus_covid-19/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=antonin-lfv/simulation_virus_covid-19&amp;utm_campaign=Badge_Grade)
+[![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
 <a href="https://www.python.org" class="fancybox" ><img align="right" width="110" height="110" src="https://user-images.githubusercontent.com/63207451/97306728-26fce600-185f-11eb-9784-14151a6b2c43.png"><a/>
 	
 __Article lié à ce github__ : ( à venir )
