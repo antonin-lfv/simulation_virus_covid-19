@@ -270,6 +270,7 @@ Le modèle crée en python est donc conforme au modèle mathématique.
 ## Simulation avec différents Ro et cas limites
 
 On fait varier ici le taux de reproduction de base _Ro_ du virus, dont l'epression est Ro=β/λ, ou ici __β est l'infectiosité du virus__, et __λ la probabilité pour qu'un individu ne puisse plus transmettre le virus__, c'est à dire p+d. On remarque que la situation est très différente pour un Ro inférieur et supérieur à 1. Pour un Ro < 1, peu d'individus sont infectés, et le virus ne propage pas. À la frontière Ro=1, le nombre de personnes retirées atteint quasiment le nombre de personnes saines, mais sans l'atteindre. On parle, pour un Ro<=1 d'équilibre. Il faut attendre un Ro>1 pour que la courbe des individus retirées passe au dessus de celle des individus sains, et provoque ainsi la propagation du virus, qui est d'autant plus importante et rapide que la valeur du Ro est grande.
+Simulation réalisée avec le modèle python.
 
 <br/>
 
