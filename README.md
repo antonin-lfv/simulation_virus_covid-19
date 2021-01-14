@@ -48,7 +48,7 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 	1. [Simulation avec différents taux d'infection](#Simulation-avec-différents-taux-dinfection)
 	2. [Simulation avec différentes létalités](#simulation-avec-différentes-létalités)
 	3. [Simulation avec différents taux d'immunité](#simulation-avec-différents-taux-dimmunité)
-	4. [Avec confinement](#avec-confinement)
+	4. [Mise en place d'un confinement](#Mise-en-place-dun-confinement)
 		1. [Confinement immédiat](#confinement-dès-le-premier-cas-detecté)
 		2. [Confinement après dépassement du seuil hospitalier](#confinement-après-dépassement-de-la-capacité-hospitalière) 
 	5. [Simuler le SARS-cov-2](#simuler-le-SARS-cov-2)
@@ -151,7 +151,7 @@ Le nombre de décès est immensément plus grand lorsque l'immunité est quasi i
 
 <br/>
 
-### Avec confinement 
+### Mise en place d'un confinement
 
 <br>
 
