@@ -77,10 +77,10 @@ Pour matplotlib une simple fenêtre python apparaîtra (ou plus).
 ## Principe de la simulation
 
 <br/>
-Lors de la simulation, plusieurs paramètres sont en jeux. Il y a tout d'abord le nombre d'invidus dans la population, ici on choisira une population entre 0 et 15000 individus pour avoir un temps d'exécution raisonnable. Ce nombre restera constant durant toute la simulation. La repartition de ces individus sera donnée par le paramètre variance_population, et qui variera entre 0 et 10 environ. Plus ce nombre est grand, plus la population sera étalée.  
+Lors de la simulation, plusieurs paramètres sont en jeux. Il y a tout d'abord le nombre d'invidus dans la population, ici on choisira une population entre 0 et 15000 individus pour avoir un temps d'exécution raisonnable. Ce nombre restera constant durant toute la simulation. La repartition de ces individus sera donnée par le paramètre __variance_population__, et qui variera entre 0 et 10 environ. Plus ce nombre est grand, plus la population sera étalée.  
 <br/>
 Ensuite, le paramètre rayon_contamination donnera la portée maximale d'un individu infecté pour avoir une chance de transmettre son virus à un individu sain, avec une probabilté nommée infectiosité, qui est comprise entre 0 et 1. Chaque individu infecté reste infecté jusqu'à temps qu'il devienne immunisé ou qu'il décède. Après qu'un individu soit infecté, il a une probabilité p de devenir immunisé et donc de ne plus transmettre le virus, et une probabilité d de décéder suite à l'infection. Ces deux paramètres sont compris entre 0 et 1 également. Nous ne considérerons pas pour l'instant l'apparition d'un vaccin durant la simulation. Seule l'immunité innée des individus est prise en compte. 
-On notera Ro le taux de reproduction du virus, qui est le nombre moyen d'individus qu'une personne infectieuse infecte tant qu'elle est contagieuse, et qui est égale au rapport de l'infectiosité sur le taux de retirement ( somme de la létalité et du taux d'immunité ).
+On notera __Ro__ le taux de reproduction du virus, qui est le nombre moyen d'individus qu'une personne infectieuse infecte tant qu'elle est contagieuse, et qui est égale au rapport de l'infectiosité sur le taux de retirement ( somme de la létalité et du taux d'immunité ).
 <br/>
 <br/>
 Dans les 3 simulations qui suivent on ne s'intéressera qu'aux courbes évolutives et non à la représentation 2D de la population.
@@ -155,6 +155,8 @@ On fait varier ici le taux de reproduction de base _Ro_ du virus, dont l'epressi
 <img src="https://user-images.githubusercontent.com/63207451/104498981-b2735100-55dc-11eb-8c99-83720fae9a45.png">
 	<p/>
 <br/>
+
+Étudions maintenant les cas extrêmes. En faisant varier les valeurs _infectiosité_ qui est le __taux d'infection__, _p_ le __taux de guérison__ et _d_ la __létalité__.
 
 ## Avec confinement 
 
