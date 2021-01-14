@@ -156,8 +156,6 @@ On fait varier ici le taux de reproduction de base _Ro_ du virus, dont l'epressi
 	<p/>
 <br/>
 
-Étudions maintenant les cas extrêmes. En faisant varier les valeurs _infectiosité_ qui est le __taux d'infection__, _p_ le __taux de guérison__ et _d_ la __létalité__.
-
 ## Avec confinement 
 
 <br>
