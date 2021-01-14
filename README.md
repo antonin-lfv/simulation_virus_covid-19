@@ -269,7 +269,7 @@ Le modèle crée en python est donc conforme au modèle mathématique.
 
 ## Simulation avec différents Ro et cas limites
 
-On fait varier ici le taux de reproduction de base _Ro_ du virus, dont l'epression est Ro=β/λ, ou ici __β est l'infectiosité du virus__, et __λ la probabilité pour qu'un individu ne puisse plus transmettre le virus__, c'est à dire p+d. On remarque que la situation est très différente pour un Ro inférieur et supérieur à 1. Pour un Ro < 1, peu d'individus sont infectés, et le virus ne propage pas. À la frontière Ro=1, le nombre de personnes retirées atteint quasiment le nombre de personnes saines, mais sans l'atteindre. On parle, pour un Ro<=1 d'équilibre. Il faut attendre un Ro>1 pour que la courbe des individus retirées passe au dessus de celle des individus sains, et provoque ainsi la propagation du virus, qui est d'autant plus importante et rapide que la valeur du Ro est grande. <br/>
+On fait varier ici le taux de reproduction de base _Ro_ du virus, dont l'epression est Ro=β/λ, ou ici __β est l'infectiosité du virus__, et __λ la probabilité pour qu'un individu ne puisse plus transmettre le virus__(pour se faire, on fixe p=0 et d=λ). On remarque que la situation est très différente pour un Ro inférieur et supérieur à 1. Pour un Ro < 1, peu d'individus sont infectés, et le virus ne propage pas. À la frontière Ro=1, le nombre de personnes retirées atteint quasiment le nombre de personnes saines, mais sans l'atteindre. On parle, pour un Ro<=1 d'équilibre. Il faut attendre un Ro>1 pour que la courbe des individus retirées passe au dessus de celle des individus sains, et provoque ainsi la propagation du virus, qui est d'autant plus importante et rapide que la valeur du Ro est grande. <br/>
 Simulation réalisée avec le modèle python.
 
 <br/>
@@ -283,7 +283,7 @@ Simulation réalisée avec le modèle python.
 
 <br/>
 L'étude épidémiologique reste au final un domaine très théorique. Même si les résultats et observations obtenues sembles assez proches de la réalité et du modèle mathématique SIR, ces modélisations ne prennent pas en compte certains autres facteurs, tels que la vaccination, la mise en quarantaine des individus dès qu'ils sont infectés, ou même le déplacement des individus dans la population. <br/>
-Néanmoins, cela nous aident à comprendre comment un virus se comporte dans une population, et quel est l'influence de certains paramètres sur sa propagation.
+Néanmoins, cela nous aident à comprendre comment un virus se comporte dans une population, quel est l'influence de certains paramètres sur sa propagation et comment l'évolution de l'épidémie peut être grossièrement appréhendée.
 <br/>
 <br/>
 
