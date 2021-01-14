@@ -47,7 +47,6 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 	- [Simulation avec différents taux d'infection](#Simulation-avec-différents-taux-dinfection)
 	- [Simulation avec différentes létalités](#simulation-avec-différentes-létalités)
 	- [Simulation avec différents taux d'immunité](#simulation-avec-différents-taux-dimmunité)
-- [Simulation avec différents Ro et cas limites](#Simulation-avec-différents-Ro-et-cas-limites)
 - [Avec confinement](#avec-confinement)
 	- [Confinement immédiat](#confinement-dès-le-premier-cas-detecté)
 	- [Confinement après dépassement du seuil hospitalier](#confinement-après-dépassement-de-la-capacité-hospitalière) 
@@ -55,6 +54,7 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 - [Le modèle SIR](#le-modèle-SIR)
 	- [Modèle mathématique](#Modèle-mathématique)
 	- [Validation du modèle statistique par le modèle SIR](#Validation-du-modèle-statistique-par-le-modèle-SIR)
+- [Simulation avec différents Ro et cas limites](#Simulation-avec-différents-Ro-et-cas-limites)
 - [Conclusion](#conclusion)
 
 
@@ -143,17 +143,6 @@ On observe cette même tendance si l'on compare maintenant les courbes des déc�
 <br/>
 Le nombre de décès est immensément plus grand lorsque l'immunité est quasi inexistante. Avec un taux d'immunité égale à 10%, on a 6 fois plus de décès qu'avec un taux à 70%.
 
-<br/>
-
-## Simulation avec différents Ro et cas limites
-
-On fait varier ici le taux de reproduction de base _Ro_ du virus, dont l'epression est Ro=β/λ, ou ici __β est l'infectiosité du virus__, et __λ la probabilité pour qu'un individu ne puisse plus transmettre le virus__, c'est à dire p+d. On remarque que la situation est très différente pour un Ro inférieur et supérieur à 1. Pour un Ro < 1, peu d'individus sont infectés, et le virus ne propage pas. À la frontière Ro=1, le nombre de personnes retirées atteint quasiment le nombre de personnes saines, mais sans l'atteindre, il faut attendre un Ro>1 pour que la courbe des individus retirées passe au dessus de celle des individus sains, et provoque ainsi la propagation du virus, qui est d'autant plus importante et rapide que la valeur du Ro est grande.
-
-<br/>
-
-<p align="center">
-<img src="https://user-images.githubusercontent.com/63207451/104498981-b2735100-55dc-11eb-8c99-83720fae9a45.png">
-	<p/>
 <br/>
 
 ## Avec confinement 
@@ -274,6 +263,20 @@ Modèle statistique :
 
 Les courbes sont assez similaires, la différence au niveau des abscisses est du au faite que les deux modèles n'ont pas la même représentation temporelle.
 Le modèle crée en python est donc conforme au modèle mathématique.
+
+<br/>
+
+
+## Simulation avec différents Ro et cas limites
+
+On fait varier ici le taux de reproduction de base _Ro_ du virus, dont l'epression est Ro=β/λ, ou ici __β est l'infectiosité du virus__, et __λ la probabilité pour qu'un individu ne puisse plus transmettre le virus__, c'est à dire p+d. On remarque que la situation est très différente pour un Ro inférieur et supérieur à 1. Pour un Ro < 1, peu d'individus sont infectés, et le virus ne propage pas. À la frontière Ro=1, le nombre de personnes retirées atteint quasiment le nombre de personnes saines, mais sans l'atteindre, il faut attendre un Ro>1 pour que la courbe des individus retirées passe au dessus de celle des individus sains, et provoque ainsi la propagation du virus, qui est d'autant plus importante et rapide que la valeur du Ro est grande.
+
+<br/>
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/63207451/104498981-b2735100-55dc-11eb-8c99-83720fae9a45.png">
+	<p/>
+<br/>
 
 ## Conclusion
 
