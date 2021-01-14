@@ -1,7 +1,6 @@
 # Import
 import numpy as np
 from scipy.integrate import odeint
-import matplotlib.pyplot as plt
 from plotly.offline import plot
 import plotly.graph_objects as go
 
