@@ -300,7 +300,7 @@ Les paramètres de ce modèle sont : <br/>
 - μ : le taux de guérison
 <br/>
 
-On représente alors ce modèle comme ceci : <br/>
+On représente alors ce modèle comme ceci :
 
 <p align="center">
 <img width="894" alt="Capture d’écran 2021-01-15 à 10 25 43" src="https://user-images.githubusercontent.com/63207451/104706930-0769b100-571c-11eb-8900-25cf3016b045.png">
@@ -312,7 +312,7 @@ Les équations qui régissent ce modèle sont :
 <img src="https://user-images.githubusercontent.com/63207451/104709482-4a795380-571f-11eb-9bf0-30bcbe6ea1d3.png">
 	<p/>
 <br/>
-De même, nous avons la somme des équations différentielles nulle, qui justifie que N est constant :<br/>
+De même, nous avons la somme des équations différentielles nulle, qui justifie que N est constant :
 <p align="center">
 <img width="900" alt="Capture d’écran 2021-01-15 à 10 33 46" src="https://user-images.githubusercontent.com/63207451/104707788-287ed180-571d-11eb-9514-74e09b16173a.png">
 	<p/>
