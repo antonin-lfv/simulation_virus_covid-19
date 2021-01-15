@@ -9,7 +9,7 @@
 #### Article lié à ce github : ( à venir )
 
 Ce projet à pour objectifs de modéliser une __épidémie__, et de simuler sa propagation au sein d'une population d'individus. Le taux d'infection, de guérison et de létalité seront les paramètres de notre modèle, que nous étudierons afin de mieux comprendre leur impact sur la vitesse de propagation du virus. <br/>
-Ce modèle statistique sera comparé au modèle mathématique __SIR__, qui appartient à la famille des modèles compartimenantaux en épidémiologie, qui reposent sur des équations différentielles.
+Ce modèle statistique sera comparé aux modèles mathématique __SIR__ et __SIDR__, qui appartiennent à la famille des modèles compartimenantaux en épidémiologie, qui reposent sur des équations différentielles.
 
 On choisira des populations de quelques centaines à quelques milliers d'individus et on supposera qu'un individu immunisé le reste toute sa vie.
 Cette modélisation sera réalisée avec matplotlib et plotly indépendamment.
@@ -325,7 +325,7 @@ L'expression du nombre de personnes saines est le même que le modèle SIR, l'ex
 # Conclusion
 
 <br/>
-L'étude épidémiologique reste au final un domaine très théorique. Même si les résultats et observations obtenues sembles assez proches de la réalité et du modèle mathématique SIR, ces modélisations ne prennent pas en compte certains autres facteurs, tels que la vaccination, la mise en quarantaine des individus dès qu'ils sont infectés, ou même le déplacement des individus dans la population. <br/>
+L'étude épidémiologique reste au final un domaine très théorique. Même si les résultats et observations obtenues sembles assez proches de la réalité et des modèles mathématique, ces modélisations ne prennent pas en compte certains autres facteurs, tels que la vaccination, la mise en quarantaine des individus dès qu'ils sont infectés, ou même le déplacement des individus dans la population. <br/>
 Néanmoins, cela nous aident à comprendre comment un virus se comporte dans une population, quel est l'influence de certains paramètres sur sa propagation et comment l'évolution de l'épidémie peut être grossièrement appréhendée.
 <br/>
 <br/>
