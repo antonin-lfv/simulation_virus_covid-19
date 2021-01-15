@@ -238,7 +238,7 @@ Le modèle SIR peut donc être representé par le diagramme suivant :
 Puis on introduit nos équations différentielles qui régissent le modèle :  
 
 <p align="center">
-<img width="1112" alt="Capture d’écran 2021-01-12 à 16 44 25" src="https://user-images.githubusercontent.com/63207451/104337207-8335e480-54f5-11eb-92c3-e221b2c94644.png">
+<img width="888" alt="Capture d’écran 2021-01-15 à 09 39 04" src="https://user-images.githubusercontent.com/63207451/104701911-9626ff80-5715-11eb-9696-86acfd24cdeb.png">
 	<p/>
 On remarque que :
 <p align="center"> 
