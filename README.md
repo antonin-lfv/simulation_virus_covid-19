@@ -87,10 +87,6 @@ On notera Ro le taux de reproduction du virus, qui est le nombre moyen d'individ
 Les simulations de cette section sont réalisées avec le modèle python, et affichées avec la librairie plotly <br/>
 <br/>
 
-# Simulations
-
-<br/>
-
 ## Simulation avec différents taux d'infection
 
 <br/>
