@@ -324,7 +324,7 @@ L'expression du nombre de personnes saines est le même que le modèle SIR, l'ex
 
 <br/>
 <p align="center">
-<img src="https://user-images.githubusercontent.com/63207451/104731597-3a23a180-573c-11eb-88c6-fdfbb2ce94ce.png">
+<img src="https://user-images.githubusercontent.com/63207451/104732037-e49bc480-573c-11eb-86d2-21e02b073a1a.png">
 	<p/>
 
 # Conclusion
