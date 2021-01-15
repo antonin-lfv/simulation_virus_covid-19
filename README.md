@@ -55,8 +55,11 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 	6. [Simulation avec différents Ro et cas limites](#Simulation-avec-différents-Ro-et-cas-limites)
 4. [Le modèle SIR](#le-modèle-SIR)
 	1. [Modèle mathématique](#Modèle-mathématique)
-	2. [Validation du modèle statistique par le modèle SIR](#Validation-du-modèle-statistique-par-le-modèle-SIR)
-5. [Conclusion](#conclusion)
+	2. [Comparaison au modèle Python](#Comparaison-au-modèle-python)
+5. [Le modèle SIDR](#le-modèle-SIDR)
+	1. [Modèle mathématique](#Modèle-mathématique)
+	2. [Comparaison au modèle Python](#Comparaison-au-modèle-python)
+6. [Conclusion](#conclusion)
 
 
 # Librairies 
@@ -210,7 +213,7 @@ Simulation réalisée avec le modèle python.
 
 
 
-## Modèle mathématique
+## Modélisation mathématique
 
 <br/>
 Le modèle SIR est un modèle mathématique déterministe à compartiments permettant de simuler de façon simplifiée l'évolution d'une population face à une épidémie. Ce modèle fait partie d'une famille de modèles compartimentaux en épidémiologie, qui ont commencé à être mis en pratique avec le SIDA dans les années 1980, ils sont à l'heure actuelle de plus en plus présents lors des décisions politiques concernant la gestion de problèmes sanitaires. <br/>
@@ -258,7 +261,7 @@ Le vecteur unitaire [S0, I0, R0] correspond aux nombres d'individus sains, infec
 
 <br/>
 
-## Validation du modèle statistique par le modèle SIR
+## Comparaison au modèle python
 
 <br/>
 
@@ -274,6 +277,12 @@ Les courbes sont assez similaires, peut importe le Ro. La petite différence au 
 Le modèle crée en python est donc conforme au modèle mathématique.
 
 <br/>
+
+# Le modèle __SIDR__
+
+## Modélisation mathématique
+
+## Comparaison au modèle python
 
 # Conclusion
 
