@@ -213,7 +213,7 @@ Simulation réalisée avec le modèle python.
 
 
 
-## Modélisation mathématique
+## Modélisation mathématique SIR
 
 <br/>
 Le modèle SIR est un modèle mathématique déterministe à compartiments permettant de simuler de façon simplifiée l'évolution d'une population face à une épidémie. Ce modèle fait partie d'une famille de modèles compartimentaux en épidémiologie, qui ont commencé à être mis en pratique avec le SIDA dans les années 1980, ils sont à l'heure actuelle de plus en plus présents lors des décisions politiques concernant la gestion de problèmes sanitaires. <br/>
@@ -261,7 +261,7 @@ Le vecteur unitaire [S0, I0, R0] correspond aux nombres d'individus sains, infec
 
 <br/>
 
-## Comparaison au modèle python
+## Comparaison SIR / modèle python
 
 <br/>
 
@@ -280,9 +280,9 @@ Le modèle crée en python est donc conforme au modèle mathématique.
 
 # Le modèle __SIDR__
 
-## Modélisation mathématique
+## Modélisation mathématique SIDR
 
-## Comparaison au modèle python
+## Comparaison SIDR / modèle python
 
 # Conclusion
 
