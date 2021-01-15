@@ -54,10 +54,10 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 	5. [Simuler le SARS-cov-2](#simuler-le-SARS-cov-2)
 	6. [Simulation avec différents Ro et cas limites](#Simulation-avec-différents-Ro-et-cas-limites)
 4. [Le modèle SIR](#le-modèle-SIR)
-	1. [Modèle mathématique SIR](#Modélisation-mathématique-SIR)
+	1. [Modèle mathématique](#Modélisation-mathématique-SIR)
 	2. [Comparaison SIR / modèle Python](#Comparaison-SIR--modèle-python)
 5. [Le modèle SIDR](#le-modèle-SIDR)
-	1. [Modèle mathématique SIDR](#Modélisation-mathématique-SIDR)
+	1. [Modèle mathématique](#Modélisation-mathématique-SIDR)
 	2. [Comparaison SIDR / modèle Python](#Comparaison-SIDR--modèle-python)
 6. [Conclusion](#conclusion)
 
