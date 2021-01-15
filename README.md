@@ -284,7 +284,7 @@ Le modèle crée en python est donc conforme au modèle mathématique.
 ## Modélisation mathématique SIDR
 
 <br/>
-Ce modèle, tout comme le modèle SIR, appartient à la famille des modèles compartimentaux en épidémiologie. Cependant, il est un peu plus précis, car il découpe la population en 4 compartiments. On a alors ∀t, S(t) le nombre d'individus sains, I(t) le nombre d'individus infectés, D(t) le nombre d'individus décédés, et R(t) le nombre de personnes rétablies.
+Ce modèle, tout comme le modèle SIR, appartient à la famille des modèles compartimentaux en épidémiologie. Cependant, il est un peu plus précis, car il découpe la population en 4 compartiments. On a alors ∀t, S(t) le nombre d'individus sains, I(t) le nombre d'individus infectés, D(t) le nombre d'individus décédés, et R(t) le nombre de personnes rétablies.<br/>
 Comme précédemment, soit N la taille de la population :
 <br/>
 
