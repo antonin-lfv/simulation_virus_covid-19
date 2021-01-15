@@ -314,7 +314,7 @@ Les équations qui régissent ce modèle sont :
 <br/>
 De même, nous avons la somme des équations différentielles nulle, qui justifie que N est constant :
 <p align="center">
-<img width="900" alt="Capture d’écran 2021-01-15 à 11 05 31" src="https://user-images.githubusercontent.com/63207451/104711388-975e2980-5721-11eb-9870-e4be30c6505e.png">
+<img width="900" alt="Capture d’écran 2021-01-15 à 11 16 11" src="https://user-images.githubusercontent.com/63207451/104712651-14d66980-5723-11eb-9fcd-b9c7b3159c8e.png">
 	<p/>
 <br/>
 
