@@ -283,6 +283,43 @@ Le modèle crée en python est donc conforme au modèle mathématique.
 
 ## Modélisation mathématique SIDR
 
+<br/>
+Ce modèle, tout comme le modèle SIR, appartient à la famille des modèles compartimentaux en épidémiologie. Cependant, il est un peu plus précis, car il découpe la population en 4 compartiments. On a alors ∀t, S(t) le nombre d'individus sains, I(t) le nombre d'individus infectés, D(t) le nombre d'individus décédés, et R(t) le nombre de personnes rétablies.
+Comme précédemment, soit N la taille de la population :
+<br/>
+
+<p align="center"> 
+	<br/>
+	∀t	  N = S(t) + I(t) + D(t) + R(t) <p/>
+<br/>
+
+Les paramètres de ce modèle sont : <br/>
+
+- β : le taux d'infection
+- θ : le taux de mortalité
+- μ : le taux de guérison
+<br/>
+
+On représente alors ce modèle comme ceci : <br/>
+
+<p align="center">
+<img width="894" alt="Capture d’écran 2021-01-15 à 10 25 43" src="https://user-images.githubusercontent.com/63207451/104706930-0769b100-571c-11eb-8900-25cf3016b045.png">
+	<p/>
+
+Les équations qui régissent ce modèle sont :
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/63207451/104709482-4a795380-571f-11eb-9bf0-30bcbe6ea1d3.png">
+	<p/>
+<br/>
+De même, nous avons la somme des équations différentielles nulle, qui justifie que N est constant :<br/>
+<p align="center">
+<img width="900" alt="Capture d’écran 2021-01-15 à 10 33 46" src="https://user-images.githubusercontent.com/63207451/104707788-287ed180-571d-11eb-9514-74e09b16173a.png">
+	<p/>
+<br/>
+
+L'expression du nombre de personnes saines est le même que le modèle SIR, l'expression du nombre d'individus infectés est la différence entre le nombre d'individus sains et la somme des individus décédés et guéris. Pour le nombre de personnes décédés et guéris, on fait simplement le produit du coefficient correspondant et de la taille de la population infectée.
+
 ## Comparaison SIDR / modèle python
 
 # Conclusion
