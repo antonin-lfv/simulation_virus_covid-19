@@ -1,14 +1,12 @@
 
-""" importation """
+"""importation"""
 
-from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot  # pour travailler en offline!
+from plotly.offline import plot  # pour travailler en offline!
 import plotly.graph_objects as go
 import numpy as np
 from scipy.integrate import odeint
-import matplotlib.pyplot as plt
 
 
-"""Modèle SIDR"""
 # Population totale, N.
 N = 10000
 # Nombre initial de sujets infectés et sauvés (immunisés, guéris, décédés).
