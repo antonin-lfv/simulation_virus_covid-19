@@ -198,6 +198,12 @@ En s'interessant maintenant aux variations du nombre de nouveaux infectés chaqu
 	<p/>
 
 <br/>
+Si on veut maintenant visualiser la taille des catégories de la population : <br/>
+
+<br/>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/63207451/105741295-6ad4b980-5f3a-11eb-8157-b1c45327dab9.png">
+	<p/>
 <br/>
 
 ## Simulation avec différents Ro et cas limites
