@@ -182,11 +182,19 @@ Cette simulation est à prendre avec beaucoup de précautions, car elle ne refl�
 <br/>
 
 <p align="center">
-<img width="1356" alt="Capture d’écran 2020-12-11 à 15 51 16" src="https://user-images.githubusercontent.com/63207451/101917618-bddff080-3bc8-11eb-83eb-46a68c3b803f.png">
+<img src="https://user-images.githubusercontent.com/63207451/105740167-38768c80-5f39-11eb-93c2-0692aeb32c31.png">
 	<p/>
 <br/>
 
 Avec cette simulation on observe que le nombre d'infectés augmente rapidement dès le début pour arriver à son maximum au bout de 8 jours, puis diminue très lentement pendant 16 jours. Au final on compte quasiment 30% de décès, et plus de la moitié deviennent immunisés.
+<br/>
+En s'interessant maintenant aux variations du nombre de nouveaux infectés chaque jour, on retrouve bien le fait que l'augmentation du nombre infectés et plus rapide que la diminution de ce nombre :
+<br/>
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/63207451/105739957-f9e0d200-5f38-11eb-93ee-74d366485593.png">
+	<p/>
+
 <br/>
 <br/>
 
