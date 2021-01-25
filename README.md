@@ -178,7 +178,8 @@ Ici, la courbe pleine représente l'épidémie sans l'application du confinement
 ## Simuler le SARS-cov-2
 
 <br/> 
-Cette simulation est à prendre avec beaucoup de précautions, car elle ne reflète pas la réalité. Nous prendrons ici comme paramètres, un taux d'infection de 17%, un taux d'immunité de 10% et une létalité de 0.5%, qui sont des estimations données par les médias en été 2020.
+Cette simulation est à prendre avec beaucoup de précautions, car elle ne reflète pas la réalité. Nous prendrons ici comme paramètres, un taux d'infection de 17%, un taux d'immunité de 10% et une létalité de 0.5%, qui sont des estimations données par les médias en été 2020. <br/>
+
 <br/>
 
 <p align="center">
@@ -186,9 +187,10 @@ Cette simulation est à prendre avec beaucoup de précautions, car elle ne refl�
 	<p/>
 <br/>
 
-Avec cette simulation on observe que le nombre d'infectés augmente rapidement dès le début pour arriver à son maximum au bout de 8 jours, puis diminue très lentement pendant 16 jours. Au final on compte quasiment 30% de décès, et plus de la moitié deviennent immunisés.
+Avec cette simulation on observe que le nombre d'infectés augmente rapidement dès le début pour arriver à son maximum au bout de 7 jours, puis diminue très lentement pendant plus de 20 jours. Au final on compte quasiment 30% de décès, et plus de la moitié deviennent immunisés.
 <br/>
-En s'interessant maintenant aux variations du nombre de nouveaux infectés chaque jour, on retrouve bien le fait que l'augmentation du nombre infectés et plus rapide que la diminution de ce nombre :
+En s'interessant maintenant aux variations du nombre de nouveaux infectés chaque jour, on retrouve bien le fait que l'augmentation du nombre infectés et plus rapide que la diminution de ce nombre : <br/>
+
 <br/>
 
 <p align="center">
