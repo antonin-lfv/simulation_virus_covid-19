@@ -33,7 +33,7 @@ def immuniser(l, l2, p):  # l: infectés; l2: immunisés précédents
     return l, l2
 
 def deces(l, l2, l3, p):  # l: infectés; l2: décès précédents; l3: immunisés
-    l_p = l[:]  # création d'une copie pour éviter d'erreur d'indice
+    l_p = l[:]  # création d'une copie pour éviter erreur d'indice
     for i in range(len(l_p)):
         proba = int(p * 100)
         if rd.randint(0, 100) <= proba and l_p[i] not in l3:
