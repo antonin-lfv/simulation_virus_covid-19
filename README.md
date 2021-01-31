@@ -335,7 +335,7 @@ On compare à présent le modèle SIDR avec notre modèle python, pour différen
 <p align="center">
 <img src="https://user-images.githubusercontent.com/63207451/104732037-e49bc480-573c-11eb-86d2-21e02b073a1a.png">
 	<p/>
-Les courbes des individus sains, décédés et immunisés sont assez similaires sur ces 3 simulations, cependant la courbe des individus infectés est un peu plus "volatile" dans notre modèle python.
+Les courbes des individus sains, décédés et immunisés sont assez similaires sur ces 3 simulations, cependant la courbe des individus infectés est un peu plus "volatile" dans notre modèle python. 
 
 # Conclusion
 
