@@ -78,7 +78,7 @@ Pour matplotlib une simple fenêtre python apparaîtra (ou plus).
 # Principe générale
 
 <br/>
-Lors de la simulation, plusieurs paramètres sont en jeux. Il y a tout d'abord le nombre d'invidus dans la population, ici on choisira une population entre 1 et 20000 individus pour avoir un temps d'exécution raisonnable. Ce nombre restera constant durant toute la simulation, nous supposerons que toute la population est susceptible d'être contaminée, et que la natalité compense la mortalité. La repartition de ces individus sera donnée par le paramètre variance_population , et qui variera entre 0 et 2 environ. Plus ce nombre est grand, plus la population sera étalée. De plus, l'épidémie commencera avec un nombre personnalisé d'individus infectés. <br/>
+Lors de la simulation, plusieurs paramètres sont en jeux. Il y a tout d'abord le nombre d'invidus dans la population, ici on choisira une population entre 1 et 20000 individus pour avoir un temps d'exécution raisonnable. Ce nombre restera constant durant toute la simulation, nous supposerons que toute la population est susceptible d'être contaminée, et que la natalité compense la mortalité. La repartition de ces individus sera donnée par le paramètre variance_population , et qui variera entre 0 et 2 environ. Plus ce nombre est grand, plus la population sera étalée. <br/>
 <br/>
 Ensuite, le paramètre rayon_contamination correspond à la zone dans laquelle un individu infecté peut transmettre le virus à un individu sain, avec une probabilté nommée infectiosité, qui est comprise entre 0 et 1. Chaque individu infecté reste infecté jusqu'à temps qu'il devienne immunisé ou qu'il décède. Après qu'un individu soit infecté, il a une probabilité p de devenir immunisé et donc de ne plus transmettre le virus, et une probabilité d de décéder suite à l'infection. Ces deux paramètres sont compris entre 0 et 1 également. Pour utiliser le paramètre λ du modèle SIR, qui est le taux de retirement, on fixera p=0 et d=λ. <br/>
 Nous ne considérerons pas pour l'instant l'apparition d'un vaccin durant la simulation. Seule l'immunité innée des individus est prise en compte. 
@@ -91,7 +91,7 @@ Les simulations de cette section sont réalisées avec le modèle python, et aff
 ## Simulation avec différents taux d'infection
 
 <br/>
-Faisons varier le taux d'infection entre 10%, 15%, 30%, 50% et 70% et observons la courbe du nombre de personnes infectés. On prendra 1 seul individu infecté à t=0. <br/>
+Faisons varier le taux d'infection entre 10%, 15%, 30%, 50% et 70% et observons la courbe du nombre de personnes infectés. <br/>
 <br/>
 <p align="center">
 <img width="1403" alt="infectés_variation_infectiosité" src="https://user-images.githubusercontent.com/63207451/97112938-6b657600-16e7-11eb-9c86-d197de969450.png">
@@ -110,7 +110,7 @@ Les courbes sont quasiment linéaires sur une grande partie, jusqu'à atteindre 
 ## Simulation avec différentes létalités
 
 <br/>
-Faisons à présent varier la létalité entre 5%, 10%, 25%, 30% et 40%. Et observons l'évolution des courbes du nombre d'individus infectés. On prendra 1 seul individu infecté à t=0. <br/>
+Faisons à présent varier la létalité entre 5%, 10%, 25%, 30% et 40%. Et observons l'évolution des courbes du nombre d'individus infectés.<br/>
 <br/>
 <p align="center">
 <img width="1403" alt="infectés_variation_letalité" src="https://user-images.githubusercontent.com/63207451/97112986-b1223e80-16e7-11eb-9fc4-eab052247d2a.png">
@@ -130,7 +130,7 @@ Le nombre de décès avec une létalité de 40% est 7 fois plus grand qu'avec un
 ## Simulation avec différents taux d'immunité
 
 <br/>
-Enfin, faisons varier le taux d'immunité entre 10%, 20%, 40%, 50% et 70%; et observons les courbes du nombre d'individus infectés. On prendra 1 seul individu infecté à t=0. <br/>
+Enfin, faisons varier le taux d'immunité entre 10%, 20%, 40%, 50% et 70%; et observons les courbes du nombre d'individus infectés.<br/>
 <br/>
 <p align="center">
 <img width="1403" alt="infectés_variation_immunité" src="https://user-images.githubusercontent.com/63207451/97113003-c9925900-16e7-11eb-8c9e-6bb57f5b8014.png">
@@ -156,7 +156,7 @@ Le nombre de décès est immensément plus grand lorsque l'immunité est quasi i
 <br/>
 On peut simuler un confinement de la population, en diminuant la variance de celle-ci et en augmentant le nombre de cluster, c'est à dire le nombre de groupes distincts physiquement, d'individus dans la population.  
 <br/>
-Par exemple avec une variance de 0.6 et 10 centers (modifiable dans la fonction make_blobs), et toujours avec 1 seul patient0, on observe que l'épidémie est globalement sous contrôle, le pic d'infectés est très bas. On compte à la fin, 12% de décès sur l'ensemble de la population. <br/>
+Par exemple avec une variance de 0.6 et 10 centers (modifiable dans la fonction make_blobs), on observe que l'épidémie est globalement sous contrôle, le pic d'infectés est très bas. On compte à la fin, 12% de décès sur l'ensemble de la population. <br/>
 <br/>
 <p align="center">
 <img width="1376" alt="Capture d’écran 2020-12-12 à 15 07 57" src="https://user-images.githubusercontent.com/63207451/101986058-e11fa400-3c8b-11eb-8053-16c26d8def16.png">
@@ -178,7 +178,7 @@ Ici, la courbe pleine représente l'épidémie sans l'application du confinement
 ## Simuler le SARS-cov-2
 
 <br/> 
-Cette simulation est à prendre avec beaucoup de précautions, car elle ne reflète pas la réalité. Nous prendrons ici comme paramètres, un taux d'infection de 17%, un taux d'immunité de 10% et une létalité de 0.5%, qui sont des estimations données par les médias en été 2020. Et nous prendrons 1 seul individu infecté à t=0. <br/>
+Cette simulation est à prendre avec beaucoup de précautions, car elle ne reflète pas la réalité. Nous prendrons ici comme paramètres, un taux d'infection de 17%, un taux d'immunité de 10% et une létalité de 0.5%, qui sont des estimations données par les médias en été 2020. <br/>
 
 <br/>
 
@@ -209,7 +209,7 @@ Si on veut maintenant visualiser la taille des catégories de la population : <b
 ## Simulation avec différents Ro et cas limites
 
 On fait varier ici le taux de reproduction de base _Ro_ du virus, dont l'epression est Ro=β/λ, ou ici __β est l'infectiosité du virus__, et __λ la probabilité pour qu'un individu ne puisse plus transmettre le virus__(pour se faire, on fixe p=0 et d=λ). On remarque que la situation est très différente pour un Ro inférieur et supérieur à 1. Pour un Ro < 1, peu d'individus sont infectés, et le virus ne propage pas. À la frontière Ro=1, le nombre de personnes retirées atteint quasiment le nombre de personnes saines, mais sans l'atteindre. On parle, pour un Ro<=1 d'équilibre. Il faut attendre un Ro>1 pour que la courbe des individus retirés passe au dessus de celle des individus sains, et provoque ainsi la propagation du virus, qui est d'autant plus importante et rapide que la valeur du Ro est grande. <br/>
-Simulation réalisée avec le modèle python et avec 1 seul patient0.
+Simulation réalisée avec le modèle python.
 
 <br/>
 
@@ -266,8 +266,7 @@ La première équation différentielle correspond au nombre de personnes saines,
 Ensuite, la deuxième équation a le signe de la différence entre le nombre de personne saines βS(t)I(t)/N et retirés λI(t), donc le nombre de personnes infectés diminue sur une période dt quand le nombre de personne saines est plus grande que le nombre de personnes retirées. <br/>
 La dernière équation, elle, correspond au nombre de personnes retirées qui est simplement le produit du nombre d'individus infectés à l'instant t par le taux de retirement.
 
-Le vecteur unitaire [S0, I0, R0] correspond aux nombres d'individus sains, infectés et retirés à t=0. Dans ce projet, aucun individu n'est immunisé à t=0 et la valeur de I0 est passé en paramètre. 
-
+Le vecteur unitaire [S0, I0, R0] correspond aux nombres d'individus sains, infectés et retirés à t=0. Dans ce projet, aucun individu n'est immunisé à t=0 et la valeur de I0 est 1.
 <br/>
 
 ## Comparaison SIR / modèle python
