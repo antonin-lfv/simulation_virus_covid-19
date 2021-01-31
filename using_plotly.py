@@ -168,11 +168,11 @@ def vague_seuil_px_opti2():
     fig.add_trace(go.Pie(values=[len(data['coord_sains']), len(data['coord_infectes']), len(data['coord_immunises']), len(data['coord_deces'])], labels=labels, sort=False), 1, 2)
 
     x_courbe = list(np.arange(0, len(data['courbe_sains'])))
-    fig.add_trace(go.Scatter(x=x_courbe, y=data['courbe_sains'], marker=dict(color='#636EFA',size=1), marker_line=dict(width=2),showlegend=False, name="sains",yaxis="y", ), 2, 1)
-    fig.add_trace(go.Scatter(x=x_courbe, y=data['courbe_infectes'], marker=dict(color='#EF553B',size=1), marker_line=dict(width=1),showlegend=False, name="infectés",yaxis="y2", ), 2, 1)
-    fig.add_trace(go.Scatter(x=x_courbe, y=data['courbe_immunises'], marker=dict(color='#00CC96',size=1), marker_line=dict(width=1),showlegend=False, name="immunisés",yaxis="y3", ), 2, 1)
-    fig.add_trace(go.Scatter(x=x_courbe, y=data['courbe_deces'], marker=dict(color='#AB63FA',size=1), marker_line=dict(width=1),showlegend=False, name="décédés",yaxis="y4", ), 2, 1)
-    fig.add_trace(go.Scatter(x=x_courbe, y=data['courbe_removed'], marker=dict(color='#000000',size=1), marker_line=dict(width=1), showlegend=False, name="removed",yaxis="y5", ), 2, 1)
+    fig.add_trace(go.Scatter(x=x_courbe, y=data['courbe_sains'], marker=dict(color='#636EFA'), marker_line=dict(width=2),showlegend=False, name="sains",yaxis="y", ), 2, 1)
+    fig.add_trace(go.Scatter(x=x_courbe, y=data['courbe_infectes'], marker=dict(color='#EF553B'), marker_line=dict(width=1),showlegend=False, name="infectés",yaxis="y2", ), 2, 1)
+    fig.add_trace(go.Scatter(x=x_courbe, y=data['courbe_immunises'], marker=dict(color='#00CC96'), marker_line=dict(width=1),showlegend=False, name="immunisés",yaxis="y3", ), 2, 1)
+    fig.add_trace(go.Scatter(x=x_courbe, y=data['courbe_deces'], marker=dict(color='#AB63FA'), marker_line=dict(width=1),showlegend=False, name="décédés",yaxis="y4", ), 2, 1)
+    fig.add_trace(go.Scatter(x=x_courbe, y=data['courbe_removed'], marker=dict(color='#000000'), marker_line=dict(width=1), showlegend=False, name="removed",yaxis="y5", ), 2, 1)
     fig.update_xaxes(title_text="jours", row=2, col=1)
     fig.update_yaxes(title_text="nombre d'individus", row=2, col=1)
     fig.add_annotation(text="Maximum d'infectés", x=data['courbe_infectes'].index(max(data['courbe_infectes'])),# ajouter un texte avec une flèche
