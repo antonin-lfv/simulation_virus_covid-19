@@ -274,7 +274,7 @@ Le vecteur unitaire [S0, I0, R0] correspond aux nombres d'individus sains, infec
 
 <br/>
 
-Comparons maintenant le modèle mathématique SIR et le modèle statistique crée avec python en prenant différentes valeurs de Ro. Tous les paramètres sont identiques.
+Comparons maintenant le modèle mathématique SIR et le modèle statistique crée avec python en prenant différentes valeurs de Ro. Tous les autres paramètres sont identiques.
 
 <p align="center">
 <img width="1281" alt="Capture d’écran 2021-01-14 à 17 28 45" src="https://user-images.githubusercontent.com/63207451/104619376-17d34a80-568e-11eb-8012-f827d350b7ad.png">
