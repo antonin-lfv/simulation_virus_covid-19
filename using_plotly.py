@@ -13,6 +13,15 @@ import numpy as np
 def distance_e(x, y):  # distance entre 2 points du plan cartésien
     return distance.euclidean([x[0],x[1]],[y[0],y[1]])
 
+def first_infect(pop,infec): #choisi un nombre infec d'individus infectés au départ
+    l = []
+    for i in range(infec):
+        num = rd.randint(0, pop - 1)
+        while num in l:
+            num = rd.randint(0, pop - 1)
+        l.append(num)
+    return l
+
 def remove_(a, l): # enlever les éléments de l dans a
     for i in range(len(l)):
         a.remove(l[i])
@@ -41,15 +50,17 @@ def deces(l, l2, l3, p):  # l: infectés; l2: décès précédents; l3: immunis�
             l.remove(l_p[i])
     return l, l2
 
+
 def vague_seuil_px_opti2():
 
     print('Début de la simulation ... \n')
     start = time.time()
 
     nb_individu = 1000  # recommandé : 500 à 10000
+    nb_infecte_0 = 10
     variance_pop = 1  # recommandé : 1
     rayon_contamination = 0.5  # recommandé : 0.5
-    infectiosite = 0.1  # recommandé : 10%
+    infectiosite = 0.17  # recommandé : 10%
     p = 0.1  # recommandé : 10%
     d = 0.05  # recommandé : 5%
 
@@ -82,29 +93,27 @@ def vague_seuil_px_opti2():
                            y=x[:,1]))
 
     # création des courbes finales et listes des coordonnées
-    data = dict(courbe_sains = [nb_individu-1],courbe_infectes = [1],courbe_immunises = [0],courbe_deces = [0],courbe_removed = [0],coord_infectes=[],coord_sains=[],coord_immunises=[],coord_deces=[])
+    data = dict(courbe_sains = [],courbe_infectes = [],courbe_immunises = [],courbe_deces = [],courbe_removed = [],coord_infectes=[],coord_sains=[],coord_immunises=[],coord_deces=[])
 
-    numero_infecte_1 = rd.randint(0, nb_individu - 1)  # on choisit le premier individu infecté au hasard
-    coord_1er_infecte = [df['x'][numero_infecte_1], df['y'][numero_infecte_1]]  # coordonnées du 1er infecté
+    numero_infecte_1 = first_infect(nb_individu,nb_infecte_0)  # on choisit les premiers individus infectés au hasard
+    coord_1er_infecte = [(df['x'][numero_infecte_1[i]], df['y'][numero_infecte_1[i]]) for i in range(len(numero_infecte_1))] # coordonnées des 1er infectés
 
-    # 1er vague
+    # Remplissage des listes
 
-    df_sans1erinfecte = df[(df['x'] != df['x'][numero_infecte_1]) & (df['y'] != df['y'][numero_infecte_1])]
     for k in range(nb_individu):
-        if [df['x'][k], df['y'][k]] == coord_1er_infecte:
-            data['coord_infectes'].append(coord_1er_infecte)
-        elif distance_e(coord_1er_infecte, [df_sans1erinfecte['x'][k], df_sans1erinfecte['y'][k]]) < rayon_contamination and chance_infecte(infectiosite):
-            data['coord_infectes'].append([df['x'][k], df['y'][k]])
+        if k in numero_infecte_1 :
+            data['coord_infectes'].append(coord_1er_infecte[numero_infecte_1.index(k)])
         else:
             data['coord_sains'].append([df['x'][k], df['y'][k]])
 
-    data['courbe_sains'].append(len(data['coord_sains']))
-    data['courbe_infectes'].append(len(data['coord_infectes']))
+    # Jour 1 de l'épidémie
+    data['courbe_sains'].append(nb_individu-nb_infecte_0)
+    data['courbe_infectes'].append(nb_infecte_0)
     data['courbe_immunises'].append(0)
     data['courbe_deces'].append(0)
     data['courbe_removed'].append(0)
 
-    # vagues 2 à n
+    # Jours 2 à n
 
     while len(data['coord_infectes']) > 0.08*nb_individu or len(data['courbe_sains']) < 10: #condition d'arrêt
         coord_infectes1, data['coord_immunises'] = immuniser(data['coord_infectes'], data['coord_immunises'], p)
@@ -124,6 +133,8 @@ def vague_seuil_px_opti2():
         data['courbe_deces'].append(len(data['coord_deces']))
         data['courbe_removed'].append(len(data['coord_immunises']) + len(data['coord_deces']))
 
+    # Affichage du résultat
+    
     if data['coord_sains']:
         fig.add_trace(go.Scatter(x=np.array(data['coord_sains'])[:, 0], y=np.array(data['coord_sains'])[:, 1], name="sain", mode="markers",
                                  marker=dict(
@@ -133,6 +144,7 @@ def vague_seuil_px_opti2():
                                          width=0.4,
                                          color='#636EFA')
                                  ),marker_line=dict(width=1), showlegend=False), 1, 1)
+        
     if data['coord_infectes']:
         fig.add_trace(go.Scatter(x=np.array(data['coord_infectes'])[:, 0], y=np.array(data['coord_infectes'])[:, 1], name="infecté",mode="markers",
                                  marker=dict(
@@ -142,6 +154,7 @@ def vague_seuil_px_opti2():
                                          width=0.4,
                                          color='#EF553B')
                                  ),marker_line=dict(width=1), showlegend=False), 1, 1)
+        
     if data['coord_immunises']:
         fig.add_trace(go.Scatter(x=np.array(data['coord_immunises'])[:, 0], y=np.array(data['coord_immunises'])[:, 1], name='immunisé',mode="markers",
                                  marker=dict(
@@ -151,6 +164,7 @@ def vague_seuil_px_opti2():
                                          width=0.4,
                                          color='#00CC96')
                                  ), marker_line=dict(width=1),showlegend=False), 1, 1)
+        
     if data['coord_deces'] :
         fig.add_trace(go.Scatter(x=np.array(data['coord_deces'])[:, 0], y=np.array(data['coord_deces'])[:, 1], name="décédé", mode="markers",
                                  marker=dict(
@@ -160,12 +174,16 @@ def vague_seuil_px_opti2():
                                          width=0.4,
                                          color='#AB63FA')
                                  ), marker_line=dict(width=1),showlegend=False), 1, 1)
+        
     fig.update_traces(hoverinfo="name")
     fig.update_xaxes(showgrid=False, visible=False, row=1, col=1)
     fig.update_yaxes(showgrid=False, visible=False, row=1, col=1)
+    
+    # Diagramme circulaire
     labels = ["sains", "infectés", "immunisés", "décédés"]
     fig.add_trace(go.Pie(values=[len(data['coord_sains']), len(data['coord_infectes']), len(data['coord_immunises']), len(data['coord_deces'])], labels=labels, sort=False), 1, 2)
 
+    # Courbes
     x_courbe = list(np.arange(0, len(data['courbe_sains'])))
     fig.add_trace(go.Scatter(x=x_courbe, y=data['courbe_sains'], marker=dict(color='#636EFA',size=1), marker_line=dict(width=1),showlegend=False, name="sains",yaxis="y", ), 2, 1)
     fig.add_trace(go.Scatter(x=x_courbe, y=data['courbe_infectes'], marker=dict(color='#EF553B',size=1), marker_line=dict(width=1),showlegend=False, name="infectés",yaxis="y2", ), 2, 1)
@@ -191,3 +209,4 @@ def vague_seuil_px_opti2():
     sec = round(t-min*60,1)
     print('Simulation terminée en '+str(min)+' minutes \net '+str(sec)+' secondes')
     plot(fig)
+
