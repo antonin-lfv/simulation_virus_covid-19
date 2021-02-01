@@ -83,24 +83,21 @@ def vague_seuil_px_opti2():
                            y=x[:,1]))
 
     # création des courbes finales et listes des coordonnées
-    data = dict(courbe_sains = [nb_individu-1],courbe_infectes = [1],courbe_immunises = [0],courbe_deces = [0],courbe_removed = [0],coord_infectes=[],coord_sains=[],coord_immunises=[],coord_deces=[])
+    data = dict(courbe_sains = [],courbe_infectes = [],courbe_immunises = [],courbe_deces = [],courbe_removed = [],coord_infectes=[],coord_sains=[],coord_immunises=[],coord_deces=[])
 
     numero_infecte_1 = rd.randint(0, nb_individu - 1)  # on choisit le premier individu infecté au hasard
     coord_1er_infecte = [df['x'][numero_infecte_1], df['y'][numero_infecte_1]]  # coordonnées du 1er infecté
 
-    # Remplissage des listes et premières infections
+    # Remplissage des listes
 
-    df_sans1erinfecte = df[(df['x'] != df['x'][numero_infecte_1]) & (df['y'] != df['y'][numero_infecte_1])]
     for k in range(nb_individu):
         if k==numero_infecte_1 :
             data['coord_infectes'].append(coord_1er_infecte)
-        elif distance_e(coord_1er_infecte, [df_sans1erinfecte['x'][k], df_sans1erinfecte['y'][k]]) < rayon_contamination and chance_infecte(infectiosite):
-            data['coord_infectes'].append([df['x'][k], df['y'][k]])
         else:
             data['coord_sains'].append([df['x'][k], df['y'][k]])
 
-    data['courbe_sains'].append(len(data['coord_sains']))
-    data['courbe_infectes'].append(len(data['coord_infectes']))
+    data['courbe_sains'].append(nb_individu-1)
+    data['courbe_infectes'].append(1)
     data['courbe_immunises'].append(0)
     data['courbe_deces'].append(0)
     data['courbe_removed'].append(0)
@@ -108,8 +105,6 @@ def vague_seuil_px_opti2():
     # Jours 2 à n
 
     while len(data['coord_infectes']) > 0.08*nb_individu or len(data['courbe_sains']) < 10: #condition d'arrêt
-        coord_infectes1, data['coord_immunises'] = immuniser(data['coord_infectes'], data['coord_immunises'], p)
-        data['coord_infectes'], data['coord_deces'] = deces(coord_infectes1, data['coord_deces'], data['coord_immunises'], d)
 
         for k in range(len(data['coord_infectes'])):
             non_sains = 0
@@ -118,6 +113,10 @@ def vague_seuil_px_opti2():
                     data['coord_infectes'].append(data['coord_sains'][j-non_sains])
                     data['coord_sains'].remove(data['coord_sains'][j-non_sains])
                     non_sains+=1
+
+        coord_infectes1, data['coord_immunises'] = immuniser(data['coord_infectes'], data['coord_immunises'], p)
+        data['coord_infectes'], data['coord_deces'] = deces(coord_infectes1, data['coord_deces'], data['coord_immunises'], d)
+
         # pour les courbes finales
         data['courbe_sains'].append(len(data['coord_sains']))
         data['courbe_infectes'].append(len(data['coord_infectes']))
@@ -192,3 +191,4 @@ def vague_seuil_px_opti2():
     sec = round(t-min*60,1)
     print('Simulation terminée en '+str(min)+' minutes \net '+str(sec)+' secondes')
     plot(fig)
+
