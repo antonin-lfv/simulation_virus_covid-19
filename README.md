@@ -24,6 +24,8 @@ Ce modèle statistique sera ensuite comparé aux modèles mathématique __SIR__ 
 
 - Thèse de Derdei Bichara sur l'[étude de modèles épidémiologiques](https://tel.archives-ouvertes.fr/tel-00841444/file/BicharaPhDThesis.pdf): Stabilité, observation et estimation de paramètres.
 
+- Étude des [modèles épidémiologiques et du Ro](http://www.math.univ-metz.fr/~sallet/R0_EPICASA09.pdf) 
+
 <br/>
 
 # Résultat global sous plotly 
