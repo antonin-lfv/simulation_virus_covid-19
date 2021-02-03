@@ -42,7 +42,7 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 
 # Index
 1. [Librairies](#librairies)
-2. [Principe générale du modèle python](#principe-générale)
+2. [Le modèle python](#le-modèle-python)
 	1. [Simulation avec différents taux d'infection](#Simulation-avec-différents-taux-dinfection)
 	2. [Simulation avec différentes létalités](#simulation-avec-différentes-létalités)
 	3. [Simulation avec différents taux d'immunité](#simulation-avec-différents-taux-dimmunité)
@@ -77,7 +77,7 @@ Pour matplotlib une simple fenêtre python apparaîtra (ou plus).
 <br/>
 <br/> 
 
-# Principe générale
+# Le modèle python
 
 <br/>
 Lors de la simulation, plusieurs paramètres sont en jeux. Il y a tout d'abord le nombre d'invidus dans la population, ici on choisira une population entre 1 et 20000 individus pour avoir un temps d'exécution raisonnable. Ce nombre restera constant durant toute la simulation, nous supposerons que toute la population est susceptible d'être contaminée, et que la natalité compense la mortalité. La repartition de ces individus sera donnée par le paramètre variance_population , et qui variera entre 0 et 2 environ. Plus ce nombre est grand, plus la population sera étalée. <br/>
