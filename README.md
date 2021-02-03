@@ -42,7 +42,7 @@ Simulation effectuée avec des valeurs de paramètres standars. <br/>
 
 # Index
 1. [Librairies](#librairies)
-2. [Principe générale](#principe-générale)
+2. [Principe générale du modèle python](#principe-générale)
 	1. [Simulation avec différents taux d'infection](#Simulation-avec-différents-taux-dinfection)
 	2. [Simulation avec différentes létalités](#simulation-avec-différentes-létalités)
 	3. [Simulation avec différents taux d'immunité](#simulation-avec-différents-taux-dimmunité)
