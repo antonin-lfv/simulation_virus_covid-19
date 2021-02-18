@@ -30,7 +30,7 @@ Ce modèle statistique sera ensuite comparé aux modèles mathématiques __SIR__
 
 # Résultat global sous plotly 
 <br/>
-Simulation effectuée avec des valeurs de paramètres standars. <br/>
+Simulation effectuée avec des valeurs de paramètres standards. <br/>
 <br/>
 <p align="center">
 <img src="https://user-images.githubusercontent.com/63207451/101951720-c13ea080-3bf7-11eb-9dbd-c3cb50136b29.png">
