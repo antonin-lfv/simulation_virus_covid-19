@@ -28,6 +28,13 @@ Ce modèle statistique sera ensuite comparé aux modèles mathématiques __SIR__
 
 <br/>
 
+# Animation avec Manim
+<br/>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/63207451/113182197-eca2d500-9252-11eb-9f2b-0c8e0446aeb3.gif">
+	<p/>
+<br/>
+
 # Résultat global sous plotly 
 <br/>
 Simulation effectuée avec des valeurs de paramètres standards. <br/>
