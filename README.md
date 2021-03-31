@@ -31,7 +31,7 @@ Ce modèle statistique sera ensuite comparé aux modèles mathématiques __SIR__
 # Animation avec Manim
 <br/>
 <p align="center">
-<img src="https://user-images.githubusercontent.com/63207451/113185840-3d1c3180-9257-11eb-884d-f966b52abeea.gif">
+<img src="https://user-images.githubusercontent.com/63207451/113188470-612d4200-925a-11eb-8ef7-325d9bb7c63a.gif">
 	<p/>
 <br/>
 
