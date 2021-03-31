@@ -13,11 +13,6 @@ import numpy as np
 def distance_e(x, y):  # distance entre 2 points du plan cartésien
     return distance.euclidean([x[0],x[1]],[y[0],y[1]])
 
-def remove_(a, l): # enlever les éléments de l dans a
-    for i in range(len(l)):
-        a.remove(l[i])
-    return a
-
 def chance_infecte(p):  # return True si il devient infecté avec une proba p
     proba = int(p * 100)
     return rd.randint(0, 100) <= proba
