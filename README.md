@@ -30,10 +30,9 @@ Ce modèle statistique sera ensuite comparé aux modèles mathématiques __SIR__
 
 # Animation avec Manim
 <p align="center">
-<img src="https://user-images.githubusercontent.com/63207451/113188470-612d4200-925a-11eb-8ef7-325d9bb7c63a.gif">
+<img src="https://user-images.githubusercontent.com/63207451/113775847-8f62c400-9729-11eb-9ef9-b74ec1ac4160.gif">
 	<p/>
-	
-[![Manim](https://user-images.githubusercontent.com/63207451/113751990-c70f4300-970c-11eb-98a6-e9e0bddf91e3.png)](https://www.youtube.com/watch?v=9MBI_X1x67E)
+
 	
 # Résultat global sous plotly 
 <br/>
