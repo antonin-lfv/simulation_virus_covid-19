@@ -24,7 +24,7 @@ Ce modèle statistique sera ensuite comparé aux modèles mathématiques <b>SIR<
 <br/>
 <br/>
 
-# Liens utiles
+<h1 align="center">Liens utiles</h1>
 
 - Article lié à ce github : ( à venir )
 
