@@ -24,7 +24,7 @@ Ce modèle statistique sera ensuite comparé aux modèles mathématiques <b>SIR<
 <br/>
 <br/>
 
-<h1 align="center">Liens utiles</h1>
+# Liens utiles
 
 - Article lié à ce github : ( à venir )
 
@@ -36,13 +36,13 @@ Ce modèle statistique sera ensuite comparé aux modèles mathématiques <b>SIR<
 
 <br/>
 
-<h1 align="center">Animation avec Manim</h1>
+# Animation avec Manim
 <p align="center">
 <img src="https://user-images.githubusercontent.com/63207451/114196366-93712a80-9951-11eb-9cea-e1e0add8231e.gif">
 	<p/>
 
 	
-<h1 align="center">Résultat global sous Plotly</h1>
+# Résultat global sous Plotly
 <br/>
 Simulation effectuée avec des valeurs de paramètres standards. <br/>
 <br/>
@@ -54,7 +54,7 @@ Simulation effectuée avec des valeurs de paramètres standards. <br/>
 (courbe noire : somme des personnes immunisées et décédées) <br/>
 <br/>
 
-<h1 align="center">Index</h1>
+# Index
 
 1. [Librairies](#librairies)
 2. [Le modèle python](#le-modèle-python)
@@ -75,7 +75,7 @@ Simulation effectuée avec des valeurs de paramètres standards. <br/>
 5. [Conclusion](#conclusion)
 
 
-<h1 align="center">Librairies</h1>
+# Librairies
 
 <br/>
 Si vous n'avez jamais utilisé plotly pensez à le télécharger via la console :  <br/>
