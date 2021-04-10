@@ -1,3 +1,5 @@
+<p align="center"><a href="https://www.python.org"><img src="https://user-images.githubusercontent.com/63207451/114282744-1bd0f780-9a46-11eb-898a-53817ff89bfb.png" alt="Python doc" height="60"/></a></p>
+
 <h1 align="center">Simulation épidémiologique</h1>
 
 <br/>
