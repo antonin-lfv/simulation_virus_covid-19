@@ -36,6 +36,12 @@ Ce modèle statistique sera ensuite comparé aux modèles mathématiques <b>SIR<
 
 <br/>
 
+| __Animation avec Manim__  | __Résultat global sous Plotly__ |
+| ------------- | ------------- |
+| <img src="https://user-images.githubusercontent.com/63207451/114196366-93712a80-9951-11eb-9cea-e1e0add8231e.gif">  | <img src="https://user-images.githubusercontent.com/63207451/101951720-c13ea080-3bf7-11eb-9dbd-c3cb50136b29.png" >  |
+
+<br/>
+
 # Animation avec Manim
 <p align="center">
 <img src="https://user-images.githubusercontent.com/63207451/114196366-93712a80-9951-11eb-9cea-e1e0add8231e.gif" width="600">
