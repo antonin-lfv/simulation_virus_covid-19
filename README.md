@@ -75,7 +75,7 @@ Simulation effectuée avec des valeurs de paramètres standards. <br/>
 5. [Conclusion](#conclusion)
 
 
-# Librairies 
+<h1 align="center">Librairies</h1>
 
 <br/>
 Si vous n'avez jamais utilisé plotly pensez à le télécharger via la console :  <br/>
