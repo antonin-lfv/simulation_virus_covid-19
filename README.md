@@ -1,6 +1,5 @@
-<p align="center"><a href="https://www.python.org"><img src="https://user-images.githubusercontent.com/63207451/114282744-1bd0f780-9a46-11eb-898a-53817ff89bfb.png" alt="Python doc" height="60"/></a></p>
-<p align="center">
-<img src="https://user-images.githubusercontent.com/63207451/114284531-e67dd700-9a50-11eb-9322-08dc04de58bd.gif" height="60">
+<p align="center"><a href="https://www.python.org">
+<img src="https://user-images.githubusercontent.com/63207451/114284531-e67dd700-9a50-11eb-9322-08dc04de58bd.gif" height="80">
 	<p/>
 
 <h1 align="center">Simulation épidémiologique</h1>
