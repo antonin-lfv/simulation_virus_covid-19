@@ -55,6 +55,7 @@ Simulation effectuée avec des valeurs de paramètres standards. <br/>
 <br/>
 
 <h1 align="center">Index</h1>
+
 1. [Librairies](#librairies)
 2. [Le modèle python](#le-modèle-python)
 	1. [Simulation avec différents taux d'infection](#Simulation-avec-différents-taux-dinfection)
