@@ -10,11 +10,9 @@
 	<p/>
 <br/>
 
-<p style="text-align:justify;">
 Ce projet à pour objectifs de modéliser une __épidémie__, et de simuler sa propagation au sein d'une population d'individus. Le taux d'infection, de guérison et de létalité seront les paramètres de notre modèle, que nous étudierons afin de mieux comprendre leur impact sur la vitesse de propagation du virus. On choisira des populations de quelques centaines à quelques dizaines de milliers d'individus et on supposera qu'un individu immunisé le reste toute sa vie. Cette modélisation sera réalisée avec matplotlib et plotly indépendamment. <br/>
 Ce modèle statistique sera ensuite comparé aux modèles mathématiques __SIR__ et __SIDR__, qui appartiennent à la famille des modèles compartimenantaux en épidémiologie, qui reposent sur des équations différentielles.<br/>
 <br/>
-	</p>
 
 >__UPDATE :__  <br/>-  Ajout de la courbe 'removed', courbe noire, qui correspond aux personnes ne pouvant plus transmettre le virus, elle correspond à la somme des personnes immunisées et décédées. Elle est ajoutée dans le but de pouvoir comparer les résultats de la simulation à un modèle mathématiques, le modèle SIR. 
 <br/> - Optimisation du code, temps d'exécution réduit de façon considérable.  
