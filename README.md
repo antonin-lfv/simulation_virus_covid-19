@@ -357,6 +357,7 @@ Néanmoins, cela nous aident à comprendre comment un virus se comporte dans une
 <a href="#simulation-épidémiologique"> haut de la page 
 	</a>
 <p/>
+<p align="center"><a href="#simulation-épidémiologique"><img src="http://randojs.com/images/backToTopButton.png" alt="Haut de la page" height="29"/></a></p>
 
 <br/>
 
