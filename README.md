@@ -88,7 +88,7 @@ Si vous n'avez jamais utilisé plotly pensez à le télécharger via la console 
 
 Documentation [Plotly](https://plotly.com/python/) .
 
-A chaque exécution d'une fonction sous plotly, une page html s'ouvrira avec le résultat.
+À chaque exécution d'une fonction sous plotly, une page html s'ouvrira avec le résultat.
 
 Pour matplotlib une simple fenêtre python apparaîtra (ou plus).
 <br/>
