@@ -36,13 +36,13 @@ Ce modèle statistique sera ensuite comparé aux modèles mathématiques <b>SIR<
 
 <br/>
 
-# Animation avec Manim
+<h1 align="center">Animation avec Manim</h1>
 <p align="center">
 <img src="https://user-images.githubusercontent.com/63207451/114196366-93712a80-9951-11eb-9cea-e1e0add8231e.gif">
 	<p/>
 
 	
-# Résultat global sous plotly 
+<h1 align="center">Résultat global sous Plotly</h1>
 <br/>
 Simulation effectuée avec des valeurs de paramètres standards. <br/>
 <br/>
@@ -54,7 +54,7 @@ Simulation effectuée avec des valeurs de paramètres standards. <br/>
 (courbe noire : somme des personnes immunisées et décédées) <br/>
 <br/>
 
-# Index
+<h1 align="center">Index</h1>
 1. [Librairies](#librairies)
 2. [Le modèle python](#le-modèle-python)
 	1. [Simulation avec différents taux d'infection](#Simulation-avec-différents-taux-dinfection)
