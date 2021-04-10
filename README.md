@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="https://user-images.githubusercontent.com/63207451/114284531-e67dd700-9a50-11eb-9322-08dc04de58bd.gif" height="80">
+	<img src="https://user-images.githubusercontent.com/63207451/114284722-45901b80-9a52-11eb-8a0c-e99fc8681436.gif" height="80">
 	<p/>
 
 <h1 align="center">Simulation épidémiologique</h1>
