@@ -353,8 +353,9 @@ On compare à présent le modèle SIDR avec notre modèle python, pour différen
 <img src="https://user-images.githubusercontent.com/63207451/104732037-e49bc480-573c-11eb-86d2-21e02b073a1a.png">
 	<p/>
 Les courbes des individus sains, décédés et immunisés sont assez similaires sur ces 3 simulations, cependant la courbe des individus infectés est un peu plus "volatile" dans notre modèle python. 
+<br/>
 
-# Conclusion
+<h1 align="center">Conclusion</h1>
 
 <br/>
 L'étude épidémiologique reste au final un domaine très théorique. Même si les résultats et observations obtenues sembles assez proches de la réalité et des modèles mathématique, ces modélisations ne prennent pas en compte certains autres facteurs, tels que la vaccination, la mise en quarantaine des individus dès qu'ils sont infectés, ou même le déplacement des individus dans la population. <br/>
