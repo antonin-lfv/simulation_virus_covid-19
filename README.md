@@ -286,7 +286,7 @@ La première équation différentielle correspond au nombre de personnes saines,
 Ensuite, la deuxième équation a le signe de la différence entre le nombre de personne saines βS(t)I(t)/N et retirés λI(t), donc le nombre de personnes infectés diminue sur une période dt quand le nombre de personne saines est plus grande que le nombre de personnes retirées. <br/>
 La dernière équation, elle, correspond au nombre de personnes retirées qui est simplement le produit du nombre d'individus infectés à l'instant t par le taux de retirement.
 
-Le vecteur unitaire [S0, I0, R0] correspond aux nombres d'individus sains, infectés et retirés à t=0. Dans ce projet, aucun individu n'est immunisé à t=0 et la valeur de I0 est 1.
+Le vecteur unitaire $\textrm{S}_0, \textrm{I}_0, \textrm{R}_0$ correspond aux nombres d'individus sains, infectés et retirés à t=0. Dans ce projet, aucun individu n'est immunisé à t=0 et la valeur de I0 est 1.
 <br/>
 
 ## Comparaison SIR / modèle python
