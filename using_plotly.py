@@ -178,9 +178,7 @@ def vague_seuil_px_opti2():
         mode="lines+markers",
         showlegend=False, row=2, col=1)
 
-    fig.update_layout(hovermode="x")
-    fig.update_layout(title_text="simulation virus")
-    fig.update_layout(title_font_color='#EF553B')
+    fig.update_layout(hovermode="x",title_text="simulation virus",title_font_color='#EF553B')
     t = (time.time()-start)
     min = int(round(t,2)//60)
     sec = round(t-min*60,1)
