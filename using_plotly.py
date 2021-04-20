@@ -1,4 +1,5 @@
 ''' modélisation avec utilisation de plotly '''
+'''Le code est expliqué dans l'article sur machinelearnia.com, lien dans le readme'''
 
 from sklearn.datasets import make_blobs
 import random as rd
