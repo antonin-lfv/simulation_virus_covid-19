@@ -35,9 +35,6 @@ ret = odeint(deriv, y0, t, args=(N, beta, gamma))
 
 S, I, R = ret.T
 
-#on calcule le total des décès sur la base du taux de mortalité
-D = np.cumsum(I*0.005)
-
 # Plot de la figure avec plotly
 fig = go.Figure()
 
