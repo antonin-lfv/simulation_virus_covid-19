@@ -51,12 +51,6 @@ Simulation effectuée avec des valeurs de paramètres standards. <br/>
 (courbe noire : somme des personnes immunisées et décédées) <br/>
 <br/>
 
-# Animation avec Manim
-<p align="center">
-<img src="https://user-images.githubusercontent.com/63207451/114284499-b1718480-9a50-11eb-8b13-a7803d66c94f.gif" width="600">
-	<p/>
-<br/>
-
 # Index
 
 1. [Librairies](#librairies)
