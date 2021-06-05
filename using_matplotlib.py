@@ -17,12 +17,8 @@ def remove_(a,l): #pour supprimer de la liste des sains (a) les nouveaux infect�
         a.remove(l[i])
     return(list(a))
 
-def chance_infecte(p): #return True si il devient infecté avec une proba p
-    proba = int(p*100)
-    if rd.randint(0,100) <= proba :
-        return(True)
-    else :
-        return(False)
+def chance_infecte(p):  # return True si il devient infecté avec une proba p
+    return rd.randint(0, 100) < int(p * 100)
 
 def immuniser(l, l2, p): #l: infectés; l2: immunisés précédents
     coord_immu = []
