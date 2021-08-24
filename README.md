@@ -28,6 +28,8 @@ Ce modèle statistique sera ensuite comparé aux modèles mathématiques <b>SIR<
 
 # Liens utiles
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/cbf3c84b56274d33a4c5973b8dcc8fe2)](https://app.codacy.com/gh/antonin-lfv/simulation_virus_covid-19?utm_source=github.com&utm_medium=referral&utm_content=antonin-lfv/simulation_virus_covid-19&utm_campaign=Badge_Grade_Settings)
+
 - Article lié à ce github : ( à venir )
 
 - Comprendre le [Modèle SIR](https://fr.wikipedia.org/wiki/Modèles_compartimentaux_en_épidémiologie). <br/>
