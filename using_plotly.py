@@ -1,48 +1,51 @@
 ''' modélisation avec utilisation de plotly '''
 '''Le code est expliqué dans l'article sur machinelearnia.com, lien dans le readme'''
 
+from typing import List, Any
+import matplotlib.pyplot as plt
 from sklearn.datasets import make_blobs
 import random as rd
 import time
-from scipy.spatial import distance
-from plotly.offline import plot
+from fastdist import fastdist
+from plotly.offline import plot  # pour travailler en offline!
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
-import pandas as pd
 import numpy as np
+import pandas as pd
 
 def distance_e(x, y):  # distance entre 2 points du plan cartésien
-    return distance.euclidean([x[0],x[1]],[y[0],y[1]])
+    return fastdist.euclidean(np.array(x), np.array(y))
+
+def remove_(a, l): # enlever les éléments de l dans a
+    for i in range(len(l)):
+        a.remove(l[i])
+    return a
 
 def chance_infecte(p):  # return True si il devient infecté avec une proba p
-    proba = int(p * 100)
-    return rd.randint(0, 100) <= proba
+    return rd.randint(0, 100) < int(p * 100)
 
 def immuniser(l, l2, p):  # l: infectés; l2: immunisés précédents
     drop = 0
     for i in range(len(l)):
-        proba = int(p * 100)
-        if rd.randint(0, 100) <= proba:
+        if rd.randint(0, 100) < int(p * 100):
             l2.append(l[i-drop])
             l.remove(l[i-drop])
             drop+=1
     return l, l2
 
 def deces(l, l2, l3, p):  # l: infectés; l2: décès précédents; l3: immunisés
-    l_p = l[:]  # création d'une copie pour éviter erreur d'indice
+    l_p = l[:]  # création d'une copie pour éviter d'erreur d'indice
     for i in range(len(l_p)):
-        proba = int(p * 100)
-        if rd.randint(0, 100) <= proba and l_p[i] not in l3:
+        if rd.randint(0, 100) < int(p * 100) and not any(list == l_p[i] for list in l3) :
             l2.append(l_p[i])
             l.remove(l_p[i])
     return l, l2
 
-
 def vague_seuil_px_opti2():
 
+    global list
     print('Début de la simulation ... \n')
     start = time.time()
-
     nb_individu = 2000  # recommandé : 500 à 10000
     variance_pop = 1  # recommandé : 1
     rayon_contamination = 0.5  # recommandé : 0.5
@@ -105,9 +108,10 @@ def vague_seuil_px_opti2():
         for k in range(len(data['coord_infectes'])):
             non_sains = 0
             for j in range(len(data['coord_sains'])):
-                if distance_e(data['coord_infectes'][k],data['coord_sains'][j-non_sains]) < rayon_contamination and data['coord_sains'][j-non_sains] not in data['coord_infectes'] and chance_infecte(infectiosite):
-                    data['coord_infectes'].append(data['coord_sains'][j-non_sains])
-                    data['coord_sains'].remove(data['coord_sains'][j-non_sains])
+                if distance_e(data['coord_infectes'][k],data['coord_sains'][j-non_sains]) < rayon_contamination and not any(list == data['coord_sains'][j-non_sains] for list in data['coord_infectes']) and chance_infecte(infectiosite):
+                    buf = data['coord_sains'][j-non_sains]
+                    data['coord_infectes'].append(buf)
+                    data['coord_sains'].remove(buf)
                     non_sains+=1
 
         coord_infectes1, data['coord_immunises'] = immuniser(data['coord_infectes'], data['coord_immunises'], p)
@@ -179,10 +183,16 @@ def vague_seuil_px_opti2():
         mode="lines+markers",
         showlegend=False, row=2, col=1)
 
-    fig.update_layout(hovermode="x",title_text="simulation virus",title_font_color='#EF553B')
+    fig.update_layout(hovermode="x")
+    fig.update_layout(title_text="simulation virus")
+    fig.update_layout(title_font_color='#EF553B')
     t = (time.time()-start)
     min = int(round(t,2)//60)
     sec = round(t-min*60,1)
     print('Simulation terminée en '+str(min)+' minutes \net '+str(sec)+' secondes')
     plot(fig)
+
+
+if __name__ == "__main__":
+    vague_seuil_px_opti2()
 
