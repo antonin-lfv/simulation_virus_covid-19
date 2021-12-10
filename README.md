@@ -21,7 +21,8 @@ Ce modèle statistique sera ensuite comparé aux modèles mathématiques <b>SIR<
 <br/>
 
 >__UPDATE :__  <br/>-  Ajout de la courbe 'removed', courbe noire, qui correspond aux personnes ne pouvant plus transmettre le virus, elle correspond à la somme des personnes immunisées et décédées. Elle est ajoutée dans le but de pouvoir comparer les résultats de la simulation à un modèle mathématiques, le modèle SIR. 
-<br/> - Optimisation du code, temps d'exécution réduit de façon considérable.  
+<br/> - Nouvelle optimisation du code, qui rend le processus quasi instantané. 
+<br/> - Grâce à l'optimisation, vous pouvez tester la simulation en ligne [ici](https://share.streamlit.io/antonin-lfv/my_streamlit_site/main/StreamLit/streamlit.py)
 
 <br/>
 <br/>
@@ -49,12 +50,6 @@ Simulation effectuée avec des valeurs de paramètres standards. <br/>
 	
 <br/>
 (courbe noire : somme des personnes immunisées et décédées) <br/>
-<br/>
-
-# Animation avec Manim
-<p align="center">
-<img src="https://user-images.githubusercontent.com/63207451/114284499-b1718480-9a50-11eb-8b13-a7803d66c94f.gif" width="600">
-	<p/>
 <br/>
 
 # Index
@@ -373,6 +368,7 @@ Néanmoins, cela nous aident à comprendre comment un virus se comporte dans une
 
 
 <p align="center">
+	  <a href="https://antonin-lfv.github.io" class="fancybox" ><img src="https://user-images.githubusercontent.com/63207451/127334786-f48498e4-7aa1-4fbd-b7b4-cd78b43972b8.png" title="Web Page" width="38" height="38"></a>
   <a href="https://github.com/antonin-lfv" class="fancybox" ><img src="https://user-images.githubusercontent.com/63207451/97302854-e484da80-1859-11eb-9374-5b319ca51197.png" title="GitHub" width="40" height="40"></a>
   <a href="https://www.linkedin.com/in/antonin-lefevre-565b8b141" class="fancybox" ><img src="https://user-images.githubusercontent.com/63207451/97303444-b2c04380-185a-11eb-8cfc-864c33a64e4b.png" title="LinkedIn" width="40" height="40"></a>
   <a href="mailto:antoninlefevre45@icloud.com" class="fancybox" ><img src="https://user-images.githubusercontent.com/63207451/97303543-cec3e500-185a-11eb-8adc-c1364e2054a9.png" title="Mail" width="40" height="40"></a>
