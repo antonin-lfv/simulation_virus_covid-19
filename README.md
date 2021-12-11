@@ -22,7 +22,7 @@ Ce modèle statistique sera ensuite comparé aux modèles mathématiques <b>SIR<
 
 >__UPDATE :__  <br/>-  Ajout de la courbe 'removed', courbe noire, qui correspond aux personnes ne pouvant plus transmettre le virus, elle correspond à la somme des personnes immunisées et décédées. Elle est ajoutée dans le but de pouvoir comparer les résultats de la simulation à un modèle mathématiques, le modèle SIR. 
 <br/> - Nouvelle optimisation du code, qui rend le processus quasi instantané. 
-<br/> - Grâce à l'optimisation, vous pouvez tester la simulation en ligne [ici](https://share.streamlit.io/antonin-lfv/simulation_virus_covid-19/Streamlit/main.py)
+<br/> - <b>Grâce à l'optimisation, vous pouvez tester la simulation en ligne [ici](https://share.streamlit.io/antonin-lfv/simulation_virus_covid-19/Streamlit/main.py)</b>
 
 <br/>
 <br/>
