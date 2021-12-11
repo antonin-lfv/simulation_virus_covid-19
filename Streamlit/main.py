@@ -51,10 +51,9 @@ st.markdown("""
 }
 </style>
 """, unsafe_allow_html=True)
-
+st.sidebar.image("logo_virus.png", use_column_width=True, width=50)
 st.markdown('<p class="first_titre">Simulation épidémiologique</p>', unsafe_allow_html=True)
-st.sidebar.title("Options :control_knobs:")
-
+st.write("##")
 
 def distance_e(x, y):  # distance entre 2 points du plan cartésien
     return fastdist.euclidean(np.array(x), np.array(y))
@@ -93,11 +92,35 @@ global list
 
 with st.sidebar.form(key='Parametres de la simulation'):
     nb_individu = st.slider(label="Nombre d'individus", min_value=10, max_value=2500, value=1000)
+    expander_0 = st.expander(label="En savoir plus")
+    with expander_0 :
+        st.subheader("Population totale de la simulation")
+    st.write("##")
     variance_pop = st.slider(label="Éloignement des individus", min_value=0.4, max_value=10., step=0.2, value=1.)
+    expander_1 = st.expander(label="En savoir plus")
+    with expander_1 :
+        st.subheader("L'éloignement des individus est la distance moyenne des points les uns des autres")
+    st.write("##")
     rayon_contamination = st.slider(label="Rayon de contamination", min_value=0.3, max_value=5.9, step=0.2, value=0.5)
+    expander_2 = st.expander(label="En savoir plus ")
+    with expander_2 :
+        st.subheader("Le rayon de contamination correspond à la taille de l'espace dans lequel un individu peut en infecter d'autres")
+    st.write("##")
     infectiosite = st.slider(label="Taux d'infection", min_value=0., max_value=1., value=0.1, step=0.05)
+    expander_3 = st.expander(label="En savoir plus ")
+    with expander_3 :
+        st.subheader("Le taux d'infection est la probabilité qu'un individu sain devienne infecté au contact d'un individu infecté")
+    st.write("##")
     p = st.slider(label="Taux de guérison", min_value=0., max_value=1., value=0.1, step=0.05)
+    expander_4 = st.expander(label="En savoir plus")
+    with expander_4 :
+        st.subheader("Le taux de guérison est la probabilité qu'un individu infecté devienne immunisé")
+    st.write("##")
     d = st.slider(label="Taux de décès", min_value=0., max_value=1., value=0.05, step=0.05)
+    expander_5 = st.expander(label="En savoir plus")
+    with expander_5 :
+        st.subheader("Le taux de décès est la probabilité qu'un individu infecté décède du virus")
+    st.write("##")
     submit_button = st.form_submit_button(label='Lancer la simulation')
 
 st.sidebar.subheader("La simulation prend quelques secondes à s'éxecuter")
