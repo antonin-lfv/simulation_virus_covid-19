@@ -55,6 +55,7 @@ st.markdown("""
 st.markdown('<p class="first_titre">Simulation épidémiologique</p>', unsafe_allow_html=True)
 st.sidebar.title("Options :control_knobs:")
 
+
 def distance_e(x, y):  # distance entre 2 points du plan cartésien
     return fastdist.euclidean(np.array(x), np.array(y))
 
@@ -141,8 +142,8 @@ while len(data['coord_infectes']) > 0.08 * nb_individu or len(data['courbe_sains
         for j in range(len(data['coord_sains'])):
             if distance_e(data['coord_infectes'][k],
                           data['coord_sains'][j - non_sains]) < rayon_contamination and not any(
-                    list == data['coord_sains'][j - non_sains] for list in
-                    data['coord_infectes']) and chance_infecte(infectiosite):
+                list == data['coord_sains'][j - non_sains] for list in
+                data['coord_infectes']) and chance_infecte(infectiosite):
                 buf = data['coord_sains'][j - non_sains]
                 data['coord_infectes'].append(buf)
                 data['coord_sains'].remove(buf)
@@ -207,7 +208,8 @@ fig.update_yaxes(showgrid=False, visible=False, row=1, col=1)
 labels = ["sains", "infectés", "immunisés", "décédés"]
 fig.add_trace(go.Pie(
     values=[len(data['coord_sains']), len(data['coord_infectes']), len(data['coord_immunises']),
-            len(data['coord_deces'])], labels=labels, sort=False), 1, 2)
+            len(data['coord_deces'])], labels=labels, sort=False,
+    marker_colors=['#636EFA', '#EF553B', '#00CC96', '#AB63FA']), 1, 2)
 
 x_courbe = list(np.arange(0, len(data['courbe_sains'])))
 fig.add_trace(
