@@ -53,7 +53,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 st.sidebar.image("logo_virus.png", use_column_width=True, width=50)
 st.markdown('<p class="first_titre">Simulation épidémiologique</p>', unsafe_allow_html=True)
-st.write("##")
+st.sidebar.write("##")
 
 def distance_e(x, y):  # distance entre 2 points du plan cartésien
     return fastdist.euclidean(np.array(x), np.array(y))
