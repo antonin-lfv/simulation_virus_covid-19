@@ -11,7 +11,7 @@ import random as rd
 from sklearn.datasets import make_blobs
 import itertools
 
-st.set_page_config(layout="wide", )
+st.set_page_config(layout="wide")
 # streamlit run StreamLit/streamlit.py
 st.markdown("""
 <style>
@@ -21,7 +21,7 @@ st.markdown("""
     box-sizing: border-box;
     text-align: center;
     width: 100%;
-    border: solid #008000 4px;
+    border: solid #59178f 4px;
     padding: 4px;
 }
 .intro{
@@ -265,7 +265,7 @@ fig.update_layout(
     template='simple_white',
     font=dict(size=10),
     autosize=False,
-    width=1600, height=1000,
+    width=1500, height=1000,
     margin=dict(l=40, r=500, b=40, t=40),
     paper_bgcolor='rgba(0,0,0,0)',
     plot_bgcolor='rgba(0,0,0,0)',
