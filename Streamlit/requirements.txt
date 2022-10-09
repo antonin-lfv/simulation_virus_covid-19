@@ -6,3 +6,4 @@ fastdist
 sklearn
 numba
 pip
+requests
