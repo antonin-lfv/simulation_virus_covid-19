@@ -128,8 +128,8 @@ def vague_seuil_px_opti2():
             for j in range(len(data['coord_sains'])):
                 if distance_e(data['coord_infectes'][k],
                               data['coord_sains'][j - non_sains]) < rayon_contamination and not any(
-                    list == data['coord_sains'][j - non_sains] for list in
-                    data['coord_infectes']) and chance_infecte(infectiosite):
+                    list == data['coord_sains'][j - non_sains] for list in data['coord_infectes']) \
+                        and chance_infecte(infectiosite):
                     buf = data['coord_sains'][j - non_sains]
                     data['coord_infectes'].append(buf)
                     data['coord_sains'].remove(buf)
