@@ -63,7 +63,7 @@ def vague_seuil_px_opti2():
     global list
     print('Début de la simulation ... \n')
     start = time.time()
-    nb_individu = 2000  # recommandé : 500 à 10000
+    nb_individu = 10000  # recommandé : 500 à 10000
     variance_pop = 1  # recommandé : 1
     rayon_contamination = 0.5  # recommandé : 0.5
     infectiosite = 0.17  # recommandé : 10%
