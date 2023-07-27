@@ -29,7 +29,7 @@ Ce modèle statistique sera ensuite comparé aux modèles mathématiques <b>SIR<
 
 # Liens utiles
 
-- Article lié à ce github : ( à venir )
+- Article lié à ce github : [ici](https://machinelearnia.com/simulation-dune-epidemie-avec-python/)
 
 - Comprendre le [Modèle SIR](https://fr.wikipedia.org/wiki/Modèles_compartimentaux_en_épidémiologie). <br/>
 
