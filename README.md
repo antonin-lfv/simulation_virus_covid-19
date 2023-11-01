@@ -68,8 +68,11 @@ Documentation [Plotly](https://plotly.com/python/) .
 À chaque exécution d'une fonction sous plotly, une page html s'ouvrira avec le résultat.
 
 Pour matplotlib une simple fenêtre python apparaîtra (ou plus).
-<br/>
+<br>
 
+<br>
+
+<br>
 
 <p align="center">
 	  <a href="https://antonin-lfv.github.io" class="fancybox" ><img src="https://user-images.githubusercontent.com/63207451/127334786-f48498e4-7aa1-4fbd-b7b4-cd78b43972b8.png" title="Web Page" width="38" height="38"></a>
