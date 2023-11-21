@@ -3,7 +3,7 @@ yfinance
 pandas
 numpy
 fastdist
-sklearn
+scikit-learn
 numba
 pip
 requests
