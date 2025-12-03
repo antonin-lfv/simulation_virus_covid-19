@@ -52,23 +52,6 @@ Simulation effectuée avec des valeurs de paramètres standards. <br/>
 	
 <br/>
 (courbe noire : somme des personnes immunisées et décédées) <br/>
-<br/>
-
-# Librairies
-
-<br/>
-Si vous n'avez jamais utilisé plotly pensez à le télécharger via la console :  <br/>
-<br/>
-
-	pip install plotly
-
-
-Documentation [Plotly](https://plotly.com/python/) .
-
-À chaque exécution d'une fonction sous plotly, une page html s'ouvrira avec le résultat.
-
-Pour matplotlib une simple fenêtre python apparaîtra (ou plus).
-<br>
 
 <br>
 
